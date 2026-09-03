@@ -21,6 +21,7 @@ import config
 FOLDER_MAP = {
     "blog": "argus/Blog",
     "thread": "argus/Thread",
+    "outline": "argus/Outline",
     "digest": "argus/Digest",
     "review": "argus/Review",
     "theses": "argus/Theses",

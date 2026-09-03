@@ -56,8 +56,8 @@ BLOG_MIN_CHARS = 800                                   # 블로그 최소 글자
 THREAD_MIN_LINES = 20                                  # 스레드 최소 줄 수
 
 # ── 출력 폴더 생성 ─────────────────────────────────────────────────────────────
-for d in [OUTPUT_DIR / "blog", OUTPUT_DIR / "thread", OUTPUT_DIR / "digest",
-          OUTPUT_DIR / "review", LOG_DIR]:
+for d in [OUTPUT_DIR / "blog", OUTPUT_DIR / "thread", OUTPUT_DIR / "outline",
+          OUTPUT_DIR / "digest", OUTPUT_DIR / "review", LOG_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 

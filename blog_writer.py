@@ -52,12 +52,13 @@ def load_thesis_guide(thesis_ids: list[str]) -> str:
 
 # ── 프롬프트 구성 ──────────────────────────────────────────────────────────────
 
-def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_context: str = "") -> str:
+def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_context: str = "", user_feedback: str = "") -> str:
     outline = topic.get("outline", {})
     outline_str = "\n".join([f"  - {k}: {v}" for k, v in outline.items()])
     today = date.today().isoformat()
 
     rag_section = f"\n\n[증권사 리포트 및 심층 데이터]\n{rag_context}\n" if rag_context else ""
+    feedback_section = f"\n\n[사용자 특별 지침 및 윤곽 수정 사항]\n{user_feedback}\n위 지침을 반드시 본론 및 논점 전개에 최우선 반영하세요.\n" if user_feedback else ""
 
     return f"""당신은 테크/투자 전문 블로그 작가입니다.
 아래 [기획안]을 바탕으로 [양식]에 맞는 블로그 초안을 작성하세요.
@@ -69,7 +70,7 @@ def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_c
 - 핵심 훅: {topic.get('hook', '')}
 - 목차:
 {outline_str}
-
+{feedback_section}
 [Thesis 작성 가이드]
 {thesis_guide if thesis_guide else '(가이드 없음 — 기획안 기반으로 작성)'}{rag_section}
 
@@ -203,6 +204,65 @@ def save_blog(content: str, title: str) -> Path:
     return filepath
 
 
+def save_outline_file(topic: dict, title: str) -> Path:
+    """1-Page 기획 윤곽서 파일(output/outline/YYYY-MM-DD-outline-{slug}.md) 저장"""
+    today = date.today().isoformat()
+    slug = make_slug(title)
+    outline_dir = config.OUTPUT_DIR / "outline"
+    outline_dir.mkdir(parents=True, exist_ok=True)
+    base = outline_dir / f"{today}-outline-{slug}"
+
+    filepath = Path(f"{base}.md")
+    i = 1
+    while filepath.exists():
+        filepath = Path(f"{base}-{i}.md")
+        i += 1
+
+    outline = topic.get("outline", {})
+    variants = topic.get("title_variants", {})
+
+    content = f"""---
+title: "{title}"
+date: {today}
+type: outline
+thesis: {json.dumps(topic.get('thesis_ids', []), ensure_ascii=False)}
+angle: "{topic.get('angle', '')}"
+status: draft
+---
+
+# 🗺️ 블로그 기획 윤곽서 (Outline Blueprint)
+
+> **주제**: {title}  
+> **핵심 훅**: {topic.get('hook', '')}  
+> **관점(Angle)**: {topic.get('angle', '')}  
+> **연계 테제**: {', '.join(topic.get('thesis_ids', []))}
+
+---
+
+## 1. 제목 후보 3종
+- **A (직관형)**: {variants.get('A', '')}
+- **B (의문형)**: {variants.get('B', '')}
+- **C (스토리)**: {variants.get('C', '')}
+
+---
+
+## 2. 4단계 목차 및 핵심 논점 구상
+- **서론**: {outline.get('서론', '')}
+- **본론 1**: {outline.get('본론1', '')}
+- **본론 2 (반론/검증)**: {outline.get('본론2', '')}
+- **결론 (투자 뷰 & 이벤트)**: {outline.get('결론', '')}
+
+---
+
+## 3. 집필 체크포인트
+- [ ] 본론 내 비교 표(Table) 구상 (기업/기술 대조)
+- [ ] 핵심 수치 데이터 박스 배치
+- [ ] 증권사 리포트 / 공식 출처 각주 확보
+"""
+    filepath.write_text(content, encoding="utf-8")
+    return filepath
+
+
 # ── 미리보기 ──────────────────────────────────────────────────────────────────
 
 def preview_blog(content: str, lines: int = 20):
@@ -217,7 +277,7 @@ def preview_blog(content: str, lines: int = 20):
 
 # ── 메인 ──────────────────────────────────────────────────────────────────────
 
-def generate_blog(topic: dict, title_choice: str = None, interactive: bool = True, use_rag: bool = False, use_critic: bool = False) -> Path:
+def generate_blog(topic: dict, title_choice: str = None, interactive: bool = True, use_rag: bool = False, use_critic: bool = False, outline_only: bool = False) -> Path:
     """주제 dict → 블로그 파일 생성 후 경로 반환"""
 
     variants = topic.get("title_variants", {})
@@ -237,6 +297,44 @@ def generate_blog(topic: dict, title_choice: str = None, interactive: bool = Tru
         selected_title = default_title
 
     print(f"\n  제목: {selected_title}")
+
+    # ── 윤곽(Outline) 사전 확인 및 편집 루프 (Human-in-the-Loop) ──
+    user_feedback = ""
+    outline = topic.get("outline", {})
+
+    if outline_only:
+        filepath = save_outline_file(topic, selected_title)
+        print(f"\n  💾 기획 윤곽서 저장 완료: {filepath}")
+        return filepath
+
+    if interactive and outline:
+        print("\n" + "━" * 60)
+        print("🗺️  [블로그 작성 전 윤곽(Outline) 사전 확인]")
+        print("━" * 60)
+        print(f"📌 주제: {selected_title}")
+        print(f"🎯 관점: {topic.get('angle', '')} | 훅: {topic.get('hook', '')}")
+        print("\n[예정된 4단계 목차 구성]")
+        for k, v in outline.items():
+            print(f"  • {k}: {v}")
+        print("━" * 60)
+        print("옵션 선택:")
+        print("  [Enter] / y : 위 윤곽 그대로 본문 작성 진행")
+        print("  e           : 윤곽 수정 및 추가 요청사항 입력 후 작성")
+        print("  o           : 윤곽(기획서)만 마크다운 파일로 저장 후 종료")
+        print("  n           : 취소")
+        action = input("선택 → ").strip().lower()
+
+        if action == "n":
+            print("  취소되었습니다.")
+            sys.exit(0)
+        elif action == "o":
+            filepath = save_outline_file(topic, selected_title)
+            print(f"\n  💾 기획 윤곽서 저장 완료: {filepath}")
+            return filepath
+        elif action == "e":
+            print("\n✏️  추가하거나 강조하고 싶은 논점, 수정 사항을 입력하세요:")
+            user_feedback = input("피드백 → ").strip()
+            print(f"  💡 지침 반영: '{user_feedback}'")
 
     # Thesis 가이드 로드
     thesis_ids = topic.get("thesis_ids", [])
@@ -258,7 +356,7 @@ def generate_blog(topic: dict, title_choice: str = None, interactive: bool = Tru
             print(f"  ⚠️ RAG 검색 오류 (기본 모드로 대체): {e}")
 
     # 프롬프트 구성 + LLM 호출
-    prompt = build_blog_prompt(topic, guide, selected_title, rag_context=rag_context)
+    prompt = build_blog_prompt(topic, guide, selected_title, rag_context=rag_context, user_feedback=user_feedback)
     print(f"  🤖 블로그 생성 중... ({config.GEMINI_MODEL})")
     content = call_gemini(prompt)
 
@@ -306,6 +404,7 @@ def main():
     grp = parser.add_mutually_exclusive_group(required=True)
     grp.add_argument("--topic",    type=str, help="주제 JSON 문자열 (topic_generator 출력)")
     grp.add_argument("--from-log", action="store_true", help="오늘의 topic 로그에서 선택")
+    parser.add_argument("--outline", action="store_true", help="본문 작성 없이 1-Page 기획 윤곽서(Blueprint)만 생성")
     parser.add_argument("--rag",    action="store_true", help="증권사 리포트 및 지식 DB RAG 심층 검색 활용")
     parser.add_argument("--critic", action="store_true", help="Critic 에이전트 자가 품질 검수 및 자동 보완 실행")
     parser.add_argument("--auto", "-y", action="store_true", help="대화형 확인 없이 자동 저장")
@@ -327,7 +426,7 @@ def main():
     else:
         topic = json.loads(args.topic)
 
-    generate_blog(topic, interactive=not args.auto, use_rag=args.rag, use_critic=args.critic)
+    generate_blog(topic, interactive=not args.auto, use_rag=args.rag, use_critic=args.critic, outline_only=args.outline)
 
 
 if __name__ == "__main__":
