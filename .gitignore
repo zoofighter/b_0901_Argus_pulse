@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.local
+.env.*.local
+
+# Database & Vector DB
+db/*.sqlite
+db/chromadb/
+
+# Cache & Logs
+.pytest_cache/
+logs/*
+!logs/.gitkeep
+
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Temporary / raw downloads
+99.raw/
+archive/

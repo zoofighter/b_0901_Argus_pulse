@@ -1,0 +1,441 @@
+# thesis.yaml — 백업본 (참고용)
+# 실제 운영은 thesis/ 폴더의 개별 MD 파일로 관리됩니다.
+# 이 파일은 YAML 단일 파일 방식의 레퍼런스용으로 보관합니다.
+# 최종 업데이트: 2026-09-02 (총 29개 Thesis 등록)
+
+theses:
+
+  - id: "T-01"
+    title: "데이터센터의 변화"
+    hypothesis: "AI 데이터센터의 병목이 GPU에서 전력·냉각 인프라로 이동한다"
+    direction: "bullish"
+    confidence: 80
+    priority: 5
+    status: "active"
+    related_companies: [NVIDIA, TSMC, SK하이닉스, Eaton, Vertiv]
+    keywords: [데이터센터, 전력, 액체냉각, HBM, CoWoS, SMR, CDU, PUE, HVDC]
+    time_horizon: "2026~2027"
+    milestone: "빅테크 SMR 계약 체결 공식화 또는 DC 전력 인허가 규제 완화"
+    related_theses: ["T-05", "T-08", "T-12", "T-13", "T-23"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-02"
+    title: "메모리 산업의 변화"
+    hypothesis: "HBM4 전환으로 메모리가 범용 원자재에서 커스텀 ASIC으로 성격이 바뀐다"
+    direction: "bullish"
+    confidence: 75
+    priority: 5
+    status: "active"
+    related_companies: [SK하이닉스, 삼성전자, Micron, NVIDIA]
+    keywords: [HBM, HBM3E, HBM4, DRAM, NAND, AI메모리, TSV, CoWoS, LTA, 커스텀HBM, zHBM, NVHBM]
+    time_horizon: "2026~2027"
+    milestone: "삼성전자 HBM4 엔비디아 공급 퀄 테스트 통과"
+    related_theses: ["T-07", "T-10", "T-28"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-03"
+    title: "전고체 배터리의 변화"
+    hypothesis: "전고체 배터리는 EV 대량 보급보다 하이엔드(로봇·군사·우주) 시장에 먼저 진입한다"
+    direction: "bullish"
+    confidence: 60
+    priority: 3
+    status: "active"
+    related_companies: [LG에너지솔루션, 삼성SDI, Toyota, QuantumScape, 현대차]
+    keywords: [전고체, 고체전해질, 황화물계, 산화물계, 배터리, ESS, 파일럿라인, 덴드라이트, 바이폴라적층]
+    time_horizon: "2026H2~2028"
+    milestone: "도요타 파일럿 라인 가동 발표 또는 삼성SDI 로봇용 전고체 양산 계약"
+    related_theses: ["T-17", "T-22"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-04"
+    title: "온디바이스 AI의 변화"
+    hypothesis: "45 TOPS NPU 기반 온디바이스 AI가 클라우드 의존을 줄이고 행동형 에이전트 시대를 연다"
+    direction: "bullish"
+    confidence: 70
+    priority: 4
+    status: "active"
+    related_companies: [Apple, 삼성전자, Qualcomm, MediaTek, Google]
+    keywords: [NPU, TOPS, 온디바이스, EdgeAI, AppleIntelligence, GalaxyAI, GeminiNano, 행동형에이전트, 온디바이스LLM]
+    time_horizon: "2026~2027"
+    milestone: "Apple Intelligence 킬러 유스케이스 대중화 또는 온디바이스 에이전트 앱 출시"
+    related_theses: ["T-18", "T-20", "T-21", "T-27"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-05"
+    title: "금리와 데이터센터"
+    hypothesis: "고금리 지속 시 빅테크 AI CAPEX가 ROIC 검증 압력에 직면하고 DC 투자 속도가 둔화된다"
+    direction: "bearish"
+    confidence: 65
+    priority: 4
+    status: "active"
+    related_companies: [Microsoft, Google, Amazon, Meta, Oracle]
+    keywords: [CAPEX, ROIC, WACC, PPA, AI인프라버블, 금리민감도, 데이터센터, 전력구매계약]
+    time_horizon: "2026~2027"
+    milestone: "미국 FOMC 금리 결정 또는 빅테크 실적 발표에서 CAPEX 가이던스 하향"
+    related_theses: ["T-01", "T-08"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-06"
+    title: "TPU 증가와 GPU 수요 둔화"
+    hypothesis: "추론 시대 진입으로 TPU·커스텀ASIC이 NVIDIA GPU를 대체하며 GPU 수요 증가세가 꺾인다"
+    direction: "bearish"
+    confidence: 60
+    priority: 4
+    status: "active"
+    related_companies: [NVIDIA, Google, AMD, Cerebras, Groq, Intel]
+    keywords: [TPU, CUDA, JAX, FLOPS, 추론최적화, 커스텀ASIC, 학습vs추론, CUDAwall, TPUv6]
+    time_horizon: "2026~2028"
+    milestone: "구글 TPU 외부 판매 개시 또는 NVIDIA 실적에서 추론용 GPU 비중 공개"
+    related_theses: ["T-08", "T-15", "T-24"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-07"
+    title: "CXL 메모리의 확대"
+    hypothesis: "CXL 3.0이 제3 메모리 계층으로 자리잡으며 메모리 풀링이 AI 인프라 표준이 된다"
+    direction: "bullish"
+    confidence: 55
+    priority: 3
+    status: "active"
+    related_companies: [삼성전자, SK하이닉스, Micron, Intel, Microsoft, Meta]
+    keywords: [CXL, CXLmemory, 메모리풀링, Type3디바이스, 메모리대역폭, 제3메모리계층, Fabric]
+    time_horizon: "2026~2028"
+    milestone: "Azure 또는 메타의 CXL 메모리 풀링 프로덕션 도입 공식 발표"
+    related_theses: ["T-02", "T-28"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-08"
+    title: "엔비디아와 네오클라우드"
+    hypothesis: "엔비디아가 네오클라우드(CoreWeave 등)를 통해 GPU 수요를 인위적으로 유지하는 혈맹 구조가 형성되었다"
+    direction: "neutral"
+    confidence: 70
+    priority: 4
+    status: "active"
+    related_companies: [NVIDIA, CoreWeave, Lambda, Together.ai, Crusoe]
+    keywords: [네오클라우드, CoreWeave, GPUasaService, 혈맹구조, 수요방어, 네오클라우드부채]
+    time_horizon: "2026~2027"
+    milestone: "CoreWeave IPO 이후 재무 구조 공개 또는 엔비디아-네오클라우드 지분 관계 변화"
+    related_theses: ["T-01", "T-05", "T-06", "T-09"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-09"
+    title: "엔비디아와 GPU 금융"
+    hypothesis: "GPU 담보 대출(칩담대) 시장이 AI 서브프라임 리스크를 만들고 있다"
+    direction: "bearish"
+    confidence: 55
+    priority: 3
+    status: "active"
+    related_companies: [NVIDIA, CoreWeave, Blackstone, JPMorgan, Goldman Sachs]
+    keywords: [칩담대, GPU담보대출, 잔존가치, GPU리스, AI서브프라임, 감가상각, 자산유동화]
+    time_horizon: "2026~2028"
+    milestone: "GPU 담보 대출 연체율 급등 또는 대형 네오클라우드 재무 위기"
+    related_theses: ["T-08"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-10"
+    title: "첨단 패키징과 CoWoS의 병목"
+    hypothesis: "차세대 AI 가속기의 출하량 한계는 웨이퍼 팹이 아닌 CoWoS 및 2.5D/3D 첨단 패키징 캐파가 결정한다"
+    direction: "bullish"
+    confidence: 80
+    priority: 4
+    status: "active"
+    related_companies: [TSMC, ASE, Amkor, 삼성전자, SK하이닉스, SKC, 인텔]
+    keywords: [CoWoS, 첨단패키징, 2.5D, 3D패키징, 인터포저, 유리기판, FOPLP, 팬아웃]
+    time_horizon: "2026~2027"
+    milestone: "주요 OSAT 기업의 첨단 패키징 캐파 2배 증설 및 유리기판 파일럿 라인 가동"
+    related_theses: ["T-01", "T-02", "T-11"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-11"
+    title: "유리기판의 차세대 패키징 침투"
+    hypothesis: "2026년 하반기부터 대면적 유기 기판(FC-BGA)의 물리적 한계로 유리기판이 초고성능 AI 가속기에 상용화된다"
+    direction: "bullish"
+    confidence: 70
+    priority: 4
+    status: "active"
+    related_companies: [SKC, 앱솔릭스, 삼성전기, LG이노텍, 인텔, 코닝]
+    keywords: [유리기판, Glass Substrate, FC-BGA, 열팽창계수, TGV, 미세회로]
+    time_horizon: "2026H2~2028"
+    milestone: "앱솔릭스/인텔 유리기판 양산 라인 인증 및 첫 고객사 탑재 발표"
+    related_theses: ["T-10", "T-02"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-12"
+    title: "데이터센터 액체냉각의 표준화"
+    hypothesis: "랙당 100kW+ GPU 발열로 인해 공랭식은 완전히 도태되고 DLC(Direct-to-Chip) 및 침전 냉각이 필수 표준으로 자리잡는다"
+    direction: "bullish"
+    confidence: 85
+    priority: 4
+    status: "active"
+    related_companies: [Vertiv, Supermicro, CoolIT, GST, 케이엔솔, 슈나이더일렉트릭]
+    keywords: [액체냉각, DLC, 액침냉각, CDU, 냉각탑, PUE, 열관리]
+    time_horizon: "2026~2027"
+    milestone: "하이퍼스케일러 데이터센터 80% 이상 DLC 냉각 채택 표준화"
+    related_theses: ["T-01", "T-05"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-13"
+    title: "SMR과 데이터센터 무탄소 전력 PPA"
+    hypothesis: "전력망 부족에 직면한 빅테크들이 24/7 기저부하 확보를 위해 SMR 개발사와 장기 전력구매계약(PPA)을 직접 체결한다"
+    direction: "bullish"
+    confidence: 75
+    priority: 4
+    status: "active"
+    related_companies: [NuScale, Oklo, Constellation Energy, 두산에너빌리티, MS, 아마존]
+    keywords: [SMR, 소형모듈원전, 전력PPA, 무탄소에너지, 원자력발전, 기저부하]
+    time_horizon: "2026~2028"
+    milestone: "빅테크-SMR 기업 간 상업적 전력 공급 계약(PPA) 공식 체결"
+    related_theses: ["T-01", "T-05"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-14"
+    title: "실리콘 포토닉스와 CPO의 상용화"
+    hypothesis: "구리 배선의 전력·신호 손실 한계로 800G/1.6T 광트랜시버 및 CPO(Co-Packaged Optics)가 데이터센터 스위치 백본으로 급부상한다"
+    direction: "bullish"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [Broadcom, Marvell, 이수페타시스, TSMC, Cisco, 코히런트]
+    keywords: [실리콘포토닉스, CPO, 광트랜시버, 1.6T, 광인터커넥트, 이더넷스위치]
+    time_horizon: "2026H2~2028"
+    milestone: "브로드컴/엔비디아 CPO 스위치 양산 채택 및 데이터센터 실증"
+    related_theses: ["T-01", "T-29"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-15"
+    title: "AI 추론 시장 폭발과 LPU·ASIC 분화"
+    hypothesis: "학습 중심에서 실시간 추론 시대로 전환되며 초저지연·고효율의 LPU 및 전용 추론 ASIC이 GPU의 자리를 잠식한다"
+    direction: "bullish"
+    confidence: 75
+    priority: 4
+    status: "active"
+    related_companies: [Groq, 리벨리온, 퓨리오사AI, SambaNova, Qualcomm, 브로드컴]
+    keywords: [AI추론, LPU, SRAM, TTFT, NPU, 추론전용칩, 서빙비용]
+    time_horizon: "2026~2027"
+    milestone: "하이퍼스케일러 LLM 서빙 워크로드의 30% 이상이 ASIC으로 전환"
+    related_theses: ["T-06", "T-24"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-16"
+    title: "파운드리 2nm 공정과 GAA 격돌"
+    hypothesis: "2nm 공정 진입과 함께 후면전력공급(BSPDN) 및 GAA 수율이 파운드리 시장 점유율의 지각변동을 일으킨다"
+    direction: "neutral"
+    confidence: 65
+    priority: 4
+    status: "active"
+    related_companies: [TSMC, 삼성전자, 인텔, Apple, Qualcomm]
+    keywords: [2nm, GAA, NanoSheet, BSPDN, 후면전력공급, High-NA EUV, 파운드리수율]
+    time_horizon: "2026~2027"
+    milestone: "TSMC vs 삼성전자 2nm 공정 양산 수율 60% 달성 및 고객사 수주 공시"
+    related_theses: ["T-02", "T-10"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-17"
+    title: "휴머노이드 로봇과 액추에이터 공급망"
+    hypothesis: "테슬라 옵티머스 등 3세대 휴머노이드 로봇이 공장 파일럿에 투입되며 고정밀 감속기·하모닉 드라이브 부품 수요가 급증한다"
+    direction: "bullish"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [Tesla, 레인보우로보틱스, 두산로보틱스, 에스피지, 하모닉드라이브, 삼성전자]
+    keywords: [휴머노이드, 로보틱스, 옵티머스, 하모닉드라이브, 액추에이터, 토크센서, 서보모터]
+    time_horizon: "2026H2~2028"
+    milestone: "테슬라 공장 내 옵티머스 1,000대 이상 실제 제조 라인 투입"
+    related_theses: ["T-03", "T-19"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-18"
+    title: "End-to-End AI 자율주행과 로보택시"
+    hypothesis: "비전 기반 E2E 신경망(VLM/세계모델)의 완성으로 무인 로보택시 서비스가 대도시 단위로 본격 상용화된다"
+    direction: "bullish"
+    confidence: 75
+    priority: 4
+    status: "active"
+    related_companies: [Tesla, Waymo, 현대차, 우버, 모빌아이, Baidu]
+    keywords: [자율주행, FSD, 로보택시, End-to-End, 비전파운데이션모델, 규제완화, 운전자제거]
+    time_horizon: "2026~2027"
+    milestone: "테슬라 사이버캡(Cybercab) 규제 승인 및 대도시 유료 무인 운행 개시"
+    related_theses: ["T-04", "T-19"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-19"
+    title: "피지컬 AI와 공간지능 반도체"
+    hypothesis: "텍스트/이미지를 넘어 3차원 공간과 물리 법칙을 이해하는 공간지능(Spatial AI) 전용 칩이 스마트팩토리와 로봇의 핵심 뇌가 된다"
+    direction: "bullish"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [NVIDIA, Apple, Qualcomm, 삼성전자, Sony]
+    keywords: [피지컬AI, 공간지능, Spatial Computing, 3D VLM, 엣지AI, ToF센서]
+    time_horizon: "2026~2028"
+    milestone: "주요 로봇 및 스마트 디바이스 제조사의 공간지능 SoC 표준 칩셋 채택"
+    related_theses: ["T-17", "T-18"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-20"
+    title: "행동형 AI 에이전트와 모바일 교체 슈퍼사이클"
+    hypothesis: "단순 질의응답을 넘어 앱 제어 및 다중 작업을 자동 수행하는 온디바이스 에이전트가 4년 만의 스마트폰 대규모 교체 수요를 촉발한다"
+    direction: "bullish"
+    confidence: 65
+    priority: 3
+    status: "active"
+    related_companies: [Apple, 삼성전자, 구글, Qualcomm, 미디어텍]
+    keywords: [AI에이전트, ActionModel, OS통합, 스마트폰교체주기, NPU, LPDDR6]
+    time_horizon: "2026~2027"
+    milestone: "애플 인텔리전스 및 갤럭시 AI 차세대 자율 에이전트 출시 후 플래그십 출하량 15% 이상 급증"
+    related_theses: ["T-04", "T-21"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-21"
+    title: "AI PC 보급 확대와 Arm 기반 윈도우 생태계"
+    hypothesis: "45 TOPS 이상의 NPU가 탑재된 Arm 기반 SoC(스냅드래곤 X 시리즈 등)가 x86의 점유율을 잠식하며 PC 아키텍처 재편이 일어난다"
+    direction: "neutral"
+    confidence: 60
+    priority: 3
+    status: "active"
+    related_companies: [Qualcomm, 인텔, AMD, Microsoft, ARM, Lenovo]
+    keywords: [AIPC, Copilot+, WoA, Snapdragon X, NPU, x86vsArm, 배터리수명]
+    time_horizon: "2026~2027"
+    milestone: "글로벌 프리미엄 노트북 시장에서 Arm 기반 AI PC 점유율 20% 돌파"
+    related_theses: ["T-04", "T-20"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-22"
+    title: "AI 전력망용 대용량 ESS와 LFP 공급망"
+    hypothesis: "데이터센터의 신재생에너지 간헐성 극복을 위해 대용량 BESS 투자가 폭증하며 LFP 배터리와 미국 현지 공장이 최대 수혜를 입는다"
+    direction: "bullish"
+    confidence: 80
+    priority: 4
+    status: "active"
+    related_companies: [Tesla, LG에너지솔루션, 삼성SDI, Fluence Energy, CATL]
+    keywords: [ESS, BESS, LFP배터리, 메가팩, 전력망안정화, IRA세액공제]
+    time_horizon: "2026~2027"
+    milestone: "테슬라 메가팩 및 북미 배터리 3사 ESS 수주 잔고 사상 최대 갱신"
+    related_theses: ["T-01", "T-03", "T-23"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-23"
+    title: "변압기·초고압 그리드 쇼티지 장기화"
+    hypothesis: "전력망 현대화와 데이터센터 전력 수요 폭증으로 초고압 변압기 및 HVDC 전력기기 리드타임이 4년 이상 유지되며 슈퍼사이클이 지속된다"
+    direction: "bullish"
+    confidence: 85
+    priority: 4
+    status: "active"
+    related_companies: [HD현대일렉트릭, 효성중공업, LS일렉트릭, Eaton, Schneider Electric, Siemens Energy]
+    keywords: [변압기, HVDC, 초고압전력망, 전력기기, 리드타임, 구리수요, 수주잔고]
+    time_horizon: "2026~2028"
+    milestone: "주요 전력기기 제조사 수주잔고 2030년 물량 조기 마감"
+    related_theses: ["T-01", "T-13", "T-22"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-24"
+    title: "빅테크 커스텀 ASIC 증가와 DSP 생태계"
+    hypothesis: "빅테크의 자체 칩(TPU, Trainium, Maia 등) 개발 가속화로 파운드리와 팹리스를 잇는 디자인하우스(DSP)의 역할과 가치가 급상승한다"
+    direction: "bullish"
+    confidence: 75
+    priority: 3
+    status: "active"
+    related_companies: [에이직랜드, 가온칩스, 에이디테크놀로지, Alchip, GUC, TSMC]
+    keywords: [디자인하우스, DSP, ASIC, 턴키설계, 백엔드설계, VCA, OIP]
+    time_horizon: "2026~2027"
+    milestone: "국내 주요 DSP 기업의 3nm/2nm 글로벌 빅테크 수주 공식 공시"
+    related_theses: ["T-06", "T-15", "T-16"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-25"
+    title: "오픈소스 모델 고도화와 온프레미스 사설 AI"
+    hypothesis: "폐쇄형 프론티어 모델과 오픈소스(LLaMA 등) 모델 간 성능 격차가 축소되며 기업들이 데이터 주권을 위해 사설 인프라 투자를 늘린다"
+    direction: "bullish"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [Meta, Dell, HPE, 슈퍼마이크로, 삼성SDS, 오픈AI]
+    keywords: [오픈소스AI, LLaMA, 온프레미스, 프라이빗AI, 엔터프라이즈서버, RAG]
+    time_horizon: "2026~2027"
+    milestone: "포춘 500대 기업의 50% 이상이 자체 온프레미스/소버린 LLM 도입"
+    related_theses: ["T-04", "T-26"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-26"
+    title: "소버린 AI와 국가 단위 컴퓨트 인프라"
+    hypothesis: "데이터 주권과 안보를 위한 각국 정부 주도의 소버린 AI 인프라 구축이 새로운 GPU/데이터센터 수요처로 급부상한다"
+    direction: "bullish"
+    confidence: 75
+    priority: 3
+    status: "active"
+    related_companies: [NVIDIA, 네이버, 프랑스 Mistral, 중동 G42, SK텔레콤, KT]
+    keywords: [소버린AI, 데이터주권, 국가컴퓨팅, 국가LLM, 중동오일머니, 정부발주]
+    time_horizon: "2026~2027"
+    milestone: "중동/유럽/동남아 정부의 수조 원 단위 국가 AI 데이터센터 클러스터 발주"
+    related_theses: ["T-01", "T-25"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-27"
+    title: "AI 스마트 글래스와 경량 AR 광학계"
+    hypothesis: "디스플레이 없는 음성/비전 AI 스마트 안경(Ray-Ban 메타 등)의 성공이 차세대 경량 AR 글래스 및 마이크로 OLED 시장을 견인한다"
+    direction: "bullish"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [Meta, EssilorLuxottica, LG디스플레이, Sony, Apple]
+    keywords: [스마트글래스, AR안경, 마이크로OLED, OLEDoS, 웨어러블AI, 비전AI]
+    time_horizon: "2026~2028"
+    milestone: "글로벌 AI 스마트 안경 연간 출하량 1,000만 대 돌파"
+    related_theses: ["T-04", "T-19"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-28"
+    title: "3D DRAM 기술 전환과 400단 V-NAND"
+    hypothesis: "미세화 한계에 도달한 2D 평면 DRAM이 3D 적층 DRAM으로 전환을 시작하며 신소재 및 ALD 원자층 증착 장비 수요가 폭발한다"
+    direction: "bullish"
+    confidence: 65
+    priority: 3
+    status: "active"
+    related_companies: [삼성전자, SK하이닉스, 원익IPS, 주성엔지니어링, 유진테크, Applied Materials]
+    keywords: [3D DRAM, 400단NAND, ALD, 원자층증착, 하이K, 커패시터]
+    time_horizon: "2027~2029"
+    milestone: "주요 메모리사의 3D DRAM 테스트 칩 개발 및 공정 기술 로드맵 발표"
+    related_theses: ["T-02", "T-07"]
+    last_checked: null
+    notes: ""
+
+  - id: "T-29"
+    title: "초고속 AI 네트워킹 UEC vs 인피니밴드"
+    hypothesis: "엔비디아의 인피니밴드 독점에 맞서 브로드컴, 시스코, 빅테크 중심의 Ultra Ethernet Consortium(UEC)이 이더넷 기반 가성비 백본으로 역전한다"
+    direction: "neutral"
+    confidence: 70
+    priority: 3
+    status: "active"
+    related_companies: [Broadcom, Cisco, Arista Networks, NVIDIA, Marvell, 이수페타시스]
+    keywords: [UEC, UltraEthernet, 인피니밴드, RoCE, 800Gbps, AI백본, RoCEv2]
+    time_horizon: "2026~2027"
+    milestone: "UEC 1.0 표준 확정 및 하이퍼스케일러 상용 AI 클러스터 이더넷 전면 도입"
+    related_theses: ["T-01", "T-14"]
+    last_checked: null
+    notes: ""

@@ -1,0 +1,13 @@
+# ── Argus Pulse Crontab 스케줄 ─────────────────────────────
+# 08:00 아침 주제 추천 (알림 발송)
+0 8 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python topic_generator.py --auto >> logs/cron_topic.log 2>&1
+
+# 09:00~21:00 매시간 뉴스 모니터링 (80점 이상 즉시 알림)
+0 9-21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python hourly_monitor.py --once >> logs/cron_monitor.log 2>&1
+
+# 21:00 데일리 다이제스트 생성 (RAG 연동) 및 옵시디언 동기화
+0 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python daily_digest.py --rag >> logs/cron_digest.log 2>&1
+
+# 21:05 Active Thesis 가설 신뢰도 자동 점검
+5 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python thesis_checker.py >> logs/cron_checker.log 2>&1
+# ───────────────────────────────────────────────────────────
