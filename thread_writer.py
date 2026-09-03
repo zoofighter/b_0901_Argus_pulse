@@ -117,7 +117,7 @@ def make_slug(title: str) -> str:
     return slug[:40]
 
 
-def save_thread(lines: list[str], title: str, angle: str) -> Path:
+def save_thread(lines: list[str], title: str, angle: str, topic: dict = None) -> Path:
     today = date.today().isoformat()
     slug = make_slug(title)
     base = config.OUTPUT_DIR / "thread" / f"{today}-thread-{slug}-{angle}"
@@ -130,6 +130,26 @@ def save_thread(lines: list[str], title: str, angle: str) -> Path:
 
     content = f"---\ntitle: \"{title}\"\ndate: {today}\nangle: \"{angle}\"\nstatus: draft\n---\n\n"
     content += "\n".join(lines)
+
+    # 참고 자료 및 출처 섹션 자동 부착
+    if topic:
+        thesis_ids = topic.get("thesis_ids", [])
+        ref_lines = ["\n\n---\n\n## 📚 핵심 참고 자료 및 출처 (Data Sources & Links)"]
+        if thesis_ids:
+            ref_lines.append("### 1. 연계 투자 테제 (Thesis)")
+            for tid in thesis_ids:
+                t = load_thesis_by_id(tid)
+                if t:
+                    ref_lines.append(f"- `[[{tid} {t['title']}]]`: {t['hypothesis']}")
+                else:
+                    ref_lines.append(f"- `[[{tid}]]`")
+        
+        hook = topic.get("hook", "")
+        if hook:
+            ref_lines.append(f"\n### 2. 시장 트리거 & 데이터 소스\n- **분석 팩트**: {hook}")
+            
+        content += "\n".join(ref_lines)
+
     filepath.write_text(content, encoding="utf-8")
     return filepath
 
@@ -213,7 +233,7 @@ def generate_thread(topic: dict, angle: str, interactive: bool = True, use_rag: 
             print("  취소됨.")
             sys.exit(0)
 
-    filepath = save_thread(lines, topic.get("title", "thread"), angle)
+    filepath = save_thread(lines, topic.get("title", "thread"), angle, topic=topic)
     print(f"\n  ✅ 저장 완료: {filepath}")
 
     try:
