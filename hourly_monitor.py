@@ -60,9 +60,9 @@ def fetch_unprocessed_news(processed_ids: set[int], lookback_hours: int = 4) -> 
     rows = conn.execute("""
         SELECT id, company, ticker, title, snippet, score, source, published, collected_at
         FROM news
-        WHERE (collected_at >= ? OR published >= date('now', '-1 day'))
-        ORDER BY id DESC
-        LIMIT 100
+        WHERE collected_at >= ?
+        ORDER BY score DESC, id DESC
+        LIMIT 500
     """, (since,)).fetchall()
     conn.close()
 

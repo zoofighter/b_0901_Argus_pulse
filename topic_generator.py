@@ -284,11 +284,21 @@ def main():
     except Exception as e:
         pass
 
-    # ── Human in the Loop ──────────────────────────────────────────────────────
+    # ── Human in the Loop (대화형 환경에서만 실행) ─────────────────────────
+    if not sys.stdin.isatty():
+        print("\n✅ [배치 모드] 오늘의 주제 추천이 완료되어 저장 및 알림이 전송되었습니다.")
+        return
     print()
     print("━" * 60)
     print("번호 선택 + 포맷 (예: 1b=블로그, 1br=RAG심층블로그, 2t=스레드, 2tr=RAG심층스레드, s=건너뜀)")
-    choice = input("→ ").strip().lower()
+    try:
+        if not sys.stdin.isatty():
+            print("비대화형(Cron/스케줄러) 환경이므로 사용자 입력을 건너뜁니다.")
+            choice = "s"
+        else:
+            choice = input("→ ").strip().lower()
+    except (EOFError, KeyboardInterrupt):
+        choice = "s"
 
     if choice == "s" or not choice:
         print("건너뜀. 필요 시: python review_generator.py")
