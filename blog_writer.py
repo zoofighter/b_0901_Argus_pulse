@@ -50,14 +50,83 @@ def load_thesis_guide(thesis_ids: list[str]) -> str:
     return "\n\n".join(sections)
 
 
+# ── 뉴스 원문 및 링크 로드 ───────────────────────────────────────────────────
+
+def fetch_related_news(thesis_ids: list[str], title: str = "", limit: int = 5) -> list[dict]:
+    """DB에서 관련 고득점 뉴스 및 실제 URL 조회"""
+    if not config.NEWS_DB_PATH.exists():
+        return []
+    import sqlite3
+    from datetime import timedelta
+    conn = sqlite3.connect(config.NEWS_DB_PATH)
+    conn.row_factory = sqlite3.Row
+
+    keywords = []
+    for tid in thesis_ids:
+        t = load_thesis_by_id(tid)
+        if t:
+            keywords.extend(t.get("keywords", []))
+
+    since = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
+
+    rows = conn.execute("""
+        SELECT id, company, title, url, source, score, published
+        FROM news
+        WHERE published >= ? OR collected_at >= ?
+        ORDER BY score DESC, id DESC
+        LIMIT 100
+    """, (since, since)).fetchall()
+    conn.close()
+
+    results = []
+    for r in rows:
+        d = dict(r)
+        t_text = f"{d.get('company','')} {d.get('title','')}"
+        if any(kw in t_text for kw in keywords) or any(w in t_text for w in title.split() if len(w) >= 2):
+            results.append(d)
+        if len(results) >= limit:
+            break
+
+    if len(results) < limit:
+        for r in rows:
+            d = dict(r)
+            if d not in results:
+                results.append(d)
+            if len(results) >= limit:
+                break
+
+    return results
+
+
+def format_news_references(news_list: list[dict]) -> str:
+    """LLM 프롬프트에 주입할 뉴스 및 원문 URL 목록"""
+    if not news_list:
+        return ""
+    lines = [
+        "────────────────────────────────────────────────────────────",
+        "📰 [관련 뉴스 기사 및 공식 웹 출처 원문 링크]",
+        "참고 자료 및 출처 섹션에 아래 실제 기사 제목과 URL을 반드시 마크다운 링크 형태로 표기하세요.",
+        "────────────────────────────────────────────────────────────"
+    ]
+    for n in news_list:
+        comp = n.get("company") or n.get("source") or "뉴스"
+        title = n.get("title", "")
+        url = n.get("url", "")
+        pub = n.get("published", "")
+        score = n.get("score", 0)
+        lines.append(f"- [{comp}] {title} ({pub}, 점수:{score})\n  원문 링크: {url}")
+    return "\n".join(lines)
+
+
 # ── 프롬프트 구성 ──────────────────────────────────────────────────────────────
 
-def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_context: str = "", user_feedback: str = "") -> str:
+def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_context: str = "", news_context: str = "", user_feedback: str = "") -> str:
     outline = topic.get("outline", {})
     outline_str = "\n".join([f"  - {k}: {v}" for k, v in outline.items()])
     today = date.today().isoformat()
 
     rag_section = f"\n\n[증권사 리포트 및 심층 데이터]\n{rag_context}\n" if rag_context else ""
+    news_section = f"\n\n[뉴스 및 웹 원문 출처 데이터]\n{news_context}\n" if news_context else ""
     feedback_section = f"\n\n[사용자 특별 지침 및 윤곽 수정 사항]\n{user_feedback}\n위 지침을 반드시 본론 및 논점 전개에 최우선 반영하세요.\n" if user_feedback else ""
 
     return f"""당신은 테크/투자 전문 블로그 작가입니다.
@@ -72,7 +141,7 @@ def build_blog_prompt(topic: dict, thesis_guide: str, selected_title: str, rag_c
 {outline_str}
 {feedback_section}
 [Thesis 작성 가이드]
-{thesis_guide if thesis_guide else '(가이드 없음 — 기획안 기반으로 작성)'}{rag_section}
+{thesis_guide if thesis_guide else '(가이드 없음 — 기획안 기반으로 작성)'}{rag_section}{news_section}
 
 [양식 및 작성 규칙]
 1. 어조: 날카롭고 명료한 시니어 애널리스트 톤 (불필요한 미사여구 배제, 단호하고 통찰력 있는 분석)
@@ -157,9 +226,16 @@ reading_time: "4분"
 ---
 
 ## 📚 참고 자료 및 출처 (References)
-- **[증권사 리포트]**: 발행사, 리포트명, 일자 (원문 PDF 링크 또는 출처 기재)
-- **[뉴스 및 공시]**: 언론사/기관명, 기사 제목 및 일자
-- **[관련 테제 & 지식]**: [[관련 Thesis ID 및 제목]]
+
+### 📰 핵심 뉴스 및 웹 출처
+- [기사 제목](실제 URL) — 언론사/출처 (날짜)
+(반드시 위 [뉴스 및 웹 원문 출처 데이터]에 기재된 실제 기사 제목과 원문 URL을 마크다운 링크 형식으로 빠짐없이 기재)
+
+### 📊 증권사 리포트 & 데이터
+- 발행기관, 리포트명 (날짜)
+
+### 🔗 연관 투자 테제
+- [[관련 Thesis ID 및 제목]]
 ```
 
 [작성 시 자기 검토 후 제출]
@@ -167,7 +243,7 @@ reading_time: "4분"
 ✅ 문단 첫 머리에 핵심 문장이 볼드로 강조되었는가?
 ✅ 기본 금융 용어(CAPEX, ROIC 등)의 불필요한 괄호 설명이 생략되고 템포가 빠른가?
 ✅ 결론에 3대 인사이트와 다음 주목 이벤트가 있는가?
-✅ 문서 하단에 [참고 자료 및 출처(References)] 섹션에 증권사 리포트/뉴스/URL이 명확히 기재되었는가?
+✅ 문서 하단 [참고 자료 및 출처(References)] 섹션에 실제 뉴스 원문 URL 링크([제목](URL))가 명확히 기재되었는가?
 위 조건을 모두 충족하는 마크다운 초안만 출력하세요."""
 
 
@@ -355,8 +431,14 @@ def generate_blog(topic: dict, title_choice: str = None, interactive: bool = Tru
         except Exception as e:
             print(f"  ⚠️ RAG 검색 오류 (기본 모드로 대체): {e}")
 
+    # 관련 뉴스 원문 및 링크 조회
+    related_news = fetch_related_news(thesis_ids, selected_title, limit=5)
+    news_context = format_news_references(related_news)
+    if related_news:
+        print(f"  📰 관련 뉴스 원문 링크 {len(related_news)}건 확보 및 프롬프트 주입")
+
     # 프롬프트 구성 + LLM 호출
-    prompt = build_blog_prompt(topic, guide, selected_title, rag_context=rag_context, user_feedback=user_feedback)
+    prompt = build_blog_prompt(topic, guide, selected_title, rag_context=rag_context, news_context=news_context, user_feedback=user_feedback)
     print(f"  🤖 블로그 생성 중... ({config.GEMINI_MODEL})")
     content = call_gemini(prompt)
 
@@ -404,6 +486,7 @@ def main():
     grp = parser.add_mutually_exclusive_group(required=True)
     grp.add_argument("--topic",    type=str, help="주제 JSON 문자열 (topic_generator 출력)")
     grp.add_argument("--from-log", action="store_true", help="오늘의 topic 로그에서 선택")
+    parser.add_argument("--index",   type=int, default=None, help="주제 번호 (1부터 시작)")
     parser.add_argument("--outline", action="store_true", help="본문 작성 없이 1-Page 기획 윤곽서(Blueprint)만 생성")
     parser.add_argument("--rag",    action="store_true", help="증권사 리포트 및 지식 DB RAG 심층 검색 활용")
     parser.add_argument("--critic", action="store_true", help="Critic 에이전트 자가 품질 검수 및 자동 보완 실행")
@@ -421,7 +504,14 @@ def main():
         print(f"\n📋 오늘의 주제 ({log_path.name}):")
         for i, t in enumerate(topics, 1):
             print(f"  [{i}] {t['title']}")
-        idx = int(input("번호 선택: ").strip()) - 1
+
+        if args.index:
+            idx = args.index - 1
+        elif args.auto or not sys.stdin.isatty():
+            idx = 0
+            print(f"  자동 선택 (1순위): {topics[idx]['title']}")
+        else:
+            idx = int(input("번호 선택: ").strip()) - 1
         topic = topics[idx]
     else:
         topic = json.loads(args.topic)
