@@ -1,17 +1,32 @@
 ---
 id: T-25
 title: 오픈소스 모델 고도화와 온프레미스 사설 AI
-hypothesis: 폐쇄형 프론티어 모델과 오픈소스(LLaMA 등) 모델 간 성능 격차가 축소되며 기업들이 데이터 주권을 위해 사설 인프라 투자를 늘린다
+hypothesis: 폐쇄형 프론티어 모델과 오픈소스(LLaMA 등) 모델 간 성능 격차가 축소되며 기업들이 데이터 주권을 위해 사설 인프라 투자를
+  늘린다
 direction: bullish
-confidence: 70
+confidence: 60
 priority: 3
 status: active
-related_companies: [Meta, Dell, HPE, 슈퍼마이크로, 삼성SDS, 오픈AI]
-keywords: [오픈소스AI, LLaMA, 온프레미스, 프라이빗AI, 엔터프라이즈서버, RAG]
+related_companies:
+- Meta
+- Dell
+- HPE
+- 슈퍼마이크로
+- 삼성SDS
+- 오픈AI
+keywords:
+- 오픈소스AI
+- LLaMA
+- 온프레미스
+- 프라이빗AI
+- 엔터프라이즈서버
+- RAG
 time_horizon: 2026~2027
 milestone: 포춘 500대 기업의 50% 이상이 자체 온프레미스/소버린 LLM 도입
-last_checked: null
-related_theses: [T-04, T-26]
+last_checked: 2026-09-04T21:13
+related_theses:
+- T-04
+- T-26
 ---
 
 # T-25 오픈소스 모델 고도화와 온프레미스 사설 AI
@@ -22,6 +37,9 @@ related_theses: [T-04, T-26]
 ## 지지 근거
 
 ## 반박 근거
+- 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 -53.5% 급락으로 AI 설비 롱 포지션 손실이 발생하고 아마존 등 고정단가 대형 계약의 원가 전가 불가 및 AI 투자 과열/수익성 압박 우려가 부각됨
+- 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락 속 AI 설비주 급락과 아마존 고정단가 계약의 원가 전가 불가로 AI 인프라 투자의 수익성·지속성에 대한 회의론 부각
+- 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락 및 AI 설비주 하락과 아마존 고정단가 계약의 원가 전가 불가, 경쟁 과열에 기인한 투자라는 지적 등 AI 인프라 투자 수요 둔화 및 수익성 리스크 부각
 
 ## 관련 블로그
 

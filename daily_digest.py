@@ -54,7 +54,7 @@ def group_news_by_thesis(news_list: list[dict], kmap: dict) -> dict:
 
         matched_theses = []
         for tid, keywords in kmap.items():
-            if any(kw in text for kw in keywords):
+            if any(str(kw) in text for kw in keywords):
                 matched_theses.append(tid)
 
         for tid in matched_theses:

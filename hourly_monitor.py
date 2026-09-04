@@ -79,7 +79,7 @@ def match_theses(title: str, snippet: str, keyword_map: dict) -> list[str]:
     text = f"{title} {snippet or ''}"
     matched = []
     for tid, keywords in keyword_map.items():
-        if any(kw in text for kw in keywords):
+        if any(str(kw) in text for kw in keywords):
             matched.append(tid)
     return matched
 

@@ -55,7 +55,7 @@ def fetch_recent_news_for_thesis(keywords: list[str], days: int = 7) -> list[dic
     matched = []
     for r in rows:
         text = f"{r['title']} {r['snippet'] or ''}"
-        if any(kw in text for kw in keywords):
+        if any(str(kw) in text for kw in keywords):
             matched.append(dict(r))
     return matched[:8]
 

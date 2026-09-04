@@ -1,17 +1,33 @@
 ---
 id: T-37
 title: AI 버블 가능성
-hypothesis: 빅테크의 AI CAPEX가 실제 수익화 속도를 초과하고 있으며, ROI 검증 실패 시 2026~2027년 AI 인프라 투자 급감과 반도체 주가 급락이 발생할 수 있다
+hypothesis: 빅테크의 AI CAPEX가 실제 수익화 속도를 초과하고 있으며, ROI 검증 실패 시 2026~2027년 AI 인프라 투자 급감과
+  반도체 주가 급락이 발생할 수 있다
 direction: bearish
-confidence: 42
+confidence: 44
 priority: 5
 status: active
-related_companies: [NVIDIA, Microsoft, Amazon, Alphabet, Meta]
-keywords: [AI버블, CAPEX과잉, ROI미달, AI수익화, 밸류에이션, 닷컴버블, 인프라과잉]
+related_companies:
+- NVIDIA
+- Microsoft
+- Amazon
+- Alphabet
+- Meta
+keywords:
+- AI버블
+- CAPEX과잉
+- ROI미달
+- AI수익화
+- 밸류에이션
+- 닷컴버블
+- 인프라과잉
 time_horizon: 2026~2027
 milestone: 빅테크 2곳 이상 AI CAPEX 삭감 발표 또는 AI 서비스 구독 해지율 급증 공시
-last_checked: null
-related_theses: [T-05, T-08, T-09]
+last_checked: 2026-09-04T10:01
+related_theses:
+- T-05
+- T-08
+- T-09
 ---
 
 # T-17 AI 버블 가능성
@@ -34,9 +50,13 @@ ROI 검증 실패 시 2026~2027년 AI 인프라 투자 급감과 반도체 주�
 | 붕괴 트리거 | 이익 미달 실적 | CAPEX 삭감 발표 |
 
 ## 지지 근거
+- 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달간 53.5% 급락 및 AI 설비주 하락·레버리지 청산 언급과 AI 데이터센터 전력망 부담에 따른 규제 리스크 부상은 AI 인프라 과열 조정 신호로 작용
+- 2026-09-04: AI 데이터센터 전력망 부담에 따른 인허가 규제 리스크 부상과 수익성 위주 CAPEX 선별 집행 전환, 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락에 따른 레버리지 청산 취약성이 인프라 투자 둔화 우려를 부분적으로 뒷받침함.
 <!-- 시스템이 자동으로 채워주거나 사용자가 직접 메모 -->
 
 ## 반박 근거
+- 2026-09-04: 애널리스트 뷰에서 무차별 증설이 아닌 수익성 위주 선별적 CAPEX 집행이 진행 중이며 국내 기판 3사의 생산능력 확대가 지속된다고 명시해 무차별 과잉투자 후 급감 시나리오를 약화
+- 2026-09-04: 생산능력 확대가 지속되고 이수페타시스·삼성전기·대덕전자 등 AI 서버 기판 기업이 대표 수혜주로 여전히 제시되며 무차별 증설이 아닌 선별 집행으로 급격한 투자 절벽·반도체 급락 시나리오의 직접 증거는 없음.
 <!-- 가설에 반하는 뉴스/데이터 -->
 
 ## 관련 블로그

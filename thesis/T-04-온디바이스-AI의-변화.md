@@ -3,14 +3,28 @@ id: T-04
 title: 온디바이스 AI의 변화
 hypothesis: 45 TOPS NPU 기반 온디바이스 AI가 클라우드 의존을 줄이고 행동형 에이전트 시대를 연다
 direction: bullish
-confidence: 70
+confidence: 65
 priority: 4
 status: active
-related_companies: [Apple, 삼성전자, Qualcomm, MediaTek, Google]
-keywords: [NPU, TOPS, 온디바이스, EdgeAI, AppleIntelligence, GalaxyAI, GeminiNano, 행동형에이전트, 온디바이스LLM]
+related_companies:
+- Apple
+- 삼성전자
+- Qualcomm
+- MediaTek
+- Google
+keywords:
+- NPU
+- TOPS
+- 온디바이스
+- EdgeAI
+- AppleIntelligence
+- GalaxyAI
+- GeminiNano
+- 행동형에이전트
+- 온디바이스LLM
 time_horizon: 2026~2027
 milestone: Apple Intelligence 킬러 유스케이스 대중화 또는 온디바이스 에이전트 앱 출시
-last_checked: null
+last_checked: 2026-09-04T09:51
 related_theses: []
 ---
 
@@ -23,6 +37,9 @@ related_theses: []
 ## 지지 근거
 
 ## 반박 근거
+- 2026-09-04: 증권사 리포트 3건 모두 GPU/HBM 기반 AI 가속기와 AI 서버 기판 등 클라우드 인프라 수혜에만 집중하고 45 TOPS NPU·온디바이스 에이전트 관련 신규 수치나 확산 사례를 전혀 언급하지 않음
+- 2026-09-04: 증권사 리포트 3건 모두 삼성전기·이수페타시스 등 AI 서버 기판과 GPU/HBM 등 클라우드 인프라 가속기에만 집중하고 45 TOPS NPU나 온디바이스 에이전트 관련 신규 팩트·수치가 전무하며 모건스탠리 모멘텀 TMT 지수가 한 달간 53.5% 급락해 AI 하드웨어 모멘텀 붕괴 리스크가 부각됨
+- 2026-09-04: 증권사 리포트 3건 모두 GPU/HBM 및 AI 서버 기판 등 클라우드 인프라 수혜만 강조하고 45 TOPS NPU·온디바이스 에이전트 관련 신규 팩트 전무, 모건스탠리 모멘텀 TMT 지수 한 달 -53.5% 급락으로 고밸류 기술주 투자심리 악화 시사
 
 ## 관련 블로그
 

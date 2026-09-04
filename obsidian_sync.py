@@ -71,7 +71,7 @@ def sync_all_outputs() -> dict:
         print(f"  ❌ 옵시디언 볼트 경로가 존재하지 않습니다: {vault}")
         return {}
 
-    counts = {"blog": 0, "thread": 0, "digest": 0, "review": 0}
+    counts = {"blog": 0, "thread": 0, "outline": 0, "digest": 0, "review": 0}
 
     for cat in counts.keys():
         src_dir = config.OUTPUT_DIR / cat
