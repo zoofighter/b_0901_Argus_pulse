@@ -5,6 +5,12 @@
 # 09:00~21:00 매시간 뉴스 모니터링 (80점 이상 즉시 알림)
 0 9-21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python hourly_monitor.py --once >> logs/cron_monitor.log 2>&1
 
+# 13:00 오후 블로그 사후 검증 리뷰 (RAG 연동) 및 옵시디언 동기화
+0 13 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python review_generator.py --rag >> logs/cron_review.log 2>&1
+
+# 13:05 오후 신규 주제 추천 (오전~점심 핫 뉴스 기반)
+5 13 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python topic_generator.py --auto >> logs/cron_topic.log 2>&1
+
 # 21:00 데일리 다이제스트 생성 (RAG 연동) 및 옵시디언 동기화
 0 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python daily_digest.py --rag >> logs/cron_digest.log 2>&1
 

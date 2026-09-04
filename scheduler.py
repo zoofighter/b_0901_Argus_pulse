@@ -57,11 +57,14 @@ def scheduler_loop():
     log("🦅 Argus Pulse 자동화 스케줄러를 시작합니다.")
     log("   - 08:00 : 아침 블로그 주제 추천 및 알림")
     log("   - 09:00~21:00 (매 정각) : 뉴스 감시 및 80점+ 즉시 알림")
+    log("   - 13:00 : 오후 블로그 사후 검증 리뷰 (RAG 연동)")
+    log("   - 13:05 : 오후 신규 주제 추천 (오전~점심 핫 뉴스 기반)")
     log("   - 21:00 : 일일 다이제스트 생성 및 옵시디언 동기화")
     log("   (종료하려면 Ctrl+C 를 누르세요)\n")
 
     last_hourly_hour = -1
     last_topic_date = ""
+    last_midday_date = ""
     last_digest_date = ""
 
     while True:
@@ -83,7 +86,15 @@ def scheduler_loop():
                 run_job("hourly_monitor.py", ["--once"])
                 last_hourly_hour = hour
 
-            # 3. 21:00 데일리 다이제스트 (하루 1회) + Thesis 자동 점검
+            # 3. 13:00 오후 사후 검증 리뷰 및 13:05 오후 주제 추천 (하루 1회)
+            if hour == 13 and minute == 0 and last_midday_date != today_str:
+                log("🔍 [13:00] 오후 과거 블로그 사후 검증 리뷰 시작 (RAG 연동)")
+                run_job("review_generator.py", ["--rag"])
+                log("🌅 [13:05] 오후 신규 주제 추천 시작")
+                run_job("topic_generator.py", ["--auto", "--n", "3"])
+                last_midday_date = today_str
+
+            # 4. 21:00 데일리 다이제스트 (하루 1회) + Thesis 자동 점검
             if hour == 21 and minute == 0 and last_digest_date != today_str:
                 log("📊 [21:00] 데일리 다이제스트 생성 시작 (RAG 연동)")
                 run_job("daily_digest.py", ["--rag"])
