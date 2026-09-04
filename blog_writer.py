@@ -296,6 +296,16 @@ def save_outline_file(topic: dict, title: str) -> Path:
 
     outline = topic.get("outline", {})
     variants = topic.get("title_variants", {})
+    thesis_ids = topic.get("thesis_ids", [])
+
+    # 관련 뉴스 원문 링크 조회
+    related_news = fetch_related_news(thesis_ids, title, limit=4)
+    news_links_lines = []
+    if related_news:
+        for n in related_news:
+            comp = n.get("company") or n.get("source") or "뉴스"
+            news_links_lines.append(f"- [{comp}] [{n.get('title')}]({n.get('url')}) ({n.get('published')}, {n.get('score')}점)")
+    news_section = "\n".join(news_links_lines) if news_links_lines else "- (관련 뉴스 링크 없음)"
 
     content = f"""---
 title: "{title}"
@@ -334,8 +344,20 @@ status: draft
 - [ ] 본론 내 비교 표(Table) 구상 (기업/기술 대조)
 - [ ] 핵심 수치 데이터 박스 배치
 - [ ] 증권사 리포트 / 공식 출처 각주 확보
+
+---
+
+## 4. 📰 핵심 뉴스 및 원문 링크
+{news_section}
 """
     filepath.write_text(content, encoding="utf-8")
+
+    try:
+        from obsidian_sync import sync_file
+        sync_file(filepath, "outline")
+    except Exception:
+        pass
+
     return filepath
 
 
@@ -432,13 +454,19 @@ def generate_blog(topic: dict, title_choice: str = None, interactive: bool = Tru
             print(f"  ⚠️ RAG 검색 오류 (기본 모드로 대체): {e}")
 
     # 관련 뉴스 원문 및 링크 조회
+    # 관련 뉴스 및 원문 링크 조회
     related_news = fetch_related_news(thesis_ids, selected_title, limit=5)
     news_context = format_news_references(related_news)
     if related_news:
         print(f"  📰 관련 뉴스 원문 링크 {len(related_news)}건 확보 및 프롬프트 주입")
 
     # 프롬프트 구성 + LLM 호출
-    prompt = build_blog_prompt(topic, guide, selected_title, rag_context=rag_context, news_context=news_context, user_feedback=user_feedback)
+    prompt = build_blog_prompt(
+        topic, guide, selected_title,
+        rag_context=rag_context,
+        news_context=news_context,
+        user_feedback=user_feedback
+    )
     print(f"  🤖 블로그 생성 중... ({config.GEMINI_MODEL})")
     content = call_gemini(prompt)
 
