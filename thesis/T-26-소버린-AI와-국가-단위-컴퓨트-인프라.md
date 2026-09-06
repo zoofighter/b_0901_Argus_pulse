@@ -1,18 +1,8 @@
 ---
-id: T-26
-title: 소버린 AI와 국가 단위 컴퓨트 인프라
-hypothesis: 데이터 주권과 안보를 위한 각국 정부 주도의 소버린 AI 인프라 구축이 새로운 GPU/데이터센터 수요처로 급부상한다
-direction: bullish
 confidence: 75
-priority: 3
-status: active
-related_companies:
-- NVIDIA
-- 네이버
-- 프랑스 Mistral
-- 중동 G42
-- SK텔레콤
-- KT
+direction: bullish
+hypothesis: 데이터 주권과 안보를 위한 각국 정부 주도의 소버린 AI 인프라 구축이 새로운 GPU/데이터센터 수요처로 급부상한다
+id: T-26
 keywords:
 - 소버린AI
 - 데이터주권
@@ -20,12 +10,26 @@ keywords:
 - 국가LLM
 - 중동오일머니
 - 정부발주
-time_horizon: 2026~2027
-milestone: 중동/유럽/동남아 정부의 수조 원 단위 국가 AI 데이터센터 클러스터 발주
 last_checked: null
+last_ranked: 2026-09-05T21:12
+milestone: 중동/유럽/동남아 정부의 수조 원 단위 국가 AI 데이터센터 클러스터 발주
+momentum: 45.0
+news_count: 0
+priority: 3
+rank: 28
+related_companies:
+- NVIDIA
+- 네이버
+- 프랑스 Mistral
+- 중동 G42
+- SK텔레콤
+- KT
 related_theses:
 - T-01
 - T-25
+status: active
+time_horizon: 2026~2027
+title: 소버린 AI와 국가 단위 컴퓨트 인프라
 ---
 
 # T-26 소버린 AI와 국가 단위 컴퓨트 인프라

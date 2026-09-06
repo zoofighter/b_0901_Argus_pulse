@@ -1,17 +1,36 @@
 ---
-id: T-36
-title: 중국 반도체의 HBM 생산 가능성
-hypothesis: 수출통제 우회와 자체 기술 개발을 통해 중국이 2027~2028년 내 HBM3E 수준의 양산 능력을 확보하며, 이는 SK하이닉스·삼성의 점유율과 ASP에 하방 압력을 가한다
-direction: bearish
 confidence: 40
-priority: 4
-status: watch
-related_companies: [SK하이닉스, 삼성전자, CXMT, 화웨이, YMTC]
-keywords: [중국HBM, CXMT, 수출통제우회, TSV, HBM3E, 메모리국산화, 화웨이반도체]
-time_horizon: 2027~2029
-milestone: CXMT 또는 화웨이 계열사의 HBM3 수준 샘플 공식 확인 또는 중국산 HBM 탑재 AI칩 등장
+direction: bearish
+hypothesis: 수출통제 우회와 자체 기술 개발을 통해 중국이 2027~2028년 내 HBM3E 수준의 양산 능력을 확보하며, 이는 SK하이닉스·삼성의
+  점유율과 ASP에 하방 압력을 가한다
+id: T-36
+keywords:
+- 중국HBM
+- CXMT
+- 수출통제우회
+- TSV
+- HBM3E
+- 메모리국산화
+- 화웨이반도체
 last_checked: null
-related_theses: [T-02, T-15]
+last_ranked: 2026-09-05T21:12
+milestone: CXMT 또는 화웨이 계열사의 HBM3 수준 샘플 공식 확인 또는 중국산 HBM 탑재 AI칩 등장
+momentum: 2776.0
+news_count: 34
+priority: 4
+rank: 5
+related_companies:
+- SK하이닉스
+- 삼성전자
+- CXMT
+- 화웨이
+- YMTC
+related_theses:
+- T-02
+- T-15
+status: watch
+time_horizon: 2027~2029
+title: 중국 반도체의 HBM 생산 가능성
 ---
 
 # T-16 중국 반도체의 HBM 생산 가능성

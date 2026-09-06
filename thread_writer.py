@@ -257,6 +257,7 @@ def main():
     grp = parser.add_mutually_exclusive_group(required=True)
     grp.add_argument("--topic",    type=str, help="주제 JSON 문자열")
     grp.add_argument("--from-log", action="store_true", help="오늘의 topic 로그에서 선택")
+    parser.add_argument("--index", type=int, default=None, help="주제 번호 (1부터 시작)")
     parser.add_argument("--angle", type=str, choices=["A", "B", "C"],
                         help="각도 선택 (없으면 대화형 선택)")
     parser.add_argument("--rag",   action="store_true", help="증권사 리포트 및 지식 DB RAG 심층 검색 활용")
@@ -272,10 +273,17 @@ def main():
             sys.exit(1)
         data = json.loads(log_path.read_text(encoding="utf-8"))
         topics = data["topics"]
-        print(f"\n📋 오늘의 주제:")
+        print(f"\n📋 오늘의 주제 ({log_path.name}):")
         for i, t in enumerate(topics, 1):
             print(f"  [{i}] {t['title']}")
-        idx = int(input("번호 선택: ").strip()) - 1
+        
+        if args.index:
+            idx = args.index - 1
+        elif args.auto or not sys.stdin.isatty():
+            idx = 0
+            print(f"  자동 선택 (1순위): {topics[idx]['title']}")
+        else:
+            idx = int(input("번호 선택: ").strip()) - 1
         topic = topics[idx]
     else:
         topic = json.loads(args.topic)

@@ -1,18 +1,9 @@
 ---
-id: T-30
-title: 피지컬 AI와 로봇의 상용화
+confidence: 52
+direction: bullish
 hypothesis: AI가 데이터센터를 벗어나 물리 세계로 나오는 원년이 2026년이며, 휴머노이드 로봇의 공장·물류 실배치가 온디바이스 AI·배터리·센서
   수요를 구조적으로 끌어올린다
-direction: bullish
-confidence: 62
-priority: 4
-status: active
-related_companies:
-- Tesla
-- 현대차
-- 레인보우로보틱스
-- HD현대
-- Figure
+id: T-30
 keywords:
 - 휴머노이드
 - 피지컬AI
@@ -21,12 +12,25 @@ keywords:
 - AMR
 - 로봇배터리
 - 액추에이터
-time_horizon: 2026~2028
+last_checked: 2026-09-05T21:10
+last_ranked: 2026-09-05T21:12
 milestone: Tesla Optimus 연간 1만대 이상 출하 공식 확인 또는 국내 대형 제조사 로봇 파일럿 계약
-last_checked: 2026-09-04T09:59
+momentum: 312.0
+news_count: 4
+priority: 4
+rank: 10
+related_companies:
+- Tesla
+- 현대차
+- 레인보우로보틱스
+- HD현대
+- Figure
 related_theses:
 - T-03
 - T-04
+status: active
+time_horizon: 2026~2028
+title: 피지컬 AI와 로봇의 상용화
 ---
 
 # T-10 피지컬 AI와 로봇의 상용화
@@ -39,6 +43,8 @@ Humanoid 로봇이 공장·물류에 실제 배치되면서 **온디바이스 AI
 <!-- 시스템이 자동으로 채워주거나 사용자가 직접 메모 -->
 
 ## 반박 근거
+- 2026-09-05: 모건스탠리 모멘텀 TMT 지수 한 달간 53.5% 급락 등 AI 설비 롱/소프트웨어 숏 포지션의 동시 손실 발생과 AI capex가 견조한 수요가 아닌 경쟁 탈락 압박에 기인한다는 지적, 아마존 고정단가 계약으로 인한 원가 전가 불가 리스크가 부각됨
+- 2026-09-04: 모건스탠리 모멘텀 TMT 지수가 한 달에 53.5% 급락하고 AI CAPEX가 수요 강세가 아닌 경쟁 압박 때문이며 아마존 등 고정단가 계약으로 원가 전가가 불가하다는 지적
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락으로 AI 설비 롱·소프트웨어 숏 동시 손실 및 레버리지 청산 리스크가 부각되고 대규모 AI 투자가 견조한 수요가 아닌 경쟁 과열 신호라는 지적이 제기됨
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락으로 AI 설비 롱 포지션 손실 및 AI 투자가 견조한 수요가 아닌 경쟁 압박에 의한 것이란 지적이 제기됨
 <!-- 가설에 반하는 뉴스/데이터 -->

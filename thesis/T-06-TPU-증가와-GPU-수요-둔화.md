@@ -1,18 +1,8 @@
 ---
-id: T-06
-title: TPU 증가와 GPU 수요 둔화
-hypothesis: 추론 시대 진입으로 TPU·커스텀ASIC이 NVIDIA GPU를 대체하며 GPU 수요 증가세가 꺾인다
+confidence: 40
 direction: bearish
-confidence: 43
-priority: 4
-status: active
-related_companies:
-- NVIDIA
-- Google
-- AMD
-- Cerebras
-- Groq
-- Intel
+hypothesis: 추론 시대 진입으로 TPU·커스텀ASIC이 NVIDIA GPU를 대체하며 GPU 수요 증가세가 꺾인다
+id: T-06
 keywords:
 - TPU
 - CUDA
@@ -23,11 +13,25 @@ keywords:
 - 학습vs추론
 - CUDAwall
 - TPUv6
-time_horizon: 2026~2028
+last_checked: 2026-09-05T21:05
+last_ranked: 2026-09-05T21:12
 milestone: 구글 TPU 외부 판매 개시 또는 NVIDIA 실적에서 추론용 GPU 비중 공개
-last_checked: 2026-09-04T21:07
+momentum: 48.0
+news_count: 0
+priority: 4
+rank: 26
+related_companies:
+- NVIDIA
+- Google
+- AMD
+- Cerebras
+- Groq
+- Intel
 related_theses:
 - T-08
+status: active
+time_horizon: 2026~2028
+title: TPU 증가와 GPU 수요 둔화
 ---
 
 # T-06 TPU 증가와 GPU 수요 둔화
@@ -39,6 +43,7 @@ AI가 학습(Training)에서 추론(Inference) 중심으로 전환되면서, **T
 ## 지지 근거
 
 ## 반박 근거
+- 2026-09-05: 서버용 CPU/GPU에 탑재되는 고부가 기판의 수급이 타이트할 정도로 GPU 수요가 여전히 양호하다는 분석이 제시되었습니다.
 - 2026-09-04: 증권사 리포트들이 GPU·HBM을 생성형AI 핵심 가속기로 규정하고 서버용 CPU/GPU용 고부가 패키지 기판(FC-BGA) 수급이 타이트할 정도로 수요가 양호하다고 명시해 GPU 수요 둔화 전제와 상충함
 - 2026-09-04: 증권사 리포트들이 GPU·HBM을 생성형AI 가속기의 핵심 요소로 재확인하고 서버용 CPU/GPU용 고부가 기판 수요/공급이 타이트할 정도로 수요가 양호하다고 언급
 - 2026-09-04: 증권사 리포트가 AI 가속기의 핵심 요소를 GPU·HBM으로 규정하고 서버용 CPU/GPU용 FC-BGA 등 고부가 기판의 수급 타이트 및 수요 양호를 언급하여 GPU 수요가 여전히 견조함을 시사함

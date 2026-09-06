@@ -1,18 +1,9 @@
 ---
-id: T-31
-title: AI 소프트웨어 레이어의 과점화
+confidence: 51
+direction: bullish
 hypothesis: AI 인프라 투자의 최종 수혜는 칩이 아닌 소프트웨어(모델·플랫폼·에이전트)로 이전되며, OpenAI·Anthropic·Google의
   API 과점이 SaaS 기업 마진을 구조적으로 압박한다
-direction: bullish
-confidence: 65
-priority: 3
-status: active
-related_companies:
-- Microsoft
-- Salesforce
-- ServiceNow
-- OpenAI
-- Anthropic
+id: T-31
 keywords:
 - LLM API
 - AI에이전트
@@ -21,12 +12,25 @@ keywords:
 - 구독모델
 - Copilot
 - Claude
-time_horizon: 2026~2027
+last_checked: 2026-09-05T21:11
+last_ranked: 2026-09-05T21:12
 milestone: OpenAI 또는 Anthropic의 기업용 ARR 100억달러 돌파 공식 확인
-last_checked: 2026-09-04T09:59
+momentum: 279.2
+news_count: 4
+priority: 3
+rank: 11
+related_companies:
+- Microsoft
+- Salesforce
+- ServiceNow
+- OpenAI
+- Anthropic
 related_theses:
 - T-06
 - T-08
+status: active
+time_horizon: 2026~2027
+title: AI 소프트웨어 레이어의 과점화
 ---
 
 # T-11 AI 소프트웨어 레이어의 과점화
@@ -39,6 +43,8 @@ OpenAI·Anthropic·Google의 API 과점이 강화되는 동시에, 기업용 AI 
 <!-- 시스템이 자동으로 채워주거나 사용자가 직접 메모 -->
 
 ## 반박 근거
+- 2026-09-05: 증권사 리포트에서 AI 인프라 투자가 수요 강세가 아닌 경쟁 압박의 증거로 해석되고 아마존의 고정단가 계약으로 원가 전가가 불가하며 이수페타시스·삼성전기 등 기판 기업이 여전히 AI 서버 대표 수혜주로 제시되어 소프트웨어로의 수혜 이전을 입증할 신규 근거 부재
+- 2026-09-04: 증권사 리포트에서 AI 수혜를 기판 기업(이수페타시스·삼성전기·대덕전자) 등 하드웨어 공급망으로 한정하고, 아마존 등 하이퍼스케일러의 고정단가 계약으로 원가 전가 불가 및 경쟁적 과잉투자를 지적하며, 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락으로 롱 인프라/숏 소프트웨어 크라우딩 청산을 시사함
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락 속 AI 설비 롱과 소프트웨어 숏 포지션 동시 손실 및 국내 리포트가 이수페타시스·삼성전기 등 기판을 AI 서버 대표 수혜주로 지목하고 아마존 고정단가 계약의 원가 전가 불가와 경쟁 과열에 따른 과잉투자 가능성을 지적한 점은 소프트웨어 과점의 안정적 렌트를 전제하는 가설을 위협함
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락으로 AI 인프라 롱·소프트웨어 숏 포지션이 동시 손실되고, 증권사 리포트가 이수페타시스·삼성전기·대덕전자 등 AI 서버 기판 하드웨어를 대표 수혜로 지목하며 아마존의 고정단가 계약 원가 전가 불가를 지적해 소프트웨어 최종 수혜 가설과 배치되는 흐름이 관측됨
 <!-- 가설에 반하는 뉴스/데이터 -->

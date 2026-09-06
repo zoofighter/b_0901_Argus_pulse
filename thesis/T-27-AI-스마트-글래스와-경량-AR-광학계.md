@@ -1,17 +1,35 @@
 ---
-id: T-27
-title: AI 스마트 글래스와 경량 AR 광학계
-hypothesis: 디스플레이 없는 음성/비전 AI 스마트 안경(Ray-Ban 메타 등)의 성공이 차세대 경량 AR 글래스 및 마이크로 OLED 시장을 견인한다
-direction: bullish
 confidence: 70
-priority: 3
-status: active
-related_companies: [Meta, EssilorLuxottica, LG디스플레이, Sony, Apple]
-keywords: [스마트글래스, AR안경, 마이크로OLED, OLEDoS, 웨어러블AI, 비전AI]
-time_horizon: 2026~2028
-milestone: 글로벌 AI 스마트 안경 연간 출하량 1,000만 대 돌파
+direction: bullish
+hypothesis: 디스플레이 없는 음성/비전 AI 스마트 안경(Ray-Ban 메타 등)의 성공이 차세대 경량 AR 글래스 및 마이크로 OLED
+  시장을 견인한다
+id: T-27
+keywords:
+- 스마트글래스
+- AR안경
+- 마이크로OLED
+- OLEDoS
+- 웨어러블AI
+- 비전AI
 last_checked: null
-related_theses: [T-04, T-19]
+last_ranked: 2026-09-05T21:12
+milestone: 글로벌 AI 스마트 안경 연간 출하량 1,000만 대 돌파
+momentum: 44.0
+news_count: 0
+priority: 3
+rank: 30
+related_companies:
+- Meta
+- EssilorLuxottica
+- LG디스플레이
+- Sony
+- Apple
+related_theses:
+- T-04
+- T-19
+status: active
+time_horizon: 2026~2028
+title: AI 스마트 글래스와 경량 AR 광학계
 ---
 
 # T-27 AI 스마트 글래스와 경량 AR 광학계

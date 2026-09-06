@@ -1,17 +1,38 @@
 ---
-id: T-24
-title: 빅테크 커스텀 ASIC 증가와 DSP 생태계
-hypothesis: 빅테크의 자체 칩(TPU, Trainium, Maia 등) 개발 가속화로 파운드리와 팹리스를 잇는 디자인하우스(DSP)의 역할과 가치가 급상승한다
-direction: bullish
 confidence: 75
-priority: 3
-status: active
-related_companies: [에이직랜드, 가온칩스, 에이디테크놀로지, Alchip, GUC, TSMC]
-keywords: [디자인하우스, DSP, ASIC, 턴키설계, 백엔드설계, VCA, OIP]
-time_horizon: 2026~2027
-milestone: 국내 주요 DSP 기업의 3nm/2nm 글로벌 빅테크 수주 공식 공시
+direction: bullish
+hypothesis: 빅테크의 자체 칩(TPU, Trainium, Maia 등) 개발 가속화로 파운드리와 팹리스를 잇는 디자인하우스(DSP)의 역할과
+  가치가 급상승한다
+id: T-24
+keywords:
+- 디자인하우스
+- DSP
+- ASIC
+- 턴키설계
+- 백엔드설계
+- VCA
+- OIP
 last_checked: null
-related_theses: [T-06, T-15, T-16]
+last_ranked: 2026-09-05T21:12
+milestone: 국내 주요 DSP 기업의 3nm/2nm 글로벌 빅테크 수주 공식 공시
+momentum: 45.0
+news_count: 0
+priority: 3
+rank: 27
+related_companies:
+- 에이직랜드
+- 가온칩스
+- 에이디테크놀로지
+- Alchip
+- GUC
+- TSMC
+related_theses:
+- T-06
+- T-15
+- T-16
+status: active
+time_horizon: 2026~2027
+title: 빅테크 커스텀 ASIC 증가와 DSP 생태계
 ---
 
 # T-24 빅테크 커스텀 ASIC 증가와 DSP 생태계

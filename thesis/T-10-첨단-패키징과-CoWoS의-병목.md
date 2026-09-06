@@ -1,17 +1,39 @@
 ---
-id: T-10
-title: 첨단 패키징과 CoWoS의 병목
-hypothesis: 차세대 AI 가속기의 출하량 한계는 웨이퍼 팹이 아닌 CoWoS 및 2.5D/3D 첨단 패키징 캐파가 결정한다
-direction: bullish
 confidence: 80
-priority: 4
-status: active
-related_companies: [TSMC, ASE, Amkor, 삼성전자, SK하이닉스, SKC, 인텔]
-keywords: [CoWoS, 첨단패키징, 2.5D, 3D패키징, 인터포저, 유리기판, FOPLP, 팬아웃]
-time_horizon: 2026~2027
-milestone: 주요 OSAT 기업의 첨단 패키징 캐파 2배 증설 및 유리기판 파일럿 라인 가동
+direction: bullish
+hypothesis: 차세대 AI 가속기의 출하량 한계는 웨이퍼 팹이 아닌 CoWoS 및 2.5D/3D 첨단 패키징 캐파가 결정한다
+id: T-10
+keywords:
+- CoWoS
+- 첨단패키징
+- 2.5D
+- 3D패키징
+- 인터포저
+- 유리기판
+- FOPLP
+- 팬아웃
 last_checked: null
-related_theses: [T-01, T-02, T-11]
+last_ranked: 2026-09-05T21:12
+milestone: 주요 OSAT 기업의 첨단 패키징 캐파 2배 증설 및 유리기판 파일럿 라인 가동
+momentum: 56.0
+news_count: 0
+priority: 4
+rank: 20
+related_companies:
+- TSMC
+- ASE
+- Amkor
+- 삼성전자
+- SK하이닉스
+- SKC
+- 인텔
+related_theses:
+- T-01
+- T-02
+- T-11
+status: active
+time_horizon: 2026~2027
+title: 첨단 패키징과 CoWoS의 병목
 ---
 
 # T-10 첨단 패키징과 CoWoS의 병목

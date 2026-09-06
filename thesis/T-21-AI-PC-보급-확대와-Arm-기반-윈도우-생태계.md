@@ -1,19 +1,9 @@
 ---
-id: T-21
-title: AI PC 보급 확대와 Arm 기반 윈도우 생태계
+confidence: 60
+direction: neutral
 hypothesis: 45 TOPS 이상의 NPU가 탑재된 Arm 기반 SoC(스냅드래곤 X 시리즈 등)가 x86의 점유율을 잠식하며 PC 아키텍처
   재편이 일어난다
-direction: neutral
-confidence: 60
-priority: 3
-status: active
-related_companies:
-- Qualcomm
-- 인텔
-- AMD
-- Microsoft
-- ARM
-- Lenovo
+id: T-21
 keywords:
 - AIPC
 - Copilot+
@@ -22,12 +12,26 @@ keywords:
 - NPU
 - x86vsArm
 - 배터리수명
-time_horizon: 2026~2027
-milestone: 글로벌 프리미엄 노트북 시장에서 Arm 기반 AI PC 점유율 20% 돌파
 last_checked: null
+last_ranked: 2026-09-05T21:12
+milestone: 글로벌 프리미엄 노트북 시장에서 Arm 기반 AI PC 점유율 20% 돌파
+momentum: 42.0
+news_count: 0
+priority: 3
+rank: 33
+related_companies:
+- Qualcomm
+- 인텔
+- AMD
+- Microsoft
+- ARM
+- Lenovo
 related_theses:
 - T-04
 - T-20
+status: active
+time_horizon: 2026~2027
+title: AI PC 보급 확대와 Arm 기반 윈도우 생태계
 ---
 
 # T-21 AI PC 보급 확대와 Arm 기반 윈도우 생태계

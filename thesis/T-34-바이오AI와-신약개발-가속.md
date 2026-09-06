@@ -1,17 +1,35 @@
 ---
-id: T-34
-title: 바이오 AI와 신약 개발 가속
-hypothesis: AlphaFold3 이후 AI 신약 개발이 임상 성공률을 구조적으로 높이고, K-바이오의 글로벌 기술수출과 CMO/CDMO 수주가 가속된다
-direction: bullish
 confidence: 55
-priority: 2
-status: watch
-related_companies: [삼성바이오로직스, 셀트리온, 유한양행, 알테오젠, Recursion]
-keywords: [AlphaFold, AI신약, CMO, CDMO, 기술수출, 단백질구조, 임상성공률]
-time_horizon: 2026~2030
-milestone: AI 기반 신약 FDA 최초 승인 또는 K-바이오 기술수출 단일 계약 1조원 돌파
+direction: bullish
+hypothesis: AlphaFold3 이후 AI 신약 개발이 임상 성공률을 구조적으로 높이고, K-바이오의 글로벌 기술수출과 CMO/CDMO 수주가
+  가속된다
+id: T-34
+keywords:
+- AlphaFold
+- AI신약
+- CMO
+- CDMO
+- 기술수출
+- 단백질구조
+- 임상성공률
 last_checked: null
-related_theses: [T-04]
+last_ranked: 2026-09-05T21:12
+milestone: AI 기반 신약 FDA 최초 승인 또는 K-바이오 기술수출 단일 계약 1조원 돌파
+momentum: 31.0
+news_count: 0
+priority: 2
+rank: 38
+related_companies:
+- 삼성바이오로직스
+- 셀트리온
+- 유한양행
+- 알테오젠
+- Recursion
+related_theses:
+- T-04
+status: watch
+time_horizon: 2026~2030
+title: 바이오 AI와 신약 개발 가속
 ---
 
 # T-14 바이오 AI와 신약 개발 가속

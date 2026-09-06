@@ -1,17 +1,8 @@
 ---
-id: T-04
-title: 온디바이스 AI의 변화
-hypothesis: 45 TOPS NPU 기반 온디바이스 AI가 클라우드 의존을 줄이고 행동형 에이전트 시대를 연다
-direction: bullish
 confidence: 65
-priority: 4
-status: active
-related_companies:
-- Apple
-- 삼성전자
-- Qualcomm
-- MediaTek
-- Google
+direction: bullish
+hypothesis: 45 TOPS NPU 기반 온디바이스 AI가 클라우드 의존을 줄이고 행동형 에이전트 시대를 연다
+id: T-04
 keywords:
 - NPU
 - TOPS
@@ -22,10 +13,23 @@ keywords:
 - GeminiNano
 - 행동형에이전트
 - 온디바이스LLM
-time_horizon: 2026~2027
-milestone: Apple Intelligence 킬러 유스케이스 대중화 또는 온디바이스 에이전트 앱 출시
 last_checked: 2026-09-04T09:51
+last_ranked: 2026-09-05T21:12
+milestone: Apple Intelligence 킬러 유스케이스 대중화 또는 온디바이스 에이전트 앱 출시
+momentum: 53.0
+news_count: 0
+priority: 4
+rank: 22
+related_companies:
+- Apple
+- 삼성전자
+- Qualcomm
+- MediaTek
+- Google
 related_theses: []
+status: active
+time_horizon: 2026~2027
+title: 온디바이스 AI의 변화
 ---
 
 # T-04 온디바이스 AI의 변화

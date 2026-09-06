@@ -1,18 +1,9 @@
 ---
-id: T-19
-title: 피지컬 AI와 공간지능 반도체
+confidence: 56
+direction: bullish
 hypothesis: 텍스트/이미지를 넘어 3차원 공간과 물리 법칙을 이해하는 공간지능(Spatial AI) 전용 칩이 스마트팩토리와 로봇의 핵심
   뇌가 된다
-direction: bullish
-confidence: 56
-priority: 3
-status: active
-related_companies:
-- NVIDIA
-- Apple
-- Qualcomm
-- 삼성전자
-- Sony
+id: T-19
 keywords:
 - 피지컬AI
 - 공간지능
@@ -20,12 +11,25 @@ keywords:
 - 3D VLM
 - 엣지AI
 - ToF센서
-time_horizon: 2026~2028
-milestone: 주요 로봇 및 스마트 디바이스 제조사의 공간지능 SoC 표준 칩셋 채택
 last_checked: 2026-09-04T21:12
+last_ranked: 2026-09-05T21:12
+milestone: 주요 로봇 및 스마트 디바이스 제조사의 공간지능 SoC 표준 칩셋 채택
+momentum: 41.2
+news_count: 0
+priority: 3
+rank: 34
+related_companies:
+- NVIDIA
+- Apple
+- Qualcomm
+- 삼성전자
+- Sony
 related_theses:
 - T-17
 - T-18
+status: active
+time_horizon: 2026~2028
+title: 피지컬 AI와 공간지능 반도체
 ---
 
 # T-19 피지컬 AI와 공간지능 반도체
@@ -36,6 +40,7 @@ related_theses:
 ## 지지 근거
 
 ## 반박 근거
+- 2026-09-05: AI 설비 관련 종목의 주가 급락과 경쟁 심화로 인한 투자 회수 리스크가 부각되고 있으나, 공간지능 반도체에 직접적으로 대응되는 반박은 제한적입니다.
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달간 53.5% 급락하며 AI 설비주 하락·레버리지 청산 압력이 부각되고, 대규모 AI 투자가 수요 강세가 아닌 경쟁 과열 신호이며 아마존 고정단가 계약의 원가 전가 불가로 인프라 수익성 우려가 확대됨
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달간 53.5% 급락으로 AI 설비 종목 중심의 모멘텀 붕괴와 레버리지 청산이 발생했고, AI 투자가 견조한 수요가 아닌 주도권 경쟁에 따른 과잉투자이며 아마존 등 고정단가 계약으로 원가 전가가 불가하다는 분석이 제기됨
 - 2026-09-04: 모건스탠리 모멘텀 TMT 지수 한 달 53.5% 급락으로 AI 설비주 약세·레버리지 청산 진행 중이며, AI 인프라 투자는 견조한 수요보다 경쟁 압박에 의한 과잉지출이고 아마존처럼 고정단가 계약으로 원가 전가가 불가하다는 수익성 우려 제기

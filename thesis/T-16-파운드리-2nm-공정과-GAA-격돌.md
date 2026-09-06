@@ -1,17 +1,35 @@
 ---
-id: T-16
-title: 파운드리 2nm 공정과 GAA 격돌
-hypothesis: 2nm 공정 진입과 함께 후면전력공급(BSPDN) 및 GAA 수율이 파운드리 시장 점유율의 지각변동을 일으킨다
-direction: neutral
 confidence: 65
-priority: 4
-status: active
-related_companies: [TSMC, 삼성전자, 인텔, Apple, Qualcomm]
-keywords: [2nm, GAA, NanoSheet, BSPDN, 후면전력공급, High-NA EUV, 파운드리수율]
-time_horizon: 2026~2027
-milestone: TSMC vs 삼성전자 2nm 공정 양산 수율 60% 달성 및 고객사 수주 공시
+direction: neutral
+hypothesis: 2nm 공정 진입과 함께 후면전력공급(BSPDN) 및 GAA 수율이 파운드리 시장 점유율의 지각변동을 일으킨다
+id: T-16
+keywords:
+- 2nm
+- GAA
+- NanoSheet
+- BSPDN
+- 후면전력공급
+- High-NA EUV
+- 파운드리수율
 last_checked: null
-related_theses: [T-02, T-10]
+last_ranked: 2026-09-05T21:12
+milestone: TSMC vs 삼성전자 2nm 공정 양산 수율 60% 달성 및 고객사 수주 공시
+momentum: 53.0
+news_count: 0
+priority: 4
+rank: 24
+related_companies:
+- TSMC
+- 삼성전자
+- 인텔
+- Apple
+- Qualcomm
+related_theses:
+- T-02
+- T-10
+status: active
+time_horizon: 2026~2027
+title: 파운드리 2nm 공정과 GAA 격돌
 ---
 
 # T-16 파운드리 2nm 공정과 GAA 격돌
