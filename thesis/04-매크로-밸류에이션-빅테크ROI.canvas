@@ -14,90 +14,90 @@
       "x": -350,
       "y": -100,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-01-금리와-데이터센터.md"
+      "file": "argus/Theses/T4-01-금리와-데이터센터.md"
     },
     {
       "id": "t4_04",
       "x": 50,
       "y": -100,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-04-AI-버블-가능성.md"
+      "file": "argus/Theses/T4-04-AI-버블-가능성.md"
     },
     {
       "id": "t4_06",
       "x": 450,
       "y": -100,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-06-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
+      "file": "argus/Theses/T4-06-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
     },
     {
       "id": "t4_02",
       "x": -350,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-02-엔비디아와-네오클라우드.md"
+      "file": "argus/Theses/T4-02-엔비디아와-네오클라우드.md"
     },
     {
       "id": "t4_03",
       "x": 50,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-03-엔비디아와-GPU-금융.md"
+      "file": "argus/Theses/T4-03-엔비디아와-GPU-금융.md"
     },
     {
       "id": "t4_05",
       "x": 450,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T4-05-10년금리-5%-재진입-가능성.md"
+      "file": "argus/Theses/T4-05-10년금리-5%-재진입-가능성.md"
     },
     {
       "id": "c_coreweave",
       "x": -350,
       "y": 550,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-CoreWeave.md"
+      "file": "argus/Companies/Company-CoreWeave.md"
     },
     {
       "id": "c_msft",
       "x": -50,
       "y": 550,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-Microsoft.md"
+      "file": "argus/Companies/Company-Microsoft.md"
     },
     {
       "id": "c_openai",
       "x": 250,
       "y": 550,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-OpenAI.md"
+      "file": "argus/Companies/Company-OpenAI.md"
     },
     {
       "id": "c_anthropic",
       "x": 550,
       "y": 550,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-Anthropic.md"
+      "file": "argus/Companies/Company-Anthropic.md"
     }
   ],
   "edges": [

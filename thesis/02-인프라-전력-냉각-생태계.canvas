@@ -14,117 +14,117 @@
       "x": -350,
       "y": -100,
       "width": 320,
-      "height": 200,
+      "height": 220,
       "type": "file",
-      "file": "thesis/Topic-액체냉각.md"
+      "file": "argus/Topics/Topic-액체냉각.md"
     },
     {
       "id": "top_grid",
       "x": 50,
       "y": -100,
       "width": 320,
-      "height": 200,
+      "height": 220,
       "type": "file",
-      "file": "thesis/Topic-전력그리드.md"
+      "file": "argus/Topics/Topic-전력그리드.md"
     },
     {
       "id": "top_smr",
       "x": 450,
       "y": -100,
       "width": 320,
-      "height": 200,
+      "height": 220,
       "type": "file",
-      "file": "thesis/Topic-SMR.md"
+      "file": "argus/Topics/Topic-SMR.md"
     },
     {
       "id": "t2_01",
       "x": -350,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T2-01-데이터센터의-변화.md"
+      "file": "argus/Theses/T2-01-데이터센터의-변화.md"
     },
     {
       "id": "t2_02",
       "x": 50,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T2-02-데이터센터-액체냉각의-표준화.md"
+      "file": "argus/Theses/T2-02-데이터센터-액체냉각의-표준화.md"
     },
     {
       "id": "t2_05",
       "x": 450,
       "y": 200,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T2-05-변압기-초고압-그리드-쇼티지-장기화.md"
+      "file": "argus/Theses/T2-05-변압기-초고압-그리드-쇼티지-장기화.md"
     },
     {
       "id": "t2_04",
       "x": -350,
       "y": 500,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T2-04-AI-전력망용-대용량-ESS와-LFP-공급망.md"
+      "file": "argus/Theses/T2-04-AI-전력망용-대용량-ESS와-LFP-공급망.md"
     },
     {
       "id": "t2_07",
       "x": 50,
       "y": 500,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
-      "file": "thesis/T2-07-800V-48V-HVDC-전력-아키텍처-혁신.md"
+      "file": "argus/Theses/T2-07-800V-48V-HVDC-전력-아키텍처-혁신.md"
     },
     {
       "id": "top_ess",
       "x": 450,
       "y": 500,
       "width": 320,
-      "height": 200,
+      "height": 220,
       "type": "file",
-      "file": "thesis/Topic-ESS.md"
+      "file": "argus/Topics/Topic-ESS.md"
     },
     {
       "id": "c_vertiv",
       "x": -350,
-      "y": 800,
+      "y": 820,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-Vertiv.md"
+      "file": "argus/Companies/Company-Vertiv.md"
     },
     {
       "id": "c_hd",
       "x": -50,
-      "y": 800,
+      "y": 820,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-HD현대일렉트릭.md"
+      "file": "argus/Companies/Company-HD현대일렉트릭.md"
     },
     {
       "id": "c_ls",
       "x": 250,
-      "y": 800,
+      "y": 820,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-LS-ELECTRIC.md"
+      "file": "argus/Companies/Company-LS-ELECTRIC.md"
     },
     {
       "id": "c_ge",
       "x": 550,
-      "y": 800,
+      "y": 820,
       "width": 260,
-      "height": 140,
+      "height": 160,
       "type": "file",
-      "file": "thesis/Company-GE-Vernova.md"
+      "file": "argus/Companies/Company-GE-Vernova.md"
     }
   ],
   "edges": [

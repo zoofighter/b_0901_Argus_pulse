@@ -26,6 +26,7 @@ FOLDER_MAP = {
     "review": "argus/Review",
     "theses": "argus/Theses",
     "thesis": "argus/Theses",
+    "canvas": "argus/Canvas",
     "incubator": "argus/Incubator",
     "chronicles": "argus/Chronicles",
     "analogies": "argus/Analogies",
@@ -118,6 +119,9 @@ def sync_all_outputs() -> dict[str, int]:
         for v_file in config.THESIS_DIR.glob("Vs-*.md"):
             if sync_file(v_file, "vs"):
                 counts["vs"] += 1
+        for canvas_file in config.THESIS_DIR.glob("*.canvas"):
+            if sync_file(canvas_file, "canvas"):
+                counts["canvas"] = counts.get("canvas", 0) + 1
         moc_file = config.THESIS_DIR / "00-Argus-Master-MOC.md"
         if moc_file.exists() and sync_file(moc_file, "moc"):
             counts["moc"] += 1
