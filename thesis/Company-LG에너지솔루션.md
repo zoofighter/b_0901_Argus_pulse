@@ -21,9 +21,9 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-03-전고체-배터리의-변화|T-03]]
-- [[T-22-AI-전력망용-대용량-ESS와-LFP-공급망|T-22]]
-- [[T-32-ESS와-한국배터리의-미국수혜|T-32]]
+- [[T3-01-전고체-배터리의-변화|T3-01]]
+- [[T2-04-AI-전력망용-대용량-ESS와-LFP-공급망|T3-04]]
+- [[T2-06-ESS와-한국배터리의-미국수혜|T3-06]]
 
 ---
 
@@ -31,7 +31,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "LG에너지솔루션")
 SORT file.mtime DESC
 LIMIT 8

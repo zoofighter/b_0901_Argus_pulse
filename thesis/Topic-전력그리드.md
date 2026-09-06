@@ -22,12 +22,12 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-05-금리와-데이터센터|T-05]]
-- [[T-13-SMR과-데이터센터-무탄소-전력-PPA|T-13]]
-- [[T-22-AI-전력망용-대용량-ESS와-LFP-공급망|T-22]]
-- [[T-23-변압기-초고압-그리드-쇼티지-장기화|T-23]]
-- [[T-38-10년금리-5%-재진입-가능성|T-38]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T4-01-금리와-데이터센터|T4-01]]
+- [[T2-03-SMR과-데이터센터-무탄소-전력-PPA|T3-03]]
+- [[T2-04-AI-전력망용-대용량-ESS와-LFP-공급망|T3-04]]
+- [[T2-05-변압기-초고압-그리드-쇼티지-장기화|T3-05]]
+- [[T4-05-10년금리-5%-재진입-가능성|T4-05]]
 
 ---
 
@@ -40,7 +40,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "변압기") OR contains(file.text, "변압기")
 SORT file.mtime DESC
 LIMIT 8

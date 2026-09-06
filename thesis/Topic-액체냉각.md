@@ -23,9 +23,9 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-05-금리와-데이터센터|T-05]]
-- [[T-12-데이터센터-액체냉각의-표준화|T-12]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T4-01-금리와-데이터센터|T4-01]]
+- [[T2-02-데이터센터-액체냉각의-표준화|T3-02]]
 
 ---
 
@@ -38,7 +38,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "액체냉각") OR contains(file.text, "액체냉각")
 SORT file.mtime DESC
 LIMIT 8

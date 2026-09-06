@@ -23,10 +23,10 @@ PCIe 기반으로 CPU·GPU·가속기 간 메모리를 공유하고 풀링(Pooli
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-07-CXL-메모리의-확대|T-07]]
-- [[T-28-3D-DRAM-기술-전환과-400단-V-NAND|T-28]]
-- [[T-35-메모리-2028년-피크아웃|T-35]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-03-CXL-메모리의-확대|T1-03]]
+- [[T1-10-3D-DRAM-기술-전환과-400단-V-NAND|T1-10]]
+- [[T1-13-메모리-2028년-피크아웃|T1-13]]
 
 ---
 
@@ -39,7 +39,7 @@ PCIe 기반으로 CPU·GPU·가속기 간 메모리를 공유하고 풀링(Pooli
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "CXL") OR contains(file.text, "CXL")
 SORT file.mtime DESC
 LIMIT 8

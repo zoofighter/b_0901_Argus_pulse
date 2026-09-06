@@ -23,10 +23,10 @@ created: 2026-09-06
 ---
 
 ## 🔗 관련 투자 테제군 (Theses Network)
-- [[T-06-TPU-증가와-GPU-수요-둔화|T-06]]
-- [[T-08-엔비디아와-네오클라우드|T-08]]
-- [[T-15-AI-추론-시장-폭발과-LPU-ASIC-분화|T-15]]
-- [[T-24-빅테크-커스텀-ASIC-증가와-DSP-생태계|T-24]]
+- [[T1-02-TPU-증가와-GPU-수요-둔화|T1-02]]
+- [[T4-02-엔비디아와-네오클라우드|T4-02]]
+- [[T1-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T1-07]]
+- [[T1-09-빅테크-커스텀-ASIC-증가와-DSP-생태계|T1-09]]
 
 ---
 
@@ -39,7 +39,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", tags AS "태그"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.text, "GPU vs ASIC") OR contains(file.outlinks, this.file.link)
 SORT file.mtime DESC
 LIMIT 8

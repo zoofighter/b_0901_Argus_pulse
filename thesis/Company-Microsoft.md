@@ -21,10 +21,10 @@ Azure 클라우드와 OpenAI 협력, Copilot 플랫폼을 통해 전 세계 엔�
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-05-금리와-데이터센터|T-05]]
-- [[T-21-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T-21]]
-- [[T-31-AI-소프트웨어-레이어의-과점화|T-31]]
-- [[T-37-AI-버블-가능성|T-37]]
+- [[T4-01-금리와-데이터센터|T4-01]]
+- [[T3-07-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T3-07]]
+- [[T5-02-AI-소프트웨어-레이어의-과점화|T5-02]]
+- [[T4-04-AI-버블-가능성|T4-04]]
 
 ---
 
@@ -32,7 +32,7 @@ Azure 클라우드와 OpenAI 협력, Copilot 플랫폼을 통해 전 세계 엔�
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Microsoft")
 SORT file.mtime DESC
 LIMIT 8

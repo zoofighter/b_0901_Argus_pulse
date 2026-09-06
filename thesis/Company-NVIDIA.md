@@ -21,15 +21,15 @@ CUDA 생태계와 Hopper/Blackwell/Vera Rubin 아키텍처를 앞세워 전 세�
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-06-TPU-증가와-GPU-수요-둔화|T-06]]
-- [[T-08-엔비디아와-네오클라우드|T-08]]
-- [[T-09-엔비디아와-GPU-금융|T-09]]
-- [[T-19-피지컬-AI와-공간지능-반도체|T-19]]
-- [[T-26-소버린-AI와-국가-단위-컴퓨트-인프라|T-26]]
-- [[T-29-초고속-AI-네트워킹-UEC-vs-인피니밴드|T-29]]
-- [[T-37-AI-버블-가능성|T-37]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-02-TPU-증가와-GPU-수요-둔화|T1-02]]
+- [[T4-02-엔비디아와-네오클라우드|T4-02]]
+- [[T4-03-엔비디아와-GPU-금융|T4-03]]
+- [[T3-05-피지컬-AI와-공간지능-반도체|T3-05]]
+- [[T6-01-소버린-AI와-국가-단위-컴퓨트-인프라|T6-01]]
+- [[T1-11-초고속-AI-네트워킹-UEC-vs-인피니밴드|T1-11]]
+- [[T4-04-AI-버블-가능성|T4-04]]
 
 ---
 
@@ -37,7 +37,7 @@ CUDA 생태계와 Hopper/Blackwell/Vera Rubin 아키텍처를 앞세워 전 세�
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "NVIDIA")
 SORT file.mtime DESC
 LIMIT 8

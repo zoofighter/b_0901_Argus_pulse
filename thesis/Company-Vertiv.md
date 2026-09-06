@@ -21,8 +21,8 @@ AI 고밀도 랙에 필수적인 액체냉각(CDU/DLC) 및 무정전 전원장�
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-12-데이터센터-액체냉각의-표준화|T-12]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T2-02-데이터센터-액체냉각의-표준화|T3-02]]
 
 ---
 
@@ -30,7 +30,7 @@ AI 고밀도 랙에 필수적인 액체냉각(CDU/DLC) 및 무정전 전원장�
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Vertiv")
 SORT file.mtime DESC
 LIMIT 8

@@ -21,10 +21,10 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-05-금리와-데이터센터|T-05]]
-- [[T-25-오픈소스-모델-고도화와-온프레미스-사설-AI|T-25]]
-- [[T-27-AI-스마트-글래스와-경량-AR-광학계|T-27]]
-- [[T-37-AI-버블-가능성|T-37]]
+- [[T4-01-금리와-데이터센터|T4-01]]
+- [[T5-01-오픈소스-모델-고도화와-온프레미스-사설-AI|T5-01]]
+- [[T3-08-AI-스마트-글래스와-경량-AR-광학계|T3-08]]
+- [[T4-04-AI-버블-가능성|T4-04]]
 
 ---
 
@@ -32,7 +32,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Meta")
 SORT file.mtime DESC
 LIMIT 8

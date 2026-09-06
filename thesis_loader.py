@@ -61,7 +61,7 @@ def load_theses(status_filter: Optional[str] = "active") -> list[dict]:
     """
     theses = []
 
-    for md_file in sorted(THESIS_DIR.glob("T-*.md")):
+    for md_file in sorted([f for f in THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]):
         meta, body = _parse_md_file(md_file)
         if not meta:
             continue
@@ -75,9 +75,15 @@ def load_theses(status_filter: Optional[str] = "active") -> list[dict]:
 
 
 def load_thesis_by_id(thesis_id: str) -> Optional[dict]:
-    """특정 Thesis ID로 단일 Thesis 로드. 예: load_thesis_by_id("T-01")"""
-    for thesis in load_theses(status_filter=None):
+    """특정 Thesis ID로 단일 Thesis 로드. 1순위: id 정확 일치, 2순위: old_id/aliases 매칭"""
+    all_theses = load_theses(status_filter=None)
+    # 1순위: ID 정확 일치
+    for thesis in all_theses:
         if thesis.get("id") == thesis_id:
+            return thesis
+    # 2순위: old_id 또는 별칭 매칭
+    for thesis in all_theses:
+        if thesis.get("old_id") == thesis_id or thesis_id in thesis.get("aliases", []):
             return thesis
     return None
 
@@ -98,7 +104,7 @@ def update_thesis_confidence(thesis_id: str, new_confidence: int) -> bool:
     Thesis MD 파일의 confidence 값을 갱신.
     Thesis Checker 에이전트가 점검 후 호출.
     """
-    for md_file in THESIS_DIR.glob("T-*.md"):
+    for md_file in [f for f in THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]:
         meta, body = _parse_md_file(md_file)
         if meta.get("id") == thesis_id:
             meta["confidence"] = max(0, min(100, new_confidence))
@@ -111,7 +117,7 @@ def update_thesis_confidence(thesis_id: str, new_confidence: int) -> bool:
 
 def append_thesis_evidence(thesis_id: str, date_str: str, supporting: str = None, counter: str = None) -> bool:
     """Thesis MD 본문의 지지/반박 근거 섹션에 날짜별 기록 추가"""
-    for md_file in THESIS_DIR.glob("T-*.md"):
+    for md_file in [f for f in THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]:
         meta, body = _parse_md_file(md_file)
         if meta.get("id") == thesis_id:
             modified = False
@@ -247,7 +253,7 @@ def sync_thesis_ranks_to_files(days: int = 2, db_path: Optional[Path] = None) ->
     now_str = datetime.now().strftime("%Y-%m-%dT%H:%M")
 
     updated_count = 0
-    for md_file in THESIS_DIR.glob("T-*.md"):
+    for md_file in [f for f in THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]:
         meta, body = _parse_md_file(md_file)
         tid = meta.get("id")
         if tid and tid in rank_map:

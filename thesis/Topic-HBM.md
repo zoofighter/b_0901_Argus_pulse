@@ -23,14 +23,14 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-07-CXL-메모리의-확대|T-07]]
-- [[T-10-첨단-패키징과-CoWoS의-병목|T-10]]
-- [[T-11-유리기판의-차세대-패키징-침투|T-11]]
-- [[T-28-3D-DRAM-기술-전환과-400단-V-NAND|T-28]]
-- [[T-33-반도체-소부장의-내재화|T-33]]
-- [[T-35-메모리-2028년-피크아웃|T-35]]
-- [[T-36-중국반도체의-HBM-생산가능성|T-36]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-03-CXL-메모리의-확대|T1-03]]
+- [[T1-04-첨단-패키징과-CoWoS의-병목|T1-04]]
+- [[T1-05-유리기판의-차세대-패키징-침투|T1-05]]
+- [[T1-10-3D-DRAM-기술-전환과-400단-V-NAND|T1-10]]
+- [[T1-12-반도체-소부장의-내재화|T1-12]]
+- [[T1-13-메모리-2028년-피크아웃|T1-13]]
+- [[T6-02-중국반도체의-HBM-생산가능성|T6-02]]
 
 ---
 
@@ -43,7 +43,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "HBM") OR contains(file.text, "HBM")
 SORT file.mtime DESC
 LIMIT 8

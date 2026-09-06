@@ -20,9 +20,9 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-08-엔비디아와-네오클라우드|T-08]]
-- [[T-09-엔비디아와-GPU-금융|T-09]]
-- [[T-37-AI-버블-가능성|T-37]]
+- [[T4-02-엔비디아와-네오클라우드|T4-02]]
+- [[T4-03-엔비디아와-GPU-금융|T4-03]]
+- [[T4-04-AI-버블-가능성|T4-04]]
 
 ---
 
@@ -30,7 +30,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "CoreWeave")
 SORT file.mtime DESC
 LIMIT 8

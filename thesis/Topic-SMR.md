@@ -22,9 +22,9 @@ AI 데이터센터의 24/7 무탄소 기저부하 전력 공급을 위한 차세
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-13-SMR과-데이터센터-무탄소-전력-PPA|T-13]]
-- [[T-23-변압기-초고압-그리드-쇼티지-장기화|T-23]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T2-03-SMR과-데이터센터-무탄소-전력-PPA|T3-03]]
+- [[T2-05-변압기-초고압-그리드-쇼티지-장기화|T3-05]]
 
 ---
 
@@ -37,7 +37,7 @@ AI 데이터센터의 24/7 무탄소 기저부하 전력 공급을 위한 차세
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "SMR") OR contains(file.text, "SMR")
 SORT file.mtime DESC
 LIMIT 8

@@ -21,8 +21,8 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-23-변압기-초고압-그리드-쇼티지-장기화|T-23]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T2-05-변압기-초고압-그리드-쇼티지-장기화|T3-05]]
 
 ---
 
@@ -30,7 +30,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "HD현대일렉트릭")
 SORT file.mtime DESC
 LIMIT 8

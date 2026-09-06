@@ -22,10 +22,10 @@ FinFET 한계를 극복한 3차원 GAA 트랜지스터 구조 기반의 2nm 선�
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-16-파운드리-2nm-공정과-GAA-격돌|T-16]]
-- [[T-24-빅테크-커스텀-ASIC-증가와-DSP-생태계|T-24]]
-- [[T-36-중국반도체의-HBM-생산가능성|T-36]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-08-파운드리-2nm-공정과-GAA-격돌|T1-08]]
+- [[T1-09-빅테크-커스텀-ASIC-증가와-DSP-생태계|T1-09]]
+- [[T6-02-중국반도체의-HBM-생산가능성|T6-02]]
 
 ---
 
@@ -38,7 +38,7 @@ FinFET 한계를 극복한 3차원 GAA 트랜지스터 구조 기반의 2nm 선�
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "2nm") OR contains(file.text, "2nm")
 SORT file.mtime DESC
 LIMIT 8

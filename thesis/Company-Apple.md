@@ -21,9 +21,9 @@ Apple Intelligence와 차세대 Apple Silicon(M/A 시리즈)을 통해 20억 대
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-04-온디바이스-AI의-변화|T-04]]
-- [[T-20-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T-20]]
-- [[T-27-AI-스마트-글래스와-경량-AR-광학계|T-27]]
+- [[T3-02-온디바이스-AI의-변화|T3-02]]
+- [[T3-06-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T3-06]]
+- [[T3-08-AI-스마트-글래스와-경량-AR-광학계|T3-08]]
 
 ---
 
@@ -31,7 +31,7 @@ Apple Intelligence와 차세대 Apple Silicon(M/A 시리즈)을 통해 20억 대
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Apple")
 SORT file.mtime DESC
 LIMIT 8

@@ -23,9 +23,9 @@ SK하이닉스(메모리)-TSMC(선단 로직 & CoWoS)-엔비디아로 이어지�
 ---
 
 ## 🔗 관련 투자 테제군 (Theses Network)
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-10-첨단-패키징과-CoWoS의-병목|T-10]]
-- [[T-16-파운드리-2nm-공정과-GAA-격돌|T-16]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-04-첨단-패키징과-CoWoS의-병목|T1-04]]
+- [[T1-08-파운드리-2nm-공정과-GAA-격돌|T1-08]]
 
 ---
 
@@ -38,7 +38,7 @@ SK하이닉스(메모리)-TSMC(선단 로직 & CoWoS)-엔비디아로 이어지�
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", tags AS "태그"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.text, "TSMC 연합 vs 삼성 턴키") OR contains(file.outlinks, this.file.link)
 SORT file.mtime DESC
 LIMIT 8

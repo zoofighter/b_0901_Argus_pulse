@@ -21,10 +21,10 @@ Snapdragon X Elite(AI PC) 및 8 Gen 시리즈로 45+ TOPS 엣지 NPU 시장을 �
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-04-온디바이스-AI의-변화|T-04]]
-- [[T-19-피지컬-AI와-공간지능-반도체|T-19]]
-- [[T-20-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T-20]]
-- [[T-21-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T-21]]
+- [[T3-02-온디바이스-AI의-변화|T3-02]]
+- [[T3-05-피지컬-AI와-공간지능-반도체|T3-05]]
+- [[T3-06-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T3-06]]
+- [[T3-07-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T3-07]]
 
 ---
 
@@ -32,7 +32,7 @@ Snapdragon X Elite(AI PC) 및 8 Gen 시리즈로 45+ TOPS 엣지 NPU 시장을 �
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Qualcomm")
 SORT file.mtime DESC
 LIMIT 8

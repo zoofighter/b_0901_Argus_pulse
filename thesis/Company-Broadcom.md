@@ -21,10 +21,10 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-06-TPU-증가와-GPU-수요-둔화|T-06]]
-- [[T-14-실리콘-포토닉스와-CPO의-상용화|T-14]]
-- [[T-24-빅테크-커스텀-ASIC-증가와-DSP-생태계|T-24]]
-- [[T-29-초고속-AI-네트워킹-UEC-vs-인피니밴드|T-29]]
+- [[T1-02-TPU-증가와-GPU-수요-둔화|T1-02]]
+- [[T1-06-실리콘-포토닉스와-CPO의-상용화|T1-06]]
+- [[T1-09-빅테크-커스텀-ASIC-증가와-DSP-생태계|T1-09]]
+- [[T1-11-초고속-AI-네트워킹-UEC-vs-인피니밴드|T1-11]]
 
 ---
 
@@ -32,7 +32,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Broadcom")
 SORT file.mtime DESC
 LIMIT 8

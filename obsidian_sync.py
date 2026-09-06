@@ -26,6 +26,9 @@ FOLDER_MAP = {
     "review": "argus/Review",
     "theses": "argus/Theses",
     "thesis": "argus/Theses",
+    "incubator": "argus/Incubator",
+    "chronicles": "argus/Chronicles",
+    "analogies": "argus/Analogies",
     "topics": "argus/Topics",
     "topic": "argus/Topics",
     "companies": "argus/Companies",
@@ -59,27 +62,28 @@ def sync_file(filepath: str | Path, category: str) -> Path | None:
     if not target_dir:
         return None
 
-    dst = target_dir / src.name
+    dest = target_dir / src.name
     try:
-        shutil.copy2(src, dst)
-        print(f"  📓 [Obsidian 동기화] {category.upper()} -> {dst.relative_to(config.OBSIDIAN_PATH)}")
-        return dst
+        shutil.copy2(src, dest)
+        print(f"  📓 [Obsidian 동기화] {category.upper()} -> {dest.relative_to(config.OBSIDIAN_PATH)}")
+        return dest
     except Exception as e:
-        print(f"  ⚠️  옵시디언 복사 실패: {e}")
+        print(f"  ❌ [Obsidian 동기화 실패] {src.name}: {e}")
         return None
 
 
-def sync_all_outputs() -> dict:
-    """모든 생성물 및 Thesis/Topic/MOC/Vs를 옵시디언으로 일괄 동기화"""
+def sync_all_outputs() -> dict[str, int]:
+    """모든 생성된 콘텐츠 및 테제/문서를 옵시디언 볼트로 일괄 동기화"""
     vault = config.OBSIDIAN_PATH
-    print(f"\n📂 [Obsidian 전체 동기화 시작]")
-    print(f"   볼트 위치: {vault}")
-
-    if not vault.exists():
-        print(f"  ❌ 옵시디언 볼트 경로가 존재하지 않습니다: {vault}")
+    if not vault or not vault.exists():
+        print(f"  ⚠️ 옵시디언 볼트 경로가 존재하지 않습니다: {vault}")
         return {}
 
-    counts = {"blog": 0, "thread": 0, "outline": 0, "digest": 0, "review": 0, "theses": 0, "topics": 0, "companies": 0, "vs": 0, "docs": 0, "moc": 0}
+    counts = {
+        "blog": 0, "thread": 0, "outline": 0, "digest": 0, "review": 0,
+        "theses": 0, "incubator": 0, "chronicles": 0, "analogies": 0,
+        "topics": 0, "companies": 0, "vs": 0, "docs": 0, "moc": 0
+    }
 
     # 1. Output 디렉터리 동기화
     for cat in ["blog", "thread", "outline", "digest", "review"]:
@@ -92,11 +96,19 @@ def sync_all_outputs() -> dict:
             if res:
                 counts[cat] += 1
 
-    # 2. Thesis 디렉터리 동기화
+    # 2. Thesis 및 하위 지식 디렉터리 동기화
     if config.THESIS_DIR.exists():
-        for t_file in config.THESIS_DIR.glob("T-*.md"):
+        for t_file in sorted([f for f in config.THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]):
             if sync_file(t_file, "theses"):
                 counts["theses"] += 1
+        # Incubator, Chronicles, Analogies 하위 폴더 동기화
+        for sub_cat in ["incubator", "chronicles", "analogies"]:
+            sub_dir = config.THESIS_DIR / sub_cat.capitalize()
+            if sub_dir.exists():
+                for sub_f in sub_dir.glob("*.md"):
+                    if sync_file(sub_f, sub_cat):
+                        counts[sub_cat] += 1
+
         for top_file in config.THESIS_DIR.glob("Topic-*.md"):
             if sync_file(top_file, "topics"):
                 counts["topics"] += 1

@@ -22,13 +22,13 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-02-메모리-산업의-변화|T-02]]
-- [[T-10-첨단-패키징과-CoWoS의-병목|T-10]]
-- [[T-11-유리기판의-차세대-패키징-침투|T-11]]
-- [[T-14-실리콘-포토닉스와-CPO의-상용화|T-14]]
-- [[T-16-파운드리-2nm-공정과-GAA-격돌|T-16]]
-- [[T-33-반도체-소부장의-내재화|T-33]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T1-01-메모리-산업의-변화|T1-01]]
+- [[T1-04-첨단-패키징과-CoWoS의-병목|T1-04]]
+- [[T1-05-유리기판의-차세대-패키징-침투|T1-05]]
+- [[T1-06-실리콘-포토닉스와-CPO의-상용화|T1-06]]
+- [[T1-08-파운드리-2nm-공정과-GAA-격돌|T1-08]]
+- [[T1-12-반도체-소부장의-내재화|T1-12]]
 
 ---
 
@@ -41,7 +41,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "CoWoS") OR contains(file.text, "CoWoS")
 SORT file.mtime DESC
 LIMIT 8

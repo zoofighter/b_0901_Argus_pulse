@@ -22,9 +22,9 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-01-데이터센터의-변화|T-01]]
-- [[T-14-실리콘-포토닉스와-CPO의-상용화|T-14]]
-- [[T-29-초고속-AI-네트워킹-UEC-vs-인피니밴드|T-29]]
+- [[T2-01-데이터센터의-변화|T3-01]]
+- [[T1-06-실리콘-포토닉스와-CPO의-상용화|T1-06]]
+- [[T1-11-초고속-AI-네트워킹-UEC-vs-인피니밴드|T1-11]]
 
 ---
 
@@ -37,7 +37,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "실리콘포토닉스") OR contains(file.text, "실리콘포토닉스")
 SORT file.mtime DESC
 LIMIT 8

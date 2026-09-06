@@ -23,8 +23,8 @@ created: 2026-09-06
 ---
 
 ## 🔗 관련 투자 테제군 (Theses Network)
-- [[T-14-실리콘-포토닉스와-CPO의-상용화|T-14]]
-- [[T-29-초고속-AI-네트워킹-UEC-vs-인피니밴드|T-29]]
+- [[T1-06-실리콘-포토닉스와-CPO의-상용화|T1-06]]
+- [[T1-11-초고속-AI-네트워킹-UEC-vs-인피니밴드|T1-11]]
 
 ---
 
@@ -37,7 +37,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", tags AS "태그"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.text, "InfiniBand vs UEC") OR contains(file.outlinks, this.file.link)
 SORT file.mtime DESC
 LIMIT 8

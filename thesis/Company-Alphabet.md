@@ -22,11 +22,11 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 가설 (Thesis Mapping)
-- [[T-04-온디바이스-AI의-변화|T-04]]
-- [[T-06-TPU-증가와-GPU-수요-둔화|T-06]]
-- [[T-18-End-to-End-AI-자율주행과-로보택시|T-18]]
-- [[T-31-AI-소프트웨어-레이어의-과점화|T-31]]
-- [[T-37-AI-버블-가능성|T-37]]
+- [[T3-02-온디바이스-AI의-변화|T3-02]]
+- [[T1-02-TPU-증가와-GPU-수요-둔화|T1-02]]
+- [[T3-04-End-to-End-AI-자율주행과-로보택시|T3-04]]
+- [[T5-02-AI-소프트웨어-레이어의-과점화|T5-02]]
+- [[T4-04-AI-버블-가능성|T4-04]]
 
 ---
 
@@ -34,7 +34,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", tags AS "태그", type AS "유형"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.outlinks, this.file.link) OR contains(file.text, "Alphabet")
 SORT file.mtime DESC
 LIMIT 8

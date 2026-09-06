@@ -23,11 +23,11 @@ created: 2026-09-06
 ---
 
 ## 🔗 연관 투자 테제 매핑 (Theses Network)
-- [[T-04-온디바이스-AI의-변화|T-04]]
-- [[T-20-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T-20]]
-- [[T-21-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T-21]]
-- [[T-25-오픈소스-모델-고도화와-온프레미스-사설-AI|T-25]]
-- [[T-27-AI-스마트-글래스와-경량-AR-광학계|T-27]]
+- [[T3-02-온디바이스-AI의-변화|T3-02]]
+- [[T3-06-행동형-AI-에이전트와-모바일-교체-슈퍼사이클|T3-06]]
+- [[T3-07-AI-PC-보급-확대와-Arm-기반-윈도우-생태계|T3-07]]
+- [[T5-01-오픈소스-모델-고도화와-온프레미스-사설-AI|T5-01]]
+- [[T3-08-AI-스마트-글래스와-경량-AR-광학계|T3-08]]
 
 ---
 
@@ -40,7 +40,7 @@ created: 2026-09-06
 
 ```dataview
 TABLE file.mtime AS "작성일", title AS "제목", angle AS "관점"
-FROM "argus" OR "output"
+FROM "argus" OR "output" OR ""
 WHERE contains(file.tags, "온디바이스AI") OR contains(file.text, "온디바이스AI")
 SORT file.mtime DESC
 LIMIT 8
