@@ -1,5 +1,5 @@
 ---
-confidence: 49
+confidence: 47
 direction: bearish
 hypothesis: GPU 담보 대출(칩담대) 시장이 AI 서브프라임 리스크를 만들고 있다
 id: T4-03
@@ -11,13 +11,13 @@ keywords:
 - AI서브프라임
 - 감가상각
 - 자산유동화
-last_checked: 2026-09-05T21:05
-last_ranked: 2026-09-06T17:24
+last_checked: 2026-09-06T21:13
+last_ranked: 2026-09-06T21:17
 milestone: GPU 담보 대출 연체율 급등 또는 대형 네오클라우드 재무 위기
-momentum: 39.8
+momentum: 39.4
 news_count: 0
 priority: 3
-rank: 40
+rank: 42
 related_companies:
 - NVIDIA
 - CoreWeave
@@ -117,3 +117,7 @@ LIMIT 7
 
 ## 📝 분석가 메모
 
+
+
+## 반박 근거
+- 2026-09-06: 증권사 리포트들이 GPU·HBM·FC-BGA 고부가 패키지 기판 수급이 타이트하고 AI 가속기 수요가 견조함을 강조하며 GPU 담보가치 폭락 전제에 대한 반정황을 시사

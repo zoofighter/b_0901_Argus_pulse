@@ -1,5 +1,5 @@
 ---
-confidence: 40
+confidence: 35
 direction: bearish
 hypothesis: 추론 시대 진입으로 TPU·커스텀ASIC이 NVIDIA GPU를 대체하며 GPU 수요 증가세가 꺾인다
 id: T1-02
@@ -13,13 +13,13 @@ keywords:
 - 학습vs추론
 - CUDAwall
 - TPUv6
-last_checked: 2026-09-05T21:05
-last_ranked: 2026-09-06T17:24
+last_checked: 2026-09-06T21:05
+last_ranked: 2026-09-06T21:17
 milestone: 구글 TPU 외부 판매 개시 또는 NVIDIA 실적에서 추론용 GPU 비중 공개
-momentum: 48.0
+momentum: 47.0
 news_count: 0
 priority: 4
-rank: 29
+rank: 31
 related_companies:
 - NVIDIA
 - Google
@@ -128,3 +128,7 @@ LIMIT 7
 
 ## 📝 분석가 메모
 
+
+
+## 반박 근거
+- 2026-09-06: 증권사 리포트들이 AI 가속기 핵심을 GPU·HBM으로 규정하고 데이터센터 비용의 대부분이 GPU·CPU에 집중되며 서버용 CPU/GPU 기판 수급이 타이트할 정도로 수요가 양호하다고 언급해 GPU 수요 둔화 가설을 반박함

@@ -1,5 +1,5 @@
 ---
-confidence: 71
+confidence: 73
 direction: bullish
 hypothesis: 데이터센터의 신재생에너지 간헐성 극복을 위해 대용량 BESS 투자가 폭증하며 LFP 배터리와 미국 현지 공장이 최대 수혜를 입는다
 id: T2-04
@@ -10,10 +10,10 @@ keywords:
 - 메가팩
 - 전력망안정화
 - IRA세액공제
-last_checked: 2026-09-05T21:07
-last_ranked: 2026-09-06T17:24
+last_checked: 2026-09-06T21:07
+last_ranked: 2026-09-06T21:17
 milestone: 테슬라 메가팩 및 북미 배터리 3사 ESS 수주 잔고 사상 최대 갱신
-momentum: 1378.4
+momentum: 1378.8
 news_count: 19
 priority: 4
 rank: 7
@@ -120,3 +120,10 @@ LIMIT 7
 
 ## 📝 분석가 메모
 
+
+
+## 지지 근거
+- 2026-09-06: 북미 ESS 수요 확대로 국내 배터리 3사의 LFP 양산 경쟁이 본격화되고 국내 3차 ESS 수주전 규모가 2조원대로 확대되고 있습니다.
+
+## 반박 근거
+- 2026-09-06: 최근 AI 설비 관련 기술주 급락 등 시장 변동성 확대와 전방 투자 불확실성 리스크가 존재합니다.

@@ -1,5 +1,5 @@
 ---
-confidence: 75
+confidence: 78
 direction: bullish
 hypothesis: 저장용 배터리(ESS) 시장이 전기차를 추월하는 속도가 예상보다 빠르고, 미국의 중국 배제 정책(관세 58% + 국가비상사태)이
   한국 배터리 3사에 2032년까지 한정된 구조적 기회를 만든다
@@ -13,10 +13,10 @@ keywords:
 - 탄산리튬
 - 음극재흑연
 - GWh
-last_checked: 2026-09-05T21:11
-last_ranked: 2026-09-06T17:24
+last_checked: 2026-09-06T21:07
+last_ranked: 2026-09-06T21:17
 milestone: 삼성SDI 인디애나·SK온 조지아 LFP 양산 개시(2026년 10월) + 에너지부 비상사태 세부품목 확정
-momentum: 1603.8
+momentum: 1604.4
 news_count: 22
 priority: 5
 rank: 6
@@ -125,3 +125,7 @@ LIMIT 7
 ## 📝 분석가 메모
 - askask.md (2026-09-02) 내용이 이 Thesis의 핵심 분석
 - 앞으로 볼 것: 10월 LFP 양산 개시, 연내 에너지부 품목 확정, 3Q 양극재 판가 반등
+
+
+## 지지 근거
+- 2026-09-06: 북미 ESS 수요 강세에 맞춘 K-배터리 3사의 LFP 전환 및 양산 경쟁 본격화와 함께 미국 내 ESS 증설에 따른 실적 추정치 상향 전망이 확인되었다.

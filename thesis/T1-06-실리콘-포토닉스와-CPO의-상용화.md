@@ -12,12 +12,12 @@ keywords:
 - 광인터커넥트
 - 이더넷스위치
 last_checked: null
-last_ranked: 2026-09-06T17:24
+last_ranked: 2026-09-06T21:17
 milestone: 브로드컴/엔비디아 CPO 스위치 양산 채택 및 데이터센터 실증
 momentum: 44.0
 news_count: 0
 priority: 3
-rank: 32
+rank: 34
 related_companies:
 - Broadcom
 - Marvell

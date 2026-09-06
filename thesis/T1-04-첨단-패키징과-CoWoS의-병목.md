@@ -13,12 +13,12 @@ keywords:
 - FOPLP
 - 팬아웃
 last_checked: null
-last_ranked: 2026-09-06T17:24
+last_ranked: 2026-09-06T21:17
 milestone: 주요 OSAT 기업의 첨단 패키징 캐파 2배 증설 및 유리기판 파일럿 라인 가동
 momentum: 56.0
 news_count: 0
 priority: 4
-rank: 23
+rank: 25
 related_companies:
 - TSMC
 - ASE

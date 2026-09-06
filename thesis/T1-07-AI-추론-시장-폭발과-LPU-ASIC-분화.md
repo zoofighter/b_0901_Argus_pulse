@@ -12,12 +12,12 @@ keywords:
 - 추론전용칩
 - 서빙비용
 last_checked: 2026-09-04T21:11
-last_ranked: 2026-09-06T17:24
+last_ranked: 2026-09-06T21:17
 milestone: 하이퍼스케일러 LLM 서빙 워크로드의 30% 이상이 ASIC으로 전환
 momentum: 53.0
 news_count: 0
 priority: 4
-rank: 26
+rank: 28
 related_companies:
 - Groq
 - 리벨리온
@@ -122,3 +122,7 @@ LIMIT 7
 
 ## 📝 분석가 메모
 
+
+
+## 반박 근거
+- 2026-09-06: 생성형 AI 서비스 및 데이터센터 인프라의 핵심 가속기로 여전히 GPU와 HBM 중심의 수요가 지속되고 있습니다.
