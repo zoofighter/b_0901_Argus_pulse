@@ -29,7 +29,10 @@ PDF_REPORTS_DIR = Path(os.getenv(
     str(ROOT_DIR.parent / "a_langragh" / "reports")
 ))
 
-OBSIDIAN_PATH = Path(os.getenv("OBSIDIAN_VAULT_PATH") or os.getenv("OBSIDIAN_PATH", str(Path.home() / "Documents" / "Obsidian" / "Argus")))
+OBSIDIAN_PATH = Path(os.getenv(
+    "OBSIDIAN_VAULT_PATH",
+    os.getenv("OBSIDIAN_PATH", str(Path.home() / "Library/Mobile Documents/iCloud~md~obsidian/Documents/obs_argus"))
+))
 
 # ── RAG 엔진 설정 ─────────────────────────────────────────────────────────────
 RAG_CHUNK_SIZE    = int(os.getenv("RAG_CHUNK_SIZE", "1000"))
