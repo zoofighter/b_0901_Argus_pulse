@@ -14,6 +14,6 @@
 # 21:00 데일리 다이제스트 생성 (RAG 연동) 및 옵시디언 동기화
 0 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python daily_digest.py --rag >> logs/cron_digest.log 2>&1
 
-# 21:05 Active Thesis 가설 신뢰도 자동 점검
-5 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python thesis_checker.py >> logs/cron_checker.log 2>&1
+# 21:05 시장 모멘텀 상위 Thesis 가설 신뢰도 스마트 자동 점검 및 프론트매터 랭킹 갱신
+5 21 * * * cd /Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse && /opt/anaconda3/bin/python thesis_checker.py --smart >> logs/cron_checker.log 2>&1
 # ───────────────────────────────────────────────────────────

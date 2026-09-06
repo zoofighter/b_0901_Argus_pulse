@@ -28,8 +28,10 @@ from rag_engine import search as rag_search
 from thesis_loader import (
     append_thesis_evidence,
     get_active_keywords,
+    get_thesis_momentum_ranking,
     load_theses,
     load_thesis_by_id,
+    sync_thesis_ranks_to_files,
     update_thesis_confidence,
 )
 
@@ -205,12 +207,20 @@ def run_checker(target_theses: list[dict]) -> list[dict]:
             message=f"📊 **Thesis 신뢰도 자동 갱신 알림**\n변동 가설: `{', '.join(changed)}`"
         )
 
+    # Thesis MD 프론트매터 랭킹 및 모멘텀 자동 갱신 + 옵시디언 동기화
+    try:
+        sync_thesis_ranks_to_files(days=2)
+    except Exception as e:
+        print(f"  ⚠️ Thesis 랭킹 프론트매터 갱신 오류: {e}")
+
     return results
 
 
 def main():
     parser = argparse.ArgumentParser(description="Argus Pulse — Thesis 자동 점검기")
     parser.add_argument("--id", type=str, help="특정 Thesis ID 지정 점검 (예: T-02)")
+    parser.add_argument("--smart", action="store_true", help="시장 모멘텀 상위(뉴스 발생) 테제만 스마트 선별 점검 (기본 5개)")
+    parser.add_argument("--top", type=int, default=5, help="스마트 점검 시 대상 상위 테제 개수 (기본: 5개)")
     parser.add_argument("--all", action="store_true", help="전체 38개 Thesis 점검")
     args = parser.parse_args()
 
@@ -220,6 +230,15 @@ def main():
             print(f"❌ Thesis를 찾을 수 없습니다: {args.id}")
             return
         run_checker([t])
+    elif args.smart:
+        print(f"\n⚡ [스마트 점검] 최근 시장 모멘텀 상위 활성 가설 선별 중...")
+        ranked = get_thesis_momentum_ranking(days=2, status_filter="active")
+        candidates = [t for t in ranked if t.get("news_count", 0) > 0][:args.top]
+        if not candidates:
+            print("  ℹ️ 최근 2일간 뉴스가 발생한 가설이 없어 우선순위 상위 3개를 점검합니다.")
+            candidates = ranked[:3]
+        print(f"  선별된 테제 ({len(candidates)}개): {', '.join(t['id'] for t in candidates)}")
+        run_checker(candidates)
     elif args.all:
         theses = load_theses(status_filter=None)
         run_checker(theses)

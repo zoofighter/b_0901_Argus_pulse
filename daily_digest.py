@@ -21,7 +21,12 @@ from pathlib import Path
 
 import config
 from notifier import send_discord
-from thesis_loader import get_active_keywords, load_thesis_by_id
+from thesis_loader import (
+    get_active_keywords,
+    get_thesis_momentum_ranking,
+    load_thesis_by_id,
+    sync_thesis_ranks_to_files,
+)
 
 
 def fetch_daily_news(days: int = 1) -> list[dict]:
@@ -108,22 +113,24 @@ def generate_daily_digest(days: int = 1, use_rag: bool = False) -> Path:
 
     kmap = get_active_keywords()
     grouped = group_news_by_thesis(news_list, kmap)
+    # 시장 모멘텀 랭킹 산출
+    ranked_theses_info = get_thesis_momentum_ranking(days=days, status_filter="active", limit=6)
+    ranked_theses = [t["id"] for t in ranked_theses_info if t.get("news_count", 0) > 0]
+    if not ranked_theses:
+        ranked_theses = [t["id"] for t in ranked_theses_info[:3]]
 
-    # 뉴스 건수 및 최고점 기준 상위 Thesis 정렬
-    ranked_theses = sorted(
-        grouped.keys(),
-        key=lambda tid: (len(grouped[tid]), max(n.get("score", 0) for n in grouped[tid])),
-        reverse=True
-    )[:6]
+    print(f"  시장 모멘텀 상위 주목 Thesis ({len(ranked_theses)}개): {', '.join(ranked_theses)}")
 
-    print(f"  상위 주목 Thesis ({len(ranked_theses)}개): {', '.join(ranked_theses)}")
+    summary_lines = ["\n## 🔥 오늘의 시장 모멘텀(News Momentum) Thesis 랭킹"]
+    for t in ranked_theses_info[:5]:
+        if t.get("news_count", 0) > 0:
+            summary_lines.append(f"- **[Rank {t['rank']}] {t['id']} {t['title']}** (모멘텀: {t['momentum_score']}점 | 뉴스 {t['news_count']}건 | 신뢰도 {t['confidence']}%)")
 
-    summary_lines = []
     for tid in ranked_theses:
         t_info = load_thesis_by_id(tid)
         t_title = t_info["title"] if t_info else tid
-        items = grouped[tid][:4]  # 상위 4개 뉴스만 발췌
-        summary_lines.append(f"\n### [{tid}] {t_title} (관련 뉴스 {len(grouped[tid])}건)")
+        items = grouped.get(tid, [])[:4]  # 상위 4개 뉴스만 발췌
+        summary_lines.append(f"\n### [{tid}] {t_title} (관련 뉴스 {len(grouped.get(tid, []))}건)")
         for item in items:
             summary_lines.append(f"- [{item.get('company','')}] {item.get('title','')} (점수: {item.get('score',0)})")
 
@@ -177,6 +184,12 @@ rag_enhanced: {str(use_rag).lower()}
         sync_file(out_file, "digest")
     except Exception:
         pass
+
+    # Thesis MD 프론트매터 랭킹/모멘텀 자동 갱신 및 옵시디언 동기화
+    try:
+        sync_thesis_ranks_to_files(days=days)
+    except Exception as e:
+        print(f"  ⚠️ Thesis 랭킹 프론트매터 갱신 오류: {e}")
 
     # 디스코드 알림
     send_discord(

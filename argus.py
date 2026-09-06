@@ -36,6 +36,7 @@ BANNER = """
   [8] 📋 Crontab 자동화 설정 가이드 확인
   [9] 🧠 Thesis 가설 신뢰도 자동 점검 (thesis_checker.py)
   [10] 📚 RAG 지식 DB 상태 및 인제스트 (ingest.py)
+  [11] 🔥 시장 모멘텀(News Momentum) Thesis 랭킹 조회
   ──────────────────────────────────────────────────────────────────
   [q] 종료
 ======================================================================
@@ -57,8 +58,8 @@ CRONTAB_SAMPLE = f"""# ── Argus Pulse Crontab 스케줄 ──────�
 # 21:00 데일리 다이제스트 생성 (RAG 연동) 및 옵시디언 동기화
 0 21 * * * cd {config.ROOT_DIR} && {sys.executable} daily_digest.py --rag >> logs/cron_digest.log 2>&1
 
-# 21:05 Active Thesis 가설 신뢰도 자동 점검
-5 21 * * * cd {config.ROOT_DIR} && {sys.executable} thesis_checker.py >> logs/cron_checker.log 2>&1
+# 21:05 시장 모멘텀 상위 Thesis 가설 신뢰도 스마트 자동 점검 및 프론트매터 랭킹 갱신
+5 21 * * * cd {config.ROOT_DIR} && {sys.executable} thesis_checker.py --smart >> logs/cron_checker.log 2>&1
 # ───────────────────────────────────────────────────────────"""
 
 
@@ -118,6 +119,8 @@ def interactive_menu():
             run_cmd(["thesis_checker.py"])
         elif choice == "10":
             run_cmd(["ingest.py", "--status"])
+        elif choice == "11":
+            run_cmd(["thesis_loader.py", "--rank"])
         else:
             print("  ⚠️ 올바른 번호를 선택해주세요.")
         
@@ -136,6 +139,7 @@ def main():
     parser.add_argument("--crontab",  action="store_true", help="크론탭 가이드 출력")
     parser.add_argument("--checker",  action="store_true", help="Thesis 가설 신뢰도 자동 점검")
     parser.add_argument("--ingest",   action="store_true", help="RAG 지식 DB 인제스트 현황 확인")
+    parser.add_argument("--rank",     action="store_true", help="시장 모멘텀(News Momentum) Thesis 랭킹 조회")
     parser.add_argument("--rag",      action="store_true", help="RAG 심층 검색 활성화")
     args = parser.parse_args()
 
@@ -165,6 +169,8 @@ def main():
         run_cmd(["thesis_checker.py"])
     elif args.ingest:
         run_cmd(["ingest.py", "--status"])
+    elif args.rank:
+        run_cmd(["thesis_loader.py", "--rank"])
     else:
         interactive_menu()
 
