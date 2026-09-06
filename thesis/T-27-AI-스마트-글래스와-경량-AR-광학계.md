@@ -28,20 +28,87 @@ related_theses:
 - T-04
 - T-19
 status: active
-time_horizon: 2026~2028
+time_horizon: 2026~2027
 title: AI 스마트 글래스와 경량 AR 광학계
+aliases:
+- T-27
+- T-27 AI 스마트 글래스와 경량 AR 광학계
+- AI 스마트 글래스와 경량 AR 광학계
+sector: 🤖 피지컬 AI, 모빌리티 & 로보틱스
+sector_id: S3
+thesis_nature: consensus
+stack_layer: L5
+stack_name: L5 (디바이스)
+geography:
+- US
+- KR
+related_vs: []
 ---
 
 # T-27 AI 스마트 글래스와 경량 AR 광학계
 
-## 핵심 가설
-무겁고 비싼 VR 헤드셋 대신 **경량 폼팩터의 AI 음성/비전 스마트 안경**이 실용성을 입증하며 대중화된다.  
-이후 초소형 Micro-OLED(OLEDoS) 및 웨이브가이드 광학 모듈이 결합된 차세대 AI 안경이 스마트폰을 보완하는 새로운 웨어러블 디바이스로 안착한다.
+> 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#3-🤖-피지컬-ai-로보틱스--엣지-디바이스-physical-ai--edge|피지컬 AI & 엣지 디바이스]]
 
-## 지지 근거
+> 🏷️ **교차 분석 메타데이터**:
+> - **성격**: `🚀 주류 성장 (Consensus)` | **스택**: `L5 (디바이스)` | **시계**: `2026~2027`
+> - **공급망 권역**: `US`, `KR` | **핵심 대결 구도**: 해당 없음
 
-## 반박 근거
+---
 
-## 관련 블로그
+## 🎯 핵심 가설
+디스플레이 없는 음성/비전 AI 스마트 안경(Ray-Ban 메타 등)의 성공이 차세대 경량 AR 글래스 및 마이크로 OLED 시장을 견인한다
 
-## 메모
+---
+
+## 🔗 테제 네트워크 (상호 연관 가설)
+
+```mermaid
+graph LR
+    P_T_04["[[T-04-온디바이스-AI의-변화|T-04 온디바이스 AI의 변화]]"] --> T_T_27["★ [[T-27-AI-스마트-글래스와-경량-AR-광학계|T-27 AI 스마트 글래스와 경량 AR 광학계]]"]
+    P_T_19["[[T-19-피지컬-AI와-공간지능-반도체|T-19 피지컬 AI와 공간지능 반도체]]"] --> T_T_27["★ [[T-27-AI-스마트-글래스와-경량-AR-광학계|T-27 AI 스마트 글래스와 경량 AR 광학계]]"]
+```
+
+- 🔼 **선행 가설 (배경 요인 & 상위 인프라)**:
+  - [[T-04-온디바이스-AI의-변화|T-04 온디바이스 AI의 변화]] — 초저전력 엣지 NPU
+  - [[T-19-피지컬-AI와-공간지능-반도체|T-19 피지컬 AI와 공간지능 반도체]] — 공간 인식 광학계
+- ➡️ **동반 및 대체·경쟁 가설**:
+  - (해당 없음)
+- 🔽 **파생 및 후행 병목 가설**:
+  - (해당 없음)
+
+---
+
+## 🏢 연관 기업 & 핵심 기술 허브
+- **핵심 기업**: [[Company-Meta|Meta]], [[Company-EssilorLuxottica|EssilorLuxottica]], [[Company-LG디스플레이|LG디스플레이]], [[Company-Sony|Sony]], [[Company-Apple|Apple]]
+- **핵심 기술/토픽**: [[Topic-온디바이스AI|온디바이스AI]], [[Topic-피지컬AI|피지컬AI]]
+
+---
+
+## 📈 지지 근거
+
+
+---
+
+## 📉 반박 근거
+
+
+---
+
+## 📑 관련 산출물 (자동 집계)
+
+### 🤖 Dataview 실시간 역방향 링크
+```dataview
+TABLE file.mtime AS "작성일", angle AS "관점", tags AS "태그"
+FROM "argus" OR "output"
+WHERE contains(thesis, "T-27") OR contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+LIMIT 7
+```
+
+### 📌 수동 링크 아카이브
+
+
+---
+
+## 📝 분석가 메모
+

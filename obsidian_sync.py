@@ -26,6 +26,14 @@ FOLDER_MAP = {
     "review": "argus/Review",
     "theses": "argus/Theses",
     "thesis": "argus/Theses",
+    "topics": "argus/Topics",
+    "topic": "argus/Topics",
+    "companies": "argus/Companies",
+    "company": "argus/Companies",
+    "moc": "argus",
+    "docs": "argus/Docs",
+    "vs": "argus/Vs",
+    "vs_hub": "argus/Vs",
 }
 
 
@@ -62,7 +70,7 @@ def sync_file(filepath: str | Path, category: str) -> Path | None:
 
 
 def sync_all_outputs() -> dict:
-    """output/ 폴더 내의 모든 생성물을 옵시디언으로 일괄 동기화"""
+    """모든 생성물 및 Thesis/Topic/MOC/Vs를 옵시디언으로 일괄 동기화"""
     vault = config.OBSIDIAN_PATH
     print(f"\n📂 [Obsidian 전체 동기화 시작]")
     print(f"   볼트 위치: {vault}")
@@ -71,9 +79,10 @@ def sync_all_outputs() -> dict:
         print(f"  ❌ 옵시디언 볼트 경로가 존재하지 않습니다: {vault}")
         return {}
 
-    counts = {"blog": 0, "thread": 0, "outline": 0, "digest": 0, "review": 0}
+    counts = {"blog": 0, "thread": 0, "outline": 0, "digest": 0, "review": 0, "theses": 0, "topics": 0, "companies": 0, "vs": 0, "docs": 0, "moc": 0}
 
-    for cat in counts.keys():
+    # 1. Output 디렉터리 동기화
+    for cat in ["blog", "thread", "outline", "digest", "review"]:
         src_dir = config.OUTPUT_DIR / cat
         if not src_dir.exists():
             continue
@@ -83,9 +92,35 @@ def sync_all_outputs() -> dict:
             if res:
                 counts[cat] += 1
 
+    # 2. Thesis 디렉터리 동기화
+    if config.THESIS_DIR.exists():
+        for t_file in config.THESIS_DIR.glob("T-*.md"):
+            if sync_file(t_file, "theses"):
+                counts["theses"] += 1
+        for top_file in config.THESIS_DIR.glob("Topic-*.md"):
+            if sync_file(top_file, "topics"):
+                counts["topics"] += 1
+        for c_file in config.THESIS_DIR.glob("Company-*.md"):
+            if sync_file(c_file, "companies"):
+                counts["companies"] += 1
+        for v_file in config.THESIS_DIR.glob("Vs-*.md"):
+            if sync_file(v_file, "vs"):
+                counts["vs"] += 1
+        moc_file = config.THESIS_DIR / "00-Argus-Master-MOC.md"
+        if moc_file.exists() and sync_file(moc_file, "moc"):
+            counts["moc"] += 1
+
+    # 3. Docs 동기화
+    docs_dir = config.ROOT_DIR / "docs"
+    if docs_dir.exists():
+        for doc_file in docs_dir.glob("*.md"):
+            if sync_file(doc_file, "docs"):
+                counts["docs"] += 1
+
     print("\n✅ 동기화 완료 요약:")
     for cat, cnt in counts.items():
-        print(f"   - {cat:<7}: {cnt}개 파일")
+        if cnt > 0:
+            print(f"   - {cat:<10}: {cnt}개 파일")
 
     return counts
 
