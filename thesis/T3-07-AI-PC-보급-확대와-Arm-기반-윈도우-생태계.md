@@ -83,7 +83,7 @@ graph LR
 ---
 
 ## 🏢 연관 기업 & 핵심 기술 허브
-- **핵심 기업**: [[Company-Qualcomm|Qualcomm]], [[Company-인텔|인텔]], [[Company-AMD|AMD]], [[Company-Microsoft|Microsoft]], [[Company-ARM|ARM]], [[Company-Lenovo|Lenovo]]
+- **핵심 기업**: [[Company-Qualcomm|Qualcomm]], [[Company-Intel|인텔]], [[Company-AMD|AMD]], [[Company-Microsoft|Microsoft]], [[Company-ARM|ARM]], [[Company-Lenovo|Lenovo]]
 - **핵심 기술/토픽**: [[Topic-온디바이스AI|온디바이스AI]], [[Topic-ASIC|ASIC]]
 
 ---

@@ -21,7 +21,11 @@ from pathlib import Path
 
 import config
 from notifier import send_discord
-from thesis_loader import load_thesis_by_id
+from thesis_loader import (
+    load_thesis_by_id,
+    inject_wikilinks_to_text,
+    generate_knowledge_network_footer,
+)
 
 
 def find_latest_blog() -> Path | None:
@@ -164,12 +168,20 @@ def generate_review(blog_path: Path = None, use_rag: bool = False) -> Path:
     content = re.sub(r"^```(?:markdown)?\n?", "", content.strip())
     content = re.sub(r"\n?```$", "", content.strip())
 
+    # 위키링크 자동 주입 및 지식 네트워크 푸터 결합
+    content = inject_wikilinks_to_text(content, auto_keywords=True)
+    if "## 🔗 연관 지식 네트워크" not in content and "### 🔗 연관 지식 네트워크" not in content:
+        knowledge_footer = generate_knowledge_network_footer(thesis_ids)
+        content = content.rstrip() + "\n\n" + knowledge_footer
+
     today_str = date.today().isoformat()
+    target_link = f"[[{target_blog.stem}|{blog_info['title']}]]" if target_blog else blog_info['title']
     header = f"""---
 title: "[리뷰] {blog_info['title']}"
 date: {today_str}
 type: review
-target_blog: "{target_blog.name}"
+target_blog: "{target_blog.name if target_blog else ''}"
+target_blog_link: "{target_link}"
 thesis: {json.dumps(thesis_ids, ensure_ascii=False)}
 rag_enhanced: {str(use_rag).lower()}
 ---

@@ -20,7 +20,11 @@ from datetime import date
 from pathlib import Path
 
 import config
-from thesis_loader import load_thesis_by_id
+from thesis_loader import (
+    load_thesis_by_id,
+    inject_wikilinks_to_text,
+    generate_knowledge_network_footer,
+)
 
 
 ANGLE_DESCRIPTIONS = {
@@ -134,21 +138,15 @@ def save_thread(lines: list[str], title: str, angle: str, topic: dict = None) ->
     # 참고 자료 및 출처 섹션 자동 부착
     if topic:
         thesis_ids = topic.get("thesis_ids", [])
-        ref_lines = ["\n\n---\n\n## 📚 핵심 참고 자료 및 출처 (Data Sources & Links)"]
-        if thesis_ids:
-            ref_lines.append("### 1. 연계 투자 테제 (Thesis)")
-            for tid in thesis_ids:
-                t = load_thesis_by_id(tid)
-                if t:
-                    ref_lines.append(f"- `[[{tid} {t['title']}]]`: {t['hypothesis']}")
-                else:
-                    ref_lines.append(f"- `[[{tid}]]`")
-        
+        # 연관 테제 및 지식 네트워크 부착
+        thesis_ids = topic.get("thesis_ids", [])
         hook = topic.get("hook", "")
         if hook:
-            ref_lines.append(f"\n### 2. 시장 트리거 & 데이터 소스\n- **분석 팩트**: {hook}")
-            
-        content += "\n".join(ref_lines)
+            content += f"\n\n---\n### 📰 시장 트리거 & 데이터 소스\n- **분석 팩트**: {hook}\n"
+        
+        content = inject_wikilinks_to_text(content, auto_keywords=True)
+        knowledge_footer = generate_knowledge_network_footer(thesis_ids)
+        content = content.rstrip() + "\n\n" + knowledge_footer
 
     filepath.write_text(content, encoding="utf-8")
     return filepath

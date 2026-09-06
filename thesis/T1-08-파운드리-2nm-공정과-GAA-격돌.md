@@ -86,7 +86,7 @@ graph LR
 ---
 
 ## 🏢 연관 기업 & 핵심 기술 허브
-- **핵심 기업**: [[Company-TSMC|TSMC]], [[Company-삼성전자|삼성전자]], [[Company-인텔|인텔]], [[Company-Apple|Apple]], [[Company-Qualcomm|Qualcomm]]
+- **핵심 기업**: [[Company-TSMC|TSMC]], [[Company-삼성전자|삼성전자]], [[Company-Intel|인텔]], [[Company-Apple|Apple]], [[Company-Qualcomm|Qualcomm]]
 - **핵심 기술/토픽**: [[Topic-2nm-GAA|2nm-GAA]], [[Topic-CoWoS|CoWoS]]
 
 ---

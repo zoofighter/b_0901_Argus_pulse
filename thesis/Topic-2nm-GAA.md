@@ -30,7 +30,7 @@ FinFET 한계를 극복한 3차원 GAA 트랜지스터 구조 기반의 2nm 선�
 ---
 
 ## 🏢 핵심 플레이어 및 공급망
-- **주요 기업**: [[Company-TSMC|TSMC]], [[Company-삼성전자|삼성전자]], [[Company-인텔|인텔]], [[Company-Rapidus|Rapidus]], [[Company-ASML|ASML]]
+- **주요 기업**: [[Company-TSMC|TSMC]], [[Company-삼성전자|삼성전자]], [[Company-Intel|인텔]], [[Company-Rapidus|Rapidus]], [[Company-ASML|ASML]]
 
 ---
 

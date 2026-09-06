@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "id": "h3",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# 🤖 [Sector 3] 피지컬 AI · 자율주행 · 로보틱스 맵\n> 공간지능 기반 VLA 파운데이션 모델 ➔ E2E 자율주행 & 로보택시 ➔ 휴머노이드 액추에이터 ➔ 온디바이스 AI"
+    },
+    {
+      "id": "top_physical",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 200,
+      "type": "file",
+      "file": "thesis/Topic-피지컬AI.md"
+    },
+    {
+      "id": "top_fsd",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 200,
+      "type": "file",
+      "file": "thesis/Topic-자율주행.md"
+    },
+    {
+      "id": "top_ondevice",
+      "x": 450,
+      "y": -100,
+      "width": 320,
+      "height": 200,
+      "type": "file",
+      "file": "thesis/Topic-온디바이스AI.md"
+    },
+    {
+      "id": "t3_03",
+      "x": -350,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T3-03-휴머노이드-로봇과-액추에이터-공급망.md"
+    },
+    {
+      "id": "t3_04",
+      "x": 50,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T3-04-End-to-End-AI-자율주행과-로보택시.md"
+    },
+    {
+      "id": "t3_05",
+      "x": 450,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T3-05-피지컬-AI와-공간지능-반도체.md"
+    },
+    {
+      "id": "c_tesla",
+      "x": -200,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-Tesla.md"
+    },
+    {
+      "id": "c_apple",
+      "x": 100,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-Apple.md"
+    },
+    {
+      "id": "c_qualcomm",
+      "x": 400,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-Qualcomm.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e3_1",
+      "fromNode": "top_physical",
+      "fromSide": "right",
+      "toNode": "top_fsd",
+      "toSide": "left",
+      "label": "공간지능 이식"
+    },
+    {
+      "id": "e3_2",
+      "fromNode": "top_fsd",
+      "fromSide": "right",
+      "toNode": "top_ondevice",
+      "toSide": "left",
+      "label": "엣지 NPU 처리"
+    },
+    {
+      "id": "e3_3",
+      "fromNode": "top_physical",
+      "fromSide": "bottom",
+      "toNode": "t3_03",
+      "toSide": "top",
+      "label": "하드웨어 구동부"
+    },
+    {
+      "id": "e3_4",
+      "fromNode": "top_fsd",
+      "fromSide": "bottom",
+      "toNode": "t3_04",
+      "toSide": "top",
+      "label": "신경망 운전"
+    },
+    {
+      "id": "e3_5",
+      "fromNode": "t3_04",
+      "fromSide": "bottom",
+      "toNode": "c_tesla",
+      "toSide": "top",
+      "label": "FSD V12 / Cybercab"
+    },
+    {
+      "id": "e3_6",
+      "fromNode": "top_ondevice",
+      "fromSide": "bottom",
+      "toNode": "c_apple",
+      "toSide": "top",
+      "label": "Apple Intelligence"
+    }
+  ]
+}

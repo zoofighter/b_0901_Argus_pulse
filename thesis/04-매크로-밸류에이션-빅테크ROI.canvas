@@ -1,0 +1,153 @@
+{
+  "nodes": [
+    {
+      "id": "h4",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# 📊 [Sector 4] 매크로 · 밸류에이션 · 빅테크 ROI 딜레마\n> 고금리 장기화(5%) ➔ 빅테크 CAPEX ROI 회수 압박 ➔ GPU 담보 금융 및 네오클라우드 리스크 ➔ 버블 vs 실적 차별화"
+    },
+    {
+      "id": "t4_01",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-01-금리와-데이터센터.md"
+    },
+    {
+      "id": "t4_04",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-04-AI-버블-가능성.md"
+    },
+    {
+      "id": "t4_06",
+      "x": 450,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-06-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
+    },
+    {
+      "id": "t4_02",
+      "x": -350,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-02-엔비디아와-네오클라우드.md"
+    },
+    {
+      "id": "t4_03",
+      "x": 50,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-03-엔비디아와-GPU-금융.md"
+    },
+    {
+      "id": "t4_05",
+      "x": 450,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "thesis/T4-05-10년금리-5%-재진입-가능성.md"
+    },
+    {
+      "id": "c_coreweave",
+      "x": -350,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-CoreWeave.md"
+    },
+    {
+      "id": "c_msft",
+      "x": -50,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-Microsoft.md"
+    },
+    {
+      "id": "c_openai",
+      "x": 250,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-OpenAI.md"
+    },
+    {
+      "id": "c_anthropic",
+      "x": 550,
+      "y": 550,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "thesis/Company-Anthropic.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e4_1",
+      "fromNode": "t4_01",
+      "fromSide": "right",
+      "toNode": "t4_04",
+      "toSide": "left",
+      "label": "할인율 상승 압박"
+    },
+    {
+      "id": "e4_2",
+      "fromNode": "t4_04",
+      "fromSide": "right",
+      "toNode": "t4_06",
+      "toSide": "left",
+      "label": "$500B 매출 갭"
+    },
+    {
+      "id": "e4_3",
+      "fromNode": "t4_01",
+      "fromSide": "bottom",
+      "toNode": "t4_02",
+      "toSide": "top",
+      "label": "대안 인프라"
+    },
+    {
+      "id": "e4_4",
+      "fromNode": "t4_02",
+      "fromSide": "right",
+      "toNode": "t4_03",
+      "toSide": "left",
+      "label": "GPU 담보 차입"
+    },
+    {
+      "id": "e4_5",
+      "fromNode": "t4_02",
+      "fromSide": "bottom",
+      "toNode": "c_coreweave",
+      "toSide": "top",
+      "label": "네오클라우드 허브"
+    },
+    {
+      "id": "e4_6",
+      "fromNode": "t4_06",
+      "fromSide": "bottom",
+      "toNode": "c_openai",
+      "toSide": "top",
+      "label": "수익화 모델 검증"
+    }
+  ]
+}

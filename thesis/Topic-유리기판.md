@@ -28,7 +28,7 @@ created: 2026-09-06
 ---
 
 ## 🏢 핵심 플레이어 및 공급망
-- **주요 기업**: [[Company-SKC|SKC]], [[Company-인텔|인텔]], [[Company-삼성전기|삼성전기]], [[Company-이오테크닉스|이오테크닉스]], [[Company-필옵틱스|필옵틱스]]
+- **주요 기업**: [[Company-SKC|SKC]], [[Company-Intel|인텔]], [[Company-삼성전기|삼성전기]], [[Company-이오테크닉스|이오테크닉스]], [[Company-필옵틱스|필옵틱스]]
 
 ---
 

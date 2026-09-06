@@ -86,7 +86,7 @@ graph LR
 ---
 
 ## 🏢 연관 기업 & 핵심 기술 허브
-- **핵심 기업**: [[Company-Groq|Groq]], [[Company-리벨리온|리벨리온]], [[Company-퓨리오사AI|퓨리오사AI]], [[Company-SambaNova|SambaNova]], [[Company-Qualcomm|Qualcomm]], [[Company-브로드컴|브로드컴]]
+- **핵심 기업**: [[Company-Groq|Groq]], [[Company-리벨리온|리벨리온]], [[Company-퓨리오사AI|퓨리오사AI]], [[Company-SambaNova|SambaNova]], [[Company-Qualcomm|Qualcomm]], [[Company-Broadcom|브로드컴]]
 - **핵심 기술/토픽**: [[Topic-ASIC|ASIC]], [[Topic-온디바이스AI|온디바이스AI]]
 
 ---

@@ -9,10 +9,10 @@ status: draft
 
 # 🗺️ 블로그 기획 윤곽서 (Outline Blueprint)
 
-> **주제**: 삼성의 33% 맹추격? 착시일 뿐, 진짜 HBM 왕좌는 'HBM4 커스텀'에서 갈린다  
-> **핵심 훅**: 삼성전자가 HBM 시장 점유율을 33%까지 끌어올리며 SK하이닉스를 턱밑까지 추격했지만, 이번 판의 룰은 완전히 바뀌고 있습니다.  
+> **주제**: 삼성의 33% 맹추격? 착시일 뿐, 진짜 [[Topic-HBM|HBM]] 왕좌는 'HBM4 커스텀'에서 갈린다  
+> **핵심 훅**: 삼성전자가 [[Topic-HBM|HBM]] 시장 점유율을 33%까지 끌어올리며 SK하이닉스를 턱밑까지 추격했지만, 이번 판의 룰은 완전히 바뀌고 있습니다.  
 > **관점(Angle)**: 기업격돌  
-> **연계 테제**: T-02
+> **연계 테제**: [[T1-01-메모리-산업의-변화|T1-01]]
 
 ---
 
@@ -25,8 +25,8 @@ status: draft
 
 ## 2. 4단계 목차 및 핵심 논점 구상
 - **서론**: 2분기 HBM 점유율 변동(SK 50% vs 삼성 33%) 분석 및 단순 '점유율 숫자'에 가려진 메모리 패러다임 전환 선언
-- **본론 1**: HBM3E까지는 양산 수율과 물량 싸움이었으나, 하반기 개막하는 HBM4부터는 파운드리·베이스다이가 결합된 '커스텀 ASIC' 영역 진입
-- **본론 2 (반론/검증)**: TSMC-SK하이닉스 연합전선 vs 턴키 솔루션을 앞세운 삼성전자의 구조적 격돌 및 빅테크별 맞춤형 메모리 락인(Lock-in) 효과
+- **본론 1**: HBM3E까지는 양산 수율과 물량 싸움이었으나, 하반기 개막하는 HBM4부터는 파운드리·베이스다이가 결합된 '커스텀 [[Topic-ASIC|ASIC]]' 영역 진입
+- **본론 2 (반론/검증)**: [[Company-TSMC|TSMC]]-SK하이닉스 연합전선 vs 턴키 솔루션을 앞세운 삼성전자의 구조적 격돌 및 빅테크별 맞춤형 메모리 락인(Lock-in) 효과
 - **결론 (투자 뷰 & 이벤트)**: 범용 메모리 치킨게임의 종말, 커스텀 HBM4 수주 성적표가 향후 5년 메모리 밸류에이션(P/E 리레이팅)을 결정짓는 핵심 지표
 
 ---
@@ -43,3 +43,18 @@ status: draft
 - [삼성전자] [삼성 HBM 점유율 33%로 '껑충'…1위 SK와 격차 좁혀](https://www.sisajournal.com/news/articleView.html?idxno=386065) (2026-09-04, 80점)
 - [SK하이닉스] [SK하이닉스, HBM 점유율 50%…삼성, 33%로 맹추격](https://it.chosun.com/news/articleView.html?idxno=2023092169456) (2026-09-03, 80점)
 - [SK하이닉스] [SK하이닉스, 2분기 글로벌 HBM 점유율 1위](https://www.ccdn.co.kr/news/articleView.html?idxno=1097707) (2026-09-03, 80점)
+
+---
+## 🔗 연관 지식 네트워크 (Knowledge Network)
+
+### 📌 관련 투자 테제 (Investment Theses)
+- [[T1-01-메모리-산업의-변화|T1-01 메모리 산업의 변화]]
+
+### 🏷️ 핵심 기술 토픽 (Topics)
+- [[Topic-CoWoS|CoWoS]] · [[Topic-HBM|HBM]]
+
+### 🏢 관련 기업 허브 (Companies)
+- [[Company-Micron|Micron]] · [[Company-NVIDIA|NVIDIA]] · [[Company-SK하이닉스|SK하이닉스]] · [[Company-TSMC|TSMC]] · [[Company-삼성전자|삼성전자]]
+
+### 🗺️ 인덱스 허브
+- [[00-Argus-Master-MOC|Argus Master MOC]]

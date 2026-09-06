@@ -8,15 +8,15 @@ tags: ["SK하이닉스", "HBM4", "DRAM", "엔비디아", "TSMC", "커스텀ASIC"
 ---
 
 1. 결론부터 말하면 9월 2일 SK하이닉스 HBM4 92점 승인으로 D램은 끝났음, HBM4부터 메모리는 엔비디아가 설계하는 주문형 칩이 됐음[^1]
-2. D램 현물가 40% 급등해도 이제 HBM 가격표는 의미 없음, HBM4 단가 3만 달러짜리 커스텀 칩이라 스팟 시세랑 연동이 안 됨[^2]
+2. D램 현물가 40% 급등해도 이제 [[Topic-HBM|HBM]] 가격표는 의미 없음, HBM4 단가 3만 달러짜리 커스텀 칩이라 스팟 시세랑 연동이 안 됨[^2]
 3. 같은 날 삼성전자 2차 퀄 85점으로 7점 차이 났음, 이 7점이 범용과 커스텀을 가르는 락인의 벽임[^1]
 4. HBM4는 대역폭 2,048GB/s로 HBM3E 1,200GB/s 대비 70% 점프했음, 용량도 12단 36GB로 1.5배 커졌음[^3]
-5. [T-02]thesis대로 메모리가 원자재에서 커스텀 ASIC으로 넘어가는 변곡점이 2025년 3분기에 터졌음, YoY 마진 스프레드가 3배 벌어지는 구간임[^4]
-6. 핵심은 베이스 다이(Base Die)에 로직을 넣는 구조 변화임, TSMC 4nm 로직 다이가 컨트롤러 역할을 하면서 D램이 아니라 SoC가 됐음[^5]
+5. [[T1-01-메모리-산업의-변화|T1-01]]]thesis대로 메모리가 원자재에서 커스텀 ASIC으로 넘어가는 변곡점이 2025년 3분기에 터졌음, YoY 마진 스프레드가 3배 벌어지는 구간임[^4]
+6. 핵심은 베이스 다이(Base Die)에 로직을 넣는 구조 변화임, [[Company-TSMC|TSMC]] 4nm 로직 다이가 컨트롤러 역할을 하면서 D램이 아니라 SoC가 됐음[^5]
 7. 커스텀 I/O(입출력 인터페이스) 2,048개 핀을 엔비디아가 직접 정의함, 핀맵 하나 바꾸면 호환 자체가 안 되는 구조임[^3]
 8. 과거 HBM3E는 SK가 70% 점유해도 삼성 따라오면 가격 20% 빠졌음, HBM4는 설계가 잠기니 가격 하락이 5% 이내로 제한됨[^2]
 9. 그래서 승부는 D램 공정이 아니라 파운드리+패키징에서 갈림, SK는 베이스 다이 35조원을 TSMC에 맡기며 락인을 걸었음[^5]
-10. 패키징은 CoWoS(Chip on Wafer on Substrate) 캐파가 병목임, TSMC CoWoS 월 7만장 중 60%가 HBM4용으로 할당됐음[^6]
+10. 패키징은 [[Topic-CoWoS|CoWoS]](Chip on Wafer on Substrate) 캐파가 병목임, [[Company-TSMC|TSMC]] [[Topic-CoWoS|CoWoS]] 월 7만장 중 60%가 HBM4용으로 할당됐음[^6]
 11. 커스텀 밸류체인 1단계 수혜는 SK하이닉스임, HBM4 ASP 2.8만 달러에 영업이익률 62%로 D램 35% 대비 27%p 높음[^2]
 12. 2단계는 TSMC임, HBM4 베이스 다이 수주만으로 2026년 매출 25억 달러 추가되고 마진 45%짜리 일감이 됐음[^5]
 13. 3단계는 패키징·장비임, 한미반도체 TC본더 점유율 75%에 HPSP 고압어닐링 장비 매출이 YoY 180% 뛰었음[^7]
@@ -26,7 +26,7 @@ tags: ["SK하이닉스", "HBM4", "DRAM", "엔비디아", "TSMC", "커스텀ASIC"
 17. 엔비디아 B300 전략도 함정임, B300 1대에 HBM4 8개 들어가는데 삼성 이원화로 단가를 15% 깎으려는 설계가 깔려 있음[^6]
 18. 커스텀화되면 마진 역설이 생김, 초기 마진 62% 찍고 물량 2배 늘면 ASP가 12% 하락해 ROIC가 25%에서 18%로 꺾이는 구간이 온다는 점임[^2]
 19. 메모리 사이클 투자는 이제 CAPEX 80조원 베팅이 아니라 밸류체인 선점 게임임, D램 가격 10% 오르면 삼성전자 영업이익 1.2조원 늘던 공식은 폐기됐음[^4]
-20. 진짜 PER(주가수익비율) 프리미엄은 D램 3사가 아니라 커스텀 독점 업체에 붙음, SK하이닉스 HBM 영업가치만 시총의 55%를 차지하게 됐음[^2]
+20. 진짜 PER(주가수익비율) 프리미엄은 D램 3사가 아니라 커스텀 독점 업체에 붙음, SK하이닉스 [[Topic-HBM|HBM]] 영업가치만 시총의 55%를 차지하게 됐음[^2]
 21. 소재 쪽도 갈림, 하이브리드 본딩용 언더필 소재는 YoY 300% 성장하는데 범용 D램용 소재는 3% 역성장 중임[^6]
 22. 반론으로 HBM4가 너무 비싸면 B300 출시가 2026년 2분기에서 3분기로 3개월 밀릴 리스크도 있음, 수요 이연 시 재고 2조원 쌓이는 구간임[^6]
 23. 삼성 최종 퀄 통과 여부가 90점 커트라인인데 현재 85점에서 5점 남았음, 통과 시 삼성 HBM 매출이 분기 5천억에서 2조원으로 4배 튐[^1]
@@ -46,7 +46,7 @@ tags: ["SK하이닉스", "HBM4", "DRAM", "엔비디아", "TSMC", "커스텀ASIC"
 * [^2]: **교보증권 (2026.07.30)**, *「2Q26 Review: HBM4와 LTA로 이어질 실적 모멘텀」*
   - HBM4 양산 확대와 LTA(장기공급계약) 체결로 인한 가격 프리미엄(ASP 2.8만~3만$) 및 영업이익률 60~70%대 지속 전망. [원문 리포트 PDF 링크](https://stock.pstatic.net/stock-research/company/62/20260730_company_806984000.pdf)
 * [^6]: **iM증권 (2026.06.18)**, *「Rubin Ultra와 HBM4E의 변화?」*
-  - 엔비디아 차세대 AI 가속기(B300/Rubin) 로드맵, TSMC CoWoS 패키징 병목 및 하이브리드 본딩 vs MR-MUF 기술 격돌 분석. [원문 리포트 PDF 링크](https://stock.pstatic.net/stock-research/industry/61/20260618_industry_907123000.pdf)
+  - 엔비디아 차세대 AI 가속기(B300/Rubin) 로드맵, [[Company-TSMC|TSMC]] CoWoS 패키징 병목 및 하이브리드 본딩 vs MR-MUF 기술 격돌 분석. [원문 리포트 PDF 링크](https://stock.pstatic.net/stock-research/industry/61/20260618_industry_907123000.pdf)
 * [^7]: **한국투자증권 / 다올투자증권 (2026.08)**, *「반도체 소부장: HBM4 밸류체인 수혜 점검」*
   - 한미반도체 TC본더 독점력 및 HPSP 고압수소 어닐링 장비 납품 실적 YoY 분석.
 
@@ -57,9 +57,24 @@ tags: ["SK하이닉스", "HBM4", "DRAM", "엔비디아", "TSMC", "커스텀ASIC"
   - 베이스 다이(Base Die) 공정을 기존 DRAM 제조 공정에서 TSMC 첨단 선단 로직(4nm/5nm) 파운드리 공정으로 전격 이관 및 패키징 협력 체결.
 
 ### 3. 시장 조사기관 및 분석 데이터
-* [^1]: **SemiAnalysis / TrendForce Research (2026.08~09)**, *「NVIDIA AI Accelerator Qualification Tracking & Memory Allocation」*
+* [^1]: **SemiAnalysis / TrendForce Research (2026.08~09)**, *「[[Company-NVIDIA|NVIDIA]] AI Accelerator Qualification Tracking & Memory Allocation」*
   - SK하이닉스 12단 HBM4 1차 승인 퀄 테스트 결과(92점) 및 삼성전자 2차 퀄(85점) 추적 데이터.
 * [^4]: **Argus Pulse Investment Thesis & Internal Knowledge**
-  - 가설 문서: `[[T-02 메모리 산업의 변화]]` (HBM4로 인한 범용 DRAM의 커스텀 ASIC화)
+  - 가설 문서: `[[T1-01-메모리-산업의-변화|T-02 메모리 산업의 변화]]` (HBM4로 인한 범용 DRAM의 커스텀 ASIC화)
   - 연계 심층 블로그 1: `[[2026-09-03-blog-삼성전자-CUBE-전략과-HBM4-대반격-메모리-파운드리-원팀의-승부수]]`
   - 연계 심층 블로그 2: `[[2026-09-03-blog-CSP-자본지출-68가-메모리로-HBM4가-촉발할-2027년-반도체-지각]]`
+
+---
+## 🔗 연관 지식 네트워크 (Knowledge Network)
+
+### 📌 관련 투자 테제 (Investment Theses)
+- [[T1-01-메모리-산업의-변화|T1-01 메모리 산업의 변화]]
+
+### 🏷️ 핵심 기술 토픽 (Topics)
+- [[Topic-CoWoS|CoWoS]] · [[Topic-HBM|HBM]]
+
+### 🏢 관련 기업 허브 (Companies)
+- [[Company-Micron|Micron]] · [[Company-NVIDIA|NVIDIA]] · [[Company-SK하이닉스|SK하이닉스]] · [[Company-TSMC|TSMC]] · [[Company-삼성전자|삼성전자]]
+
+### 🗺️ 인덱스 허브
+- [[00-Argus-Master-MOC|Argus Master MOC]]

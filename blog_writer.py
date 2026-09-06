@@ -18,7 +18,11 @@ from datetime import date, datetime
 from pathlib import Path
 
 import config
-from thesis_loader import load_thesis_by_id
+from thesis_loader import (
+    load_thesis_by_id,
+    inject_wikilinks_to_text,
+    generate_knowledge_network_footer,
+)
 
 
 # ── Thesis 가이드 로드 ─────────────────────────────────────────────────────────
@@ -473,6 +477,12 @@ def generate_blog(topic: dict, title_choice: str = None, interactive: bool = Tru
     # 코드 블록 래퍼 제거
     content = re.sub(r"^```(?:markdown)?\n?", "", content.strip())
     content = re.sub(r"\n?```$", "", content.strip())
+
+    # 위키링크 자동 주입 및 지식 네트워크 푸터 결합
+    content = inject_wikilinks_to_text(content, auto_keywords=True)
+    if "## 🔗 연관 지식 네트워크" not in content and "### 🔗 연관 지식 네트워크" not in content:
+        knowledge_footer = generate_knowledge_network_footer(thesis_ids)
+        content = content.rstrip() + "\n\n" + knowledge_footer
 
     # Critic 자가 검수 루프 (옵션 활성화 시)
     if use_critic:

@@ -93,7 +93,7 @@ graph LR
 ---
 
 ## 🏢 연관 기업 & 핵심 기술 허브
-- **핵심 기업**: [[Company-TSMC|TSMC]], [[Company-ASE|ASE]], [[Company-Amkor|Amkor]], [[Company-삼성전자|삼성전자]], [[Company-SK하이닉스|SK하이닉스]], [[Company-SKC|SKC]], [[Company-인텔|인텔]]
+- **핵심 기업**: [[Company-TSMC|TSMC]], [[Company-ASE|ASE]], [[Company-Amkor|Amkor]], [[Company-삼성전자|삼성전자]], [[Company-SK하이닉스|SK하이닉스]], [[Company-SKC|SKC]], [[Company-Intel|인텔]]
 - **핵심 기술/토픽**: [[Topic-CoWoS|CoWoS]], [[Topic-HBM|HBM]], [[Topic-유리기판|유리기판]]
 
 ---
@@ -120,7 +120,7 @@ LIMIT 7
 ```
 
 ### 📌 수동 링크 아카이브
-<!-- [[블로그 파일명]] 형식으로 링크 -->
+<!-- `블로그 파일명` 형식으로 링크 -->
 
 ---
 

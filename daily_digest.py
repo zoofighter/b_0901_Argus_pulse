@@ -26,6 +26,8 @@ from thesis_loader import (
     get_thesis_momentum_ranking,
     load_thesis_by_id,
     sync_thesis_ranks_to_files,
+    inject_wikilinks_to_text,
+    generate_knowledge_network_footer,
 )
 
 
@@ -158,6 +160,12 @@ def generate_daily_digest(days: int = 1, use_rag: bool = False) -> Path:
     # 정리 및 프론트매터 결합
     content = re.sub(r"^```(?:markdown)?\n?", "", content.strip())
     content = re.sub(r"\n?```$", "", content.strip())
+
+    # 위키링크 자동 주입 및 지식 네트워크 푸터 결합
+    content = inject_wikilinks_to_text(content, auto_keywords=True)
+    if "## 🔗 연관 지식 네트워크" not in content and "### 🔗 연관 지식 네트워크" not in content:
+        knowledge_footer = generate_knowledge_network_footer(ranked_theses)
+        content = content.rstrip() + "\n\n" + knowledge_footer
 
     header = f"""---
 title: "Argus Pulse 일일 다이제스트 ({today_str})"

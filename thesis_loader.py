@@ -276,6 +276,172 @@ def sync_thesis_ranks_to_files(days: int = 2, db_path: Optional[Path] = None) ->
     return ranked_theses
 
 
+
+# ── Obsidian 위키링크 지식 그래프 연동 헬퍼 ────────────────────────
+
+def get_wikilink_map() -> dict:
+    """
+    thesis/ 디렉토리 내의 테제, 토픽, 기업, MOC 파일들을 분석하여
+    키워드 -> 위키링크 맵을 반환.
+    """
+    theses = load_theses(status_filter=None)
+    thesis_map = {}
+    for t in theses:
+        tid = t.get("id")
+        old_id = t.get("old_id")
+        title = t.get("title", "")
+        fp = Path(t.get("filepath", ""))
+        stem = fp.stem
+        link = f"[[{stem}|{tid} {title}]]"
+        short_link = f"[[{stem}|{tid}]]"
+        
+        if tid:
+            thesis_map[tid] = (short_link, link, stem)
+        if old_id:
+            thesis_map[old_id] = (short_link, link, stem)
+        for alias in t.get("aliases", []):
+            thesis_map[alias] = (short_link, link, stem)
+
+    topic_map = {}
+    for f in THESIS_DIR.glob("Topic-*.md"):
+        topic_name = f.stem.replace("Topic-", "")
+        topic_map[topic_name] = f"[[{f.stem}|{topic_name}]]"
+
+    company_map = {}
+    for f in THESIS_DIR.glob("Company-*.md"):
+        comp_name = f.stem.replace("Company-", "")
+        company_map[comp_name] = f"[[{f.stem}|{comp_name}]]"
+
+    return {
+        "theses": thesis_map,
+        "topics": topic_map,
+        "companies": company_map,
+        "moc": "[[00-Argus-Master-MOC|Argus Master MOC]]"
+    }
+
+
+def inject_wikilinks_to_text(text: str, auto_keywords: bool = True) -> str:
+    """
+    본문 텍스트 내의 테제 ID(T1-01, T-01 등), 주요 기업, 주요 기술 토픽을
+    옵시디언 위키링크로 변환 (이미 링크 처리된 부분 [[...]] 이나 [...]은 보호).
+    """
+    wmap = get_wikilink_map()
+    
+    # 1. 테제 ID 변환 (T[1-6]-[0-9]{2} 또는 T-[0-9]{2})
+    def replace_thesis(match):
+        tid = match.group(0)
+        if tid in wmap["theses"]:
+            return wmap["theses"][tid][0]
+        return tid
+
+    # 이미 위키링크 안에 있는 것은 건너뛰기 위해 정규식 보호 처리
+    # 예: [[...]] 내부는 건너뛰고 일반 텍스트의 Thesis ID 치환
+    pattern = r'(?<!\[\[)(?<![A-Za-z0-9_])(T[1-6]-\d{2}|T-\d{2})(?![A-Za-z0-9_])(?!\]\])'
+    text = re.sub(pattern, replace_thesis, text)
+
+    if auto_keywords:
+        # 2. 기업명 변환 (긴 이름부터 매칭)
+        sorted_companies = sorted(wmap["companies"].keys(), key=len, reverse=True)
+        for comp in sorted_companies:
+            if len(comp) < 2:
+                continue
+            link = wmap["companies"][comp]
+            # 이미 대괄호 안에 들어있지 않은 단어만 치환
+            # 정규식 negative lookbehind/lookahead
+            esc_comp = re.escape(comp)
+            comp_pattern = rf'(?<!\[\[)(?<![가-힣a-zA-Z0-9])({esc_comp})(?![가-힣a-zA-Z0-9])(?!\]\])(?![^\[]*\])'
+            # 본문에서 최대 3회까지만 치환하여 가독성 유지
+            text = re.sub(comp_pattern, link, text, count=3)
+
+        # 3. 토픽명 변환
+        sorted_topics = sorted(wmap["topics"].keys(), key=len, reverse=True)
+        for top in sorted_topics:
+            if len(top) < 2:
+                continue
+            link = wmap["topics"][top]
+            esc_top = re.escape(top)
+            top_pattern = rf'(?<!\[\[)(?<![가-힣a-zA-Z0-9])({esc_top})(?![가-힣a-zA-Z0-9])(?!\]\])(?![^\[]*\])'
+            text = re.sub(top_pattern, link, text, count=2)
+
+    return text
+
+
+def generate_knowledge_network_footer(thesis_ids: list[str], extra_topics: Optional[list[str]] = None, extra_companies: Optional[list[str]] = None) -> str:
+    """
+    마크다운 문서 하단에 부착할 표준 '🔗 연관 지식 네트워크 (Knowledge Network)' 위키링크 섹션 생성
+    """
+    wmap = get_wikilink_map()
+    lines = [
+        "---",
+        "## 🔗 연관 지식 네트워크 (Knowledge Network)",
+        "",
+        "### 📌 관련 투자 테제 (Investment Theses)",
+    ]
+
+    added_theses = set()
+    for tid in thesis_ids:
+        t = load_thesis_by_id(tid)
+        if t:
+            fp = Path(t.get("filepath", ""))
+            link = f"- [[{fp.stem}|{t.get('id')} {t.get('title')}]]"
+            lines.append(link)
+            added_theses.add(t.get("id"))
+        elif tid in wmap["theses"]:
+            stem = wmap["theses"][tid][2]
+            lines.append(f"- [[{stem}|{tid}]]")
+            added_theses.add(tid)
+
+    if not added_theses:
+        lines.append("- 연관 테제 없음")
+
+    # 관련 기술 토픽
+    lines.append("\n### 🏷️ 핵심 기술 토픽 (Topics)")
+    topic_links = []
+    # 테제에서 추출하거나 인자로 받은 토픽
+    all_topics = set(extra_topics or [])
+    for tid in thesis_ids:
+        t = load_thesis_by_id(tid)
+        if t:
+            for top_name, top_link in wmap["topics"].items():
+                if top_name in str(t.get("keywords", [])) or top_name in t.get("title", ""):
+                    all_topics.add(top_name)
+    
+    for top in sorted(all_topics):
+        if top in wmap["topics"]:
+            topic_links.append(wmap["topics"][top])
+    
+    if topic_links:
+        lines.append("- " + " · ".join(topic_links))
+    else:
+        lines.append("- 관련 기술 토픽 없음")
+
+    # 관련 기업 허브
+    lines.append("\n### 🏢 관련 기업 허브 (Companies)")
+    comp_links = []
+    all_comps = set(extra_companies or [])
+    for tid in thesis_ids:
+        t = load_thesis_by_id(tid)
+        if t:
+            for c in t.get("related_companies", []):
+                all_comps.add(c)
+
+    for comp in sorted(all_comps):
+        if comp in wmap["companies"]:
+            comp_links.append(wmap["companies"][comp])
+        else:
+            comp_links.append(f"[[Company-{comp}|{comp}]]")
+
+    if comp_links:
+        lines.append("- " + " · ".join(comp_links))
+    else:
+        lines.append("- 관련 기업 허브 없음")
+
+    # Master MOC 링크
+    lines.append(f"\n### 🗺️ 인덱스 허브\n- {wmap['moc']}")
+
+    return "\n".join(lines)
+
+
 # ── 사용 예시 및 CLI ────────────────────────────────────────
 if __name__ == "__main__":
     import argparse
