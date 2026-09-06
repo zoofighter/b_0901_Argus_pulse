@@ -37,6 +37,7 @@ BANNER = """
   [9] 🧠 Thesis 가설 신뢰도 자동 점검 (thesis_checker.py)
   [10] 📚 RAG 지식 DB 상태 및 인제스트 (ingest.py)
   [11] 🔥 시장 모멘텀(News Momentum) Thesis 랭킹 조회
+  [12] 📝 수기 뉴스 등록 (add_news.py — 자동 수집 누락 기사 주입)
   ──────────────────────────────────────────────────────────────────
   [q] 종료
 ======================================================================
@@ -121,6 +122,8 @@ def interactive_menu():
             run_cmd(["ingest.py", "--status"])
         elif choice == "11":
             run_cmd(["thesis_loader.py", "--rank"])
+        elif choice == "12":
+            run_cmd(["add_news.py"])
         else:
             print("  ⚠️ 올바른 번호를 선택해주세요.")
         
@@ -140,6 +143,7 @@ def main():
     parser.add_argument("--checker",  action="store_true", help="Thesis 가설 신뢰도 자동 점검")
     parser.add_argument("--ingest",   action="store_true", help="RAG 지식 DB 인제스트 현황 확인")
     parser.add_argument("--rank",     action="store_true", help="시장 모멘텀(News Momentum) Thesis 랭킹 조회")
+    parser.add_argument("--add-news", action="store_true", help="수기 뉴스 직접 등록 (news.sqlite)")
     parser.add_argument("--rag",      action="store_true", help="RAG 심층 검색 활성화")
     args = parser.parse_args()
 
@@ -171,6 +175,8 @@ def main():
         run_cmd(["ingest.py", "--status"])
     elif args.rank:
         run_cmd(["thesis_loader.py", "--rank"])
+    elif args.add_news:
+        run_cmd(["add_news.py"])
     else:
         interactive_menu()
 
