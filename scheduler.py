@@ -76,8 +76,8 @@ def scheduler_loop():
 
             # 1. 08:00 아침 주제 추천 (하루 1회)
             if hour == 8 and minute == 0 and last_topic_date != today_str:
-                log("🌅 [08:00] 아침 블로그 주제 추천 시작")
-                run_job("topic_generator.py", ["--auto", "--n", "3"])
+                log("🌅 [08:00] 아침 블로그 주제 추천 및 자동 집필 시작")
+                run_job("topic_generator.py", ["--auto", "--n", "3", "--auto-write", "--rag"])
                 last_topic_date = today_str
 
             # 2. 09:00 ~ 21:00 매시간 뉴스 감시 (매 정각 1회)

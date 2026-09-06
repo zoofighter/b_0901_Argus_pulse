@@ -51,9 +51,10 @@ MAX_NEWS_FOR_PROMPT    = int(os.getenv("MAX_NEWS_FOR_PROMPT", "15"))    # 프롬
 HOT_NEWS_MIN_COUNT     = int(os.getenv("HOT_NEWS_MIN_COUNT", "2"))      # 새 콘텐츠 생성 최소 건수
 
 # ── 콘텐츠 설정 ───────────────────────────────────────────────────────────────
-NUM_TOPICS    = int(os.getenv("NUM_TOPICS", "3"))     # 추천 주제 수
-BLOG_MIN_CHARS = 800                                   # 블로그 최소 글자 수
+NUM_TOPICS      = int(os.getenv("NUM_TOPICS", "3"))     # 추천 주제 수
+BLOG_MIN_CHARS   = 800                                   # 블로그 최소 글자 수
 THREAD_MIN_LINES = 20                                  # 스레드 최소 줄 수
+AUTO_WRITE_BLOG  = os.getenv("AUTO_WRITE_BLOG", "false").lower() in ("true", "1", "yes") # 배치 시 1위 주제 블로그 자동 집필 여부
 
 # ── 출력 폴더 생성 ─────────────────────────────────────────────────────────────
 for d in [OUTPUT_DIR / "blog", OUTPUT_DIR / "thread", OUTPUT_DIR / "outline",

@@ -11,7 +11,7 @@
 ```
 [Argus Pulse 일일 자동화 파이프라인 (24시간 풀 스케줄)]
 
-08:00 ──► [아침 주제 추천 (topic_generator)] ────► 핫 뉴스 기반 3대 기획안 & 디스코드 알림
+08:00 ──► [아침 주제 추천 & 1위 블로그 자동 집필 (topic_generator)] ──► 기획안 3선 도출 + 1위 포스트 자동 생성 + 옵시디언 동기화 & 디스코드 알림
                │
 09~21:00 ─► [매시간 뉴스 감시 (hourly_monitor)] ──► 80점+ 충격 뉴스 즉각 감지 & 디스코드 발송
                │
@@ -50,13 +50,23 @@
 * **다이제스트 연동 (`daily_digest.py`)**: 일일 다이제스트 상단에 당일 시장 모멘텀 랭킹 Top 5를 자동 표기.
 * **통합 제어 센터 연동 (`argus.py`)**: 대화형 메뉴 [11]번 및 CLI 플래그 `--rank` 추가.
 
+### ⑤ 아침 크론 배치 진단 및 블로그 자동 집필(Auto-Write) 파이프라인 구축
+* **배치 실행 진단**: 08:00 크론(`topic_generator.py --auto`)은 정상 작동하여 3대 기획안(`logs/2026-09-06-topics.json`) 저장 및 디스코드 알림을 발송했으나, 기존 Human-in-the-Loop 구조상 사용자 선택 전까지는 2-Page 블로그 마크다운 파일이 생성되지 않아 배치가 미작동한 것처럼 보였던 원인을 분석·규명.
+* **1위 추천 주제 블로그 자동 집필 기능 신설**:
+  - `topic_generator.py`에 `--auto-write` 및 `--rag` 플래그 추가.
+  - 비대화형(크론/스케줄러) 모드 실행 시 당일 1순위(`Rank 1`) 추천 주제로 `blog_writer.py --auto --rag`를 자동 연계 호출하여 2-Page 완성형 블로그 포스트를 즉시 집필하고 옵시디언(`agent_vault/argus/Blog/`)에 자동 미러링하도록 파이프라인 확장.
+* **스케줄 및 환경설정 반영**:
+  - [`config.py`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/config.py): `AUTO_WRITE_BLOG` 설정 지원.
+  - macOS 시스템 `crontab`, [`crontab.txt`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/crontab.txt), [`scheduler.py`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/scheduler.py): 08:00 아침 크론에 `--auto-write --rag` 옵션 정식 적용 완료.
+
 ---
 
 ## 3. 주요 생성 콘텐츠 산출물
 
 | 카테고리 | 문서명 | 핵심 내용 |
 |---|---|---|
-| **정식 블로그 (2-Page)** | [`2026-09-04-blog-삼성의-33-맹추격-착시일-뿐-진짜-HBM-왕좌는-HBM4-커스텀에서-갈.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/blog/2026-09-04-blog-%EC%82%BC%EC%84%B1%EC%9D%98-33-%EB%A7%B9%EC%B6%94%EA%B2%A9-%EC%B0%A9%EC%8B%9C%EC%9D%BC-%EB%BF%90-%EC%A7%84%EC%A7%9C-HBM-%EC%99%95%EC%A2%8C%EB%8A%94-HBM4-%EC%BB%A4%EC%8A%A4%ED%85%80%EC%97%90%EC%84%9C-%EA%B0%88.md) | 최고 점수(80점) 뉴스 기반, HBM3E vs HBM4 비교 표, 3사 전략 대조, 실제 기사 URL 출처 포함 |
+| **오늘자 정식 블로그 (9/6)** | [`2026-09-06-blog-삼성전자의-33-맹추격-하지만-진짜-전쟁은-HBM4-커스텀-수주전이다.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/blog/2026-09-06-blog-%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%EC%9D%98-33-%EB%A7%B9%EC%B6%94%EA%B2%A9-%ED%95%98%EC%A7%80%EB%A7%8C-%EC%A7%84%EC%A7%9C-%EC%A0%84%EC%9F%81%EC%9D%80-HBM4-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%88%98%EC%A3%BC%EC%A0%84%EC%9D%B4%EB%8B%A4.md) | 당일 1위 기획안 기반 2-Page 블로그. HBM3E 점유율 격차 축소 vs HBM4 커스텀 ASIC화 대조표, 3사 전략 비교, 증권사 리포트 RAG 연동, 실제 뉴스 원문 5건 URL 링크 포함 |
+| **정식 블로그 (9/4)** | [`2026-09-04-blog-삼성의-33-맹추격-착시일-뿐-진짜-HBM-왕좌는-HBM4-커스텀에서-갈.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/blog/2026-09-04-blog-%EC%82%BC%EC%84%B1%EC%9D%98-33-%EB%A7%B9%EC%B6%94%EA%B2%A9-%EC%B0%A9%EC%8B%9C%EC%9D%BC-%EB%BF%90-%EC%A7%84%EC%A7%9C-HBM-%EC%99%95%EC%A2%8C%EB%8A%94-HBM4-%EC%BB%A4%EC%8A%A4%ED%85%80%EC%97%90%EC%84%9C-%EA%B0%88.md) | 최고 점수(80점) 뉴스 기반, HBM3E vs HBM4 비교 표, 3사 전략 대조, 실제 기사 URL 출처 포함 |
 | **기획 윤곽서 (1-Page)** | [`2026-09-04-outline-삼성의-33-맹추격-착시일-뿐-진짜-HBM-왕좌는-HBM4-커스텀에서-갈.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/outline/2026-09-04-outline-%EC%82%BC%EC%84%B1%EC%9D%98-33-%EB%A7%B9%EC%B6%94%EA%B2%A9-%EC%B0%A9%EC%8B%9C%EC%9D%BC-%EB%BF%90-%EC%A7%84%EC%A7%9C-HBM-%EC%99%95%EC%A2%8C%EB%8A%94-HBM4-%EC%BB%A4%EC%8A%A4%ED%85%80%EC%97%90%EC%84%9C-%EA%B0%88.md) | 제목 3종(A/B/C), 4단계 논점 구조, 집필 체크포인트, 뉴스 원문 링크 배치 |
 | **사후 검증 리뷰** | [`2026-09-04-review-금리-동결에-환호한-AI-랠리의-불편한-진실-돈은-풀렸.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/review/2026-09-04-review-%EA%B8%88%EB%8 contamination) | T-05/T-01 가설 사후 검증, 증권사 리포트 RAG 대조 분석 |
 | **데일리 다이제스트** | [`output/digest/2026-09-04-digest.md`](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/output/digest/2026-09-04-digest.md) | 453건 뉴스 및 Top 6 테제 종합 브리프, RAG 심층 참조 반영 |

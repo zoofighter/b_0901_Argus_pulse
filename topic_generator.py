@@ -216,6 +216,8 @@ def main():
     grp.add_argument("--text",  type=str, help="텍스트 직접 입력")
     parser.add_argument("--n",  type=int, default=config.NUM_TOPICS, help="추천 개수")
     parser.add_argument("--archive", action="store_true", help="수동 입력 파일 처리 후 자동으로 archive/ 로 이동")
+    parser.add_argument("--auto-write", action="store_true", help="1위 추천 주제로 2-Page 블로그 자동 작성 및 옵시디언 동기화")
+    parser.add_argument("--rag", action="store_true", help="자동 블로그 작성 시 RAG 지식 DB 연동")
     args = parser.parse_args()
 
     print("\n🔍 Argus Pulse — 주제 추천 시작")
@@ -283,6 +285,23 @@ def main():
         notify_topics_ready(topics)
     except Exception as e:
         pass
+
+    # ── 블로그 자동 집필 처리 (--auto-write 또는 AUTO_WRITE_BLOG 활성화 시) ──
+    should_auto_write = args.auto_write or (not sys.stdin.isatty() and getattr(config, "AUTO_WRITE_BLOG", False))
+    if should_auto_write and topics:
+        selected = topics[0]
+        print(f"\n🚀 [자동 집필] 1위 추천 주제로 블로그 작성을 자동 시작합니다: [{selected['title']}]")
+        import subprocess
+        cmd = [
+            sys.executable, "blog_writer.py",
+            "--topic", json.dumps(selected, ensure_ascii=False),
+            "--auto"
+        ]
+        if args.rag:
+            cmd.append("--rag")
+        subprocess.run(cmd)
+        if not sys.stdin.isatty() or args.auto_write:
+            return
 
     # ── Human in the Loop (대화형 환경에서만 실행) ─────────────────────────
     if not sys.stdin.isatty():
