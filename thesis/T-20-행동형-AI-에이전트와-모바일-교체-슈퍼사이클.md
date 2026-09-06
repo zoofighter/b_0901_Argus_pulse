@@ -11,9 +11,9 @@ keywords:
 - NPU
 - LPDDR6
 last_checked: 2026-09-04T09:53
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 애플 인텔리전스 및 갤럭시 AI 차세대 자율 에이전트 출시 후 플래그십 출하량 15% 이상 급증
-momentum: 222.4
+momentum: 207.4
 news_count: 2
 priority: 3
 rank: 14

@@ -14,7 +14,7 @@ keywords:
 - 행동형에이전트
 - 온디바이스LLM
 last_checked: 2026-09-04T09:51
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: Apple Intelligence 킬러 유스케이스 대중화 또는 온디바이스 에이전트 앱 출시
 momentum: 53.0
 news_count: 0

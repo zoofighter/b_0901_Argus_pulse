@@ -13,9 +13,9 @@ keywords:
 - Copilot
 - Claude
 last_checked: 2026-09-05T21:11
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: OpenAI 또는 Anthropic의 기업용 ARR 100억달러 돌파 공식 확인
-momentum: 279.2
+momentum: 265.2
 news_count: 4
 priority: 3
 rank: 11

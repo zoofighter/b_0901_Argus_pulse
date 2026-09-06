@@ -13,7 +13,7 @@ keywords:
 - x86vsArm
 - 배터리수명
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 글로벌 프리미엄 노트북 시장에서 Arm 기반 AI PC 점유율 20% 돌파
 momentum: 42.0
 news_count: 0

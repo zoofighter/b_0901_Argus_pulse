@@ -12,7 +12,7 @@ keywords:
 - 엔터프라이즈서버
 - RAG
 last_checked: 2026-09-05T21:08
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 포춘 500대 기업의 50% 이상이 자체 온프레미스/소버린 LLM 도입
 momentum: 41.0
 news_count: 0

@@ -12,7 +12,7 @@ keywords:
 - High-NA EUV
 - 파운드리수율
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: TSMC vs 삼성전자 2nm 공정 양산 수율 60% 달성 및 고객사 수주 공시
 momentum: 53.0
 news_count: 0

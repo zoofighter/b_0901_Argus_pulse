@@ -13,10 +13,10 @@ keywords:
 - 로봇배터리
 - 액추에이터
 last_checked: 2026-09-05T21:10
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: Tesla Optimus 연간 1만대 이상 출하 공식 확인 또는 국내 대형 제조사 로봇 파일럿 계약
-momentum: 312.0
-news_count: 4
+momentum: 336.4
+news_count: 5
 priority: 4
 rank: 10
 related_companies:

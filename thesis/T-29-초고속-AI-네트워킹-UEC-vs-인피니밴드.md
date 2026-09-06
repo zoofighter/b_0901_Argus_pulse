@@ -13,7 +13,7 @@ keywords:
 - AI백본
 - RoCEv2
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: UEC 1.0 표준 확정 및 하이퍼스케일러 상용 AI 클러스터 이더넷 전면 도입
 momentum: 44.0
 news_count: 0

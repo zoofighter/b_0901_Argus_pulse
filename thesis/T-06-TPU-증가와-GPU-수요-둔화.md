@@ -14,7 +14,7 @@ keywords:
 - CUDAwall
 - TPUv6
 last_checked: 2026-09-05T21:05
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 구글 TPU 외부 판매 개시 또는 NVIDIA 실적에서 추론용 GPU 비중 공개
 momentum: 48.0
 news_count: 0

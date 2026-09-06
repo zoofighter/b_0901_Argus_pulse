@@ -11,7 +11,7 @@ keywords:
 - 중동오일머니
 - 정부발주
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 중동/유럽/동남아 정부의 수조 원 단위 국가 AI 데이터센터 클러스터 발주
 momentum: 45.0
 news_count: 0

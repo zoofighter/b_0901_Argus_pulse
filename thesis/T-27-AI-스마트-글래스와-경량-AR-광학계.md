@@ -12,7 +12,7 @@ keywords:
 - 웨어러블AI
 - 비전AI
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 글로벌 AI 스마트 안경 연간 출하량 1,000만 대 돌파
 momentum: 44.0
 news_count: 0

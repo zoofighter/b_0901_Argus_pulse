@@ -12,7 +12,7 @@ keywords:
 - 하이K
 - 커패시터
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 주요 메모리사의 3D DRAM 테스트 칩 개발 및 공정 기술 로드맵 발표
 momentum: 43.0
 news_count: 0

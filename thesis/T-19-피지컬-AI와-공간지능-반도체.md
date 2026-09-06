@@ -12,7 +12,7 @@ keywords:
 - 엣지AI
 - ToF센서
 last_checked: 2026-09-04T21:12
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: 주요 로봇 및 스마트 디바이스 제조사의 공간지능 SoC 표준 칩셋 채택
 momentum: 41.2
 news_count: 0

@@ -13,7 +13,7 @@ keywords:
 - 단백질구조
 - 임상성공률
 last_checked: null
-last_ranked: 2026-09-05T21:12
+last_ranked: 2026-09-06T12:51
 milestone: AI 기반 신약 FDA 최초 승인 또는 K-바이오 기술수출 단일 계약 1조원 돌파
 momentum: 31.0
 news_count: 0
