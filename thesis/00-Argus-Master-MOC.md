@@ -92,6 +92,21 @@ flowchart TB
 
 ---
 
+## 🎨 6대 섹터 인터랙티브 캔버스 (Interactive Canvas Boards)
+
+> 💡 **옵시디언 캔버스(Canvas) 뷰어**: 각 섹터별 가설 노드, 연관 토픽, 핵심 기업 및 수혜/피해 밸류체인이 시각적으로 배치된 2차원 화이트보드입니다. 클릭 시 해당 섹터의 캔버스로 바로 이동합니다.
+
+| 섹터 번호 및 명칭 | 캔버스 보드 바로가기 | 주요 노드 구성 |
+|:---|:---:|:---|
+| **Sector 1 (⚡ 에너지·전력·냉각 인프라)** | **[[01-에너지-전력-냉각-인프라.canvas\|⚡ Sector 1 캔버스]]** | 데이터센터 전력, 액체냉각, SMR, 대용량 ESS, HVDC, Vertiv, HD현대일렉 |
+| **Sector 2 (💾 AI 컴퓨트·메모리·선단반도체)** | **[[02-AI컴퓨트-메모리-선단반도체.canvas\|💾 Sector 2 캔버스]]** | HBM, CoWoS 패키징, 유리기판, 2nm GAA, CXL, SK하이닉스, TSMC, 삼성전자 |
+| **Sector 3 (🌐 초고속 네트워킹·시스템 플랫폼)** | **[[03-초고속네트워킹-시스템플랫폼.canvas\|🌐 Sector 3 캔버스]]** | 실리콘 포토닉스, CPO, UEC vs 인피니밴드, 네오클라우드, Broadcom, CoreWeave |
+| **Sector 4 (💻 파운데이션 모델·엔터프라이즈 SW)** | **[[04-파운데이션모델-엔터프라이즈SW.canvas\|💻 Sector 4 캔버스]]** | 오픈소스 LLM, SaaS 과점화, 바이오 AI, TPU/ASIC, Microsoft, Meta, Alphabet |
+| **Sector 5 (🤖 피지컬 AI·자율주행·로보틱스)** | **[[05-피지컬AI-자율주행-로보틱스.canvas\|🤖 Sector 5 캔버스]]** | E2E 자율주행, 휴머노이드 액추에이터, 온디바이스 NPU, 공간지능, Tesla, Apple |
+| **Sector 6 (🏛️ 매크로 자본시장·밸류·지정학)** | **[[06-매크로-밸류에이션-지정학안보.canvas\|🏛️ Sector 6 캔버스]]** | $500B 매출 갭, GPU 금융, AI 버블, 소버린 AI, 중국 HBM/NAND, OpenAI, YMTC |
+
+---
+
 ## 🔀 다차원 교차 분석 대시보드 (Multi-Dimensional Dashboards)
 
 ### 🛡️ 1. 컨센서스 vs 역발상/헷지 뷰 (Consensus vs Contrarian)

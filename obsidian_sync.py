@@ -53,8 +53,8 @@ def get_target_dir(category: str) -> Path | None:
     return target
 
 
-def sync_file(filepath: str | Path, category: str) -> Path | None:
-    """단일 마크다운 파일을 옵시디언 볼트로 동기화(복사)"""
+def sync_file(filepath: str | Path, category: str, force: bool = False) -> Path | None:
+    """단일 마크다운/캔버스 파일을 옵시디언 볼트로 증분 동기화(변경된 파일만 복사)"""
     src = Path(filepath)
     if not src.exists():
         return None
@@ -65,6 +65,13 @@ def sync_file(filepath: str | Path, category: str) -> Path | None:
 
     dest = target_dir / src.name
     try:
+        # 증분 동기화: 이미 존재하고 크기 및 수정 시간이 같으면 불필요한 I/O 건너뜀
+        if not force and dest.exists():
+            src_stat = src.stat()
+            dest_stat = dest.stat()
+            if dest_stat.st_mtime >= src_stat.st_mtime and dest_stat.st_size == src_stat.st_size:
+                return dest
+
         shutil.copy2(src, dest)
         print(f"  📓 [Obsidian 동기화] {category.upper()} -> {dest.relative_to(config.OBSIDIAN_PATH)}")
         return dest

@@ -4,10 +4,10 @@
       "id": "h6",
       "x": -400,
       "y": -300,
-      "width": 1200,
+      "width": 1600,
       "height": 100,
       "type": "text",
-      "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 고금리 장기화(5%) ➔ 빅테크 CAPEX ROI 회수 압박 ➔ GPU 금융 리스크 ➔ 소버린 AI & 미중 패권"
+      "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 고금리 장기화(5%) ➔ 빅테크 CAPEX ROI 회수 압박 ➔ GPU 금융 리스크 ➔ 소버린 AI & 미중 메모리/패권 경쟁"
     },
     {
       "id": "t6_01",
@@ -37,6 +37,15 @@
       "file": "argus/Theses/T6-05-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
     },
     {
+      "id": "t6_04",
+      "x": 850,
+      "y": -100,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T6-04-10년금리-5%-재진입-가능성.md"
+    },
+    {
       "id": "t6_02",
       "x": -350,
       "y": 200,
@@ -62,6 +71,15 @@
       "height": 240,
       "type": "file",
       "file": "argus/Theses/T6-07-중국반도체의-HBM-생산가능성.md"
+    },
+    {
+      "id": "t6_08",
+      "x": 850,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T6-08-중국반도체의-NAND-점유율-증가.md"
     },
     {
       "id": "c_coreweave",
@@ -98,6 +116,15 @@
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Anthropic.md"
+    },
+    {
+      "id": "c_ymtc",
+      "x": 850,
+      "y": 550,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-YMTC.md"
     }
   ],
   "edges": [
@@ -140,6 +167,38 @@
       "toNode": "c_openai",
       "toSide": "top",
       "label": "수익화 모델 검증"
+    },
+    {
+      "id": "e6_6",
+      "fromNode": "t6_08",
+      "fromSide": "bottom",
+      "toNode": "c_ymtc",
+      "toSide": "top",
+      "label": "3D NAND 공급"
+    },
+    {
+      "id": "e6_7",
+      "fromNode": "t6_01",
+      "fromSide": "right",
+      "toNode": "t6_04",
+      "toSide": "left",
+      "label": "국채 금리 상방 압력"
+    },
+    {
+      "id": "e6_8",
+      "fromNode": "t6_06",
+      "fromSide": "right",
+      "toNode": "t6_07",
+      "toSide": "left",
+      "label": "중국 소버린 자립"
+    },
+    {
+      "id": "e6_9",
+      "fromNode": "t6_07",
+      "fromSide": "right",
+      "toNode": "t6_08",
+      "toSide": "left",
+      "label": "메모리 공급망 다변화"
     }
   ]
 }
