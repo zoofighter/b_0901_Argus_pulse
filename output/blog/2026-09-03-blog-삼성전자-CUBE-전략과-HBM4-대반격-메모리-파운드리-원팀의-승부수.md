@@ -89,8 +89,8 @@ critic_verdict: PASS
 ## 🔗 연관 지식 네트워크 (Knowledge Network)
 
 ### 📌 관련 투자 테제 (Investment Theses)
-- [[T1-01-메모리-산업의-변화|T1-01 메모리 산업의 변화]]
-- [[T1-08-파운드리-2nm-공정과-GAA-격돌|T1-08 파운드리 2nm 공정과 GAA 격돌]]
+- [[T2-01-메모리-산업의-변화|T2-01 메모리 산업의 변화]]
+- [[T2-04-파운드리-2nm-공정과-GAA-격돌|T2-04 파운드리 2nm 공정과 GAA 격돌]]
 
 ### 🏷️ 핵심 기술 토픽 (Topics)
 - [[Topic-CoWoS|CoWoS]] · [[Topic-HBM|HBM]]

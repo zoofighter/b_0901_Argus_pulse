@@ -7,8 +7,8 @@ core_entities:
   - "[[Company-삼성전자|삼성전자]]"
   - "[[Company-NVIDIA|NVIDIA]]"
 related_theses:
-  - "[[T1-01-메모리-산업의-변화|T1-01]]"
-  - "[[T1-04-첨단-패키징과-CoWoS의-병목|T1-04]]"
+  - "[[T2-01-메모리-산업의-변화|T2-01]]"
+  - "[[T2-02-첨단-패키징과-CoWoS의-병목|T2-02]]"
 tags:
   - chronicle
   - history

@@ -1,0 +1,188 @@
+{
+  "nodes": [
+    {
+      "id": "h1",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# ⚡ [Sector 1] AI 데이터센터 & 전력·냉각 인프라 맵 (젠슨 황 1단)\n> 전력 밀도 폭증 ➔ 수랭식 냉각 전환 ➔ 초고압 변압기 쇼티지 ➔ 무탄소 SMR & 대용량 ESS"
+    },
+    {
+      "id": "top_liquid",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-액체냉각.md"
+    },
+    {
+      "id": "top_grid",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-전력그리드.md"
+    },
+    {
+      "id": "top_smr",
+      "x": 450,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-SMR.md"
+    },
+    {
+      "id": "t1_01",
+      "x": -350,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T1-01-데이터센터의-변화.md"
+    },
+    {
+      "id": "t1_02",
+      "x": 50,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T1-02-데이터센터-액체냉각의-표준화.md"
+    },
+    {
+      "id": "t1_05",
+      "x": 450,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T1-05-변압기-초고압-그리드-쇼티지-장기화.md"
+    },
+    {
+      "id": "t1_04",
+      "x": -350,
+      "y": 500,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T1-04-AI-전력망용-대용량-ESS와-LFP-공급망.md"
+    },
+    {
+      "id": "t1_07",
+      "x": 50,
+      "y": 500,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T1-07-800V-48V-HVDC-전력-아키텍처-혁신.md"
+    },
+    {
+      "id": "top_ess",
+      "x": 450,
+      "y": 500,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-ESS.md"
+    },
+    {
+      "id": "c_vertiv",
+      "x": -350,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Vertiv.md"
+    },
+    {
+      "id": "c_hd",
+      "x": -50,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-HD현대일렉트릭.md"
+    },
+    {
+      "id": "c_ls",
+      "x": 250,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-LS-ELECTRIC.md"
+    },
+    {
+      "id": "c_ge",
+      "x": 550,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-GE-Vernova.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1_1",
+      "fromNode": "top_liquid",
+      "fromSide": "right",
+      "toNode": "top_grid",
+      "toSide": "left",
+      "label": "냉각 전력 소모"
+    },
+    {
+      "id": "e1_2",
+      "fromNode": "top_grid",
+      "fromSide": "right",
+      "toNode": "top_smr",
+      "toSide": "left",
+      "label": "기저부하 확보"
+    },
+    {
+      "id": "e1_3",
+      "fromNode": "top_liquid",
+      "fromSide": "bottom",
+      "toNode": "t1_02",
+      "toSide": "top",
+      "label": "DLC 표준화"
+    },
+    {
+      "id": "e1_4",
+      "fromNode": "top_grid",
+      "fromSide": "bottom",
+      "toNode": "t1_05",
+      "toSide": "top",
+      "label": "리드타임 4년+"
+    },
+    {
+      "id": "e1_5",
+      "fromNode": "t1_02",
+      "fromSide": "bottom",
+      "toNode": "c_vertiv",
+      "toSide": "top",
+      "label": "CDU 독점 공급"
+    },
+    {
+      "id": "e1_6",
+      "fromNode": "t1_05",
+      "fromSide": "bottom",
+      "toNode": "c_hd",
+      "toSide": "top",
+      "label": "초고압 변압기 수혜"
+    },
+    {
+      "id": "e1_7",
+      "fromNode": "t1_05",
+      "fromSide": "bottom",
+      "toNode": "c_ls",
+      "toSide": "top",
+      "label": "배전/스위치기어"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "id": "h4",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> 오픈소스 LLM 고도화 ➔ 온프레미스 사설 AI ➔ 빅테크 SW 플랫폼 과점화 ➔ 버티컬 바이오 AI"
+    },
+    {
+      "id": "t4_01",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md"
+    },
+    {
+      "id": "t4_02",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-02-AI-소프트웨어-레이어의-과점화.md"
+    },
+    {
+      "id": "t4_03",
+      "x": 450,
+      "y": -100,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-03-바이오AI와-신약개발-가속.md"
+    },
+    {
+      "id": "t4_04",
+      "x": 850,
+      "y": -100,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-04-TPU-증가와-GPU-수요-둔화.md"
+    },
+    {
+      "id": "c_msft",
+      "x": -350,
+      "y": 250,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Microsoft.md"
+    },
+    {
+      "id": "c_meta",
+      "x": 50,
+      "y": 250,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Meta.md"
+    },
+    {
+      "id": "c_alphabet",
+      "x": 450,
+      "y": 250,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Alphabet.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e4_1",
+      "fromNode": "t4_01",
+      "fromSide": "right",
+      "toNode": "t4_02",
+      "toSide": "left",
+      "label": "SW 통합 플랫폼"
+    },
+    {
+      "id": "e4_2",
+      "fromNode": "t4_01",
+      "fromSide": "bottom",
+      "toNode": "c_meta",
+      "toSide": "top",
+      "label": "Llama 오픈소스"
+    },
+    {
+      "id": "e4_3",
+      "fromNode": "t4_02",
+      "fromSide": "bottom",
+      "toNode": "c_msft",
+      "toSide": "top",
+      "label": "Copilot 생태계"
+    },
+    {
+      "id": "e4_4",
+      "fromNode": "t4_04",
+      "fromSide": "bottom",
+      "toNode": "c_alphabet",
+      "toSide": "top",
+      "label": "자체 TPU 최적화"
+    }
+  ]
+}

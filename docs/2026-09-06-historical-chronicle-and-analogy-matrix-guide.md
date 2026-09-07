@@ -74,8 +74,8 @@ narrative_stages:
   - "2. MR-MUF 공정 결단 (2020~2021)"
   - "3. H100 독점 공급 (2022~2023)"
 related_theses:
-  - "[[T1-01-메모리-산업의-변화|T1-01]]"
-  - "[[T1-04-첨단-패키징과-CoWoS의-병목|T1-04]]"
+  - "[[T2-01-메모리-산업의-변화|T2-01]]"
+  - "[[T2-02-첨단-패키징과-CoWoS의-병목|T2-02]]"
 ---
 ```
 
@@ -84,7 +84,7 @@ related_theses:
 ---
 title: "Analogy: 2020 HBM2E 수율 격돌 vs 2026 HBM4 커스텀 파운드리"
 type: analogy
-current_thesis: "[[T1-01-메모리-산업의-변화|T1-01]]"
+current_thesis: "[[T2-01-메모리-산업의-변화|T2-01]]"
 historical_chronicle: "[[Chronicle-HBM2-to-HBM3-수율과-독점의-역사|HBM2-to-HBM3]]"
 confidence_score: 88
 rhyme_score: 90

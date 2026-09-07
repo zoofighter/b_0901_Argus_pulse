@@ -1,7 +1,7 @@
 ---
 title: "Analogy: 2020 HBM2E/3 수율 독점 vs 2026 HBM4 커스텀 파운드리"
 type: analogy
-current_thesis: "[[T1-01-메모리-산업의-변화|T1-01]]"
+current_thesis: "[[T2-01-메모리-산업의-변화|T2-01]]"
 historical_chronicle: "[[Chronicle-HBM2-to-HBM3-수율과-독점의-역사|Chronicle HBM2~HBM3]]"
 rhyme_score: 92
 confidence_score: 88

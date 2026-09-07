@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": "h3",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> CPO 실리콘 포토닉스 ➔ UEC vs 인피니밴드 통신 패브릭 ➔ 분산 데이터센터 코로케이션 ➔ 네오클라우드"
+    },
+    {
+      "id": "top_cpo",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-실리콘포토닉스.md"
+    },
+    {
+      "id": "top_net",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-초고속네트워킹.md"
+    },
+    {
+      "id": "t3_01",
+      "x": -350,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-01-실리콘-포토닉스와-CPO의-상용화.md"
+    },
+    {
+      "id": "t3_02",
+      "x": 50,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md"
+    },
+    {
+      "id": "t3_03",
+      "x": 450,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md"
+    },
+    {
+      "id": "t3_04",
+      "x": 850,
+      "y": 200,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-04-엔비디아와-네오클라우드.md"
+    },
+    {
+      "id": "c_arista",
+      "x": -350,
+      "y": 550,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Broadcom.md"
+    },
+    {
+      "id": "c_coreweave",
+      "x": 50,
+      "y": 550,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-CoreWeave.md"
+    },
+    {
+      "id": "c_equinix",
+      "x": 450,
+      "y": 550,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Equinix.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e3_1",
+      "fromNode": "top_cpo",
+      "fromSide": "right",
+      "toNode": "top_net",
+      "toSide": "left",
+      "label": "광인터커넥트 전환"
+    },
+    {
+      "id": "e3_2",
+      "fromNode": "top_cpo",
+      "fromSide": "bottom",
+      "toNode": "t3_01",
+      "toSide": "top",
+      "label": "스케일아웃 통신"
+    },
+    {
+      "id": "e3_3",
+      "fromNode": "top_net",
+      "fromSide": "bottom",
+      "toNode": "t3_02",
+      "toSide": "top",
+      "label": "표준 연합 대결"
+    },
+    {
+      "id": "e3_4",
+      "fromNode": "t3_04",
+      "fromSide": "bottom",
+      "toNode": "c_coreweave",
+      "toSide": "top",
+      "label": "클러스터 대여"
+    }
+  ]
+}

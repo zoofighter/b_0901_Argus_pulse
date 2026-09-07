@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "id": "h2",
+      "x": -400,
+      "y": -300,
+      "width": 1200,
+      "height": 100,
+      "type": "text",
+      "text": "# 💾 [Sector 2] AI 컴퓨트 · 메모리 · 선단 반도체 밸류체인 맵 (젠슨 황 2단)\n> HBM4 커스텀화 ➔ 첨단 패키징(CoWoS/유리기판) ➔ 2nm GAA ➔ 빅테크 커스텀 ASIC 생태계"
+    },
+    {
+      "id": "top_hbm",
+      "x": -350,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-HBM.md"
+    },
+    {
+      "id": "top_cowos",
+      "x": 50,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-CoWoS.md"
+    },
+    {
+      "id": "top_glass",
+      "x": 450,
+      "y": -100,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-유리기판.md"
+    },
+    {
+      "id": "top_asic",
+      "x": -350,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-ASIC.md"
+    },
+    {
+      "id": "top_gaa",
+      "x": 50,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-2nm-GAA.md"
+    },
+    {
+      "id": "top_cxl",
+      "x": 450,
+      "y": 200,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Topics/Topic-CXL.md"
+    },
+    {
+      "id": "t2_01",
+      "x": -350,
+      "y": 500,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T2-01-메모리-산업의-변화.md"
+    },
+    {
+      "id": "t2_02",
+      "x": 50,
+      "y": 500,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T2-02-첨단-패키징과-CoWoS의-병목.md"
+    },
+    {
+      "id": "t2_03",
+      "x": 450,
+      "y": 500,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T2-03-유리기판의-차세대-패키징-침투.md"
+    },
+    {
+      "id": "c_hynix",
+      "x": -350,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-SK하이닉스.md"
+    },
+    {
+      "id": "c_samsung",
+      "x": -50,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-삼성전자.md"
+    },
+    {
+      "id": "c_tsmc",
+      "x": 250,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-TSMC.md"
+    },
+    {
+      "id": "c_nvda",
+      "x": 550,
+      "y": 820,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-NVIDIA.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e2_1",
+      "fromNode": "top_hbm",
+      "fromSide": "right",
+      "toNode": "top_cowos",
+      "toSide": "left",
+      "label": "2.5D 통합"
+    },
+    {
+      "id": "e2_2",
+      "fromNode": "top_cowos",
+      "fromSide": "right",
+      "toNode": "top_glass",
+      "toSide": "left",
+      "label": "대면적 기판 혁신"
+    },
+    {
+      "id": "e2_3",
+      "fromNode": "top_hbm",
+      "fromSide": "bottom",
+      "toNode": "t2_01",
+      "toSide": "top",
+      "label": "HBM4 커스텀화"
+    },
+    {
+      "id": "e2_4",
+      "fromNode": "top_cowos",
+      "fromSide": "bottom",
+      "toNode": "t2_02",
+      "toSide": "top",
+      "label": "패키징 병목"
+    },
+    {
+      "id": "e2_5",
+      "fromNode": "top_glass",
+      "fromSide": "bottom",
+      "toNode": "t2_03",
+      "toSide": "top",
+      "label": "유리기판 침투"
+    },
+    {
+      "id": "e2_6",
+      "fromNode": "t2_01",
+      "fromSide": "bottom",
+      "toNode": "c_hynix",
+      "toSide": "top",
+      "label": "HBM 선두"
+    },
+    {
+      "id": "e2_7",
+      "fromNode": "t2_01",
+      "fromSide": "bottom",
+      "toNode": "c_samsung",
+      "toSide": "top",
+      "label": "HBM3E/4 수주전"
+    },
+    {
+      "id": "e2_8",
+      "fromNode": "t2_02",
+      "fromSide": "bottom",
+      "toNode": "c_tsmc",
+      "toSide": "top",
+      "label": "CoWoS 독점"
+    },
+    {
+      "id": "e2_9",
+      "fromNode": "top_asic",
+      "fromSide": "bottom",
+      "toNode": "c_nvda",
+      "toSide": "top",
+      "label": "GPU 독점 견제"
+    }
+  ]
+}
