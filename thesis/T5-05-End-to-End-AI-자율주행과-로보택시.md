@@ -2,7 +2,7 @@
 confidence: 75
 direction: bullish
 hypothesis: 비전 기반 E2E 신경망(VLM/세계모델)의 완성으로 무인 로보택시 서비스가 대도시 단위로 본격 상용화된다
-id: "T5-05"
+id: T5-05
 keywords:
 - 자율주행
 - FSD
@@ -12,12 +12,12 @@ keywords:
 - 규제완화
 - 운전자제거
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 테슬라 사이버캡(Cybercab) 규제 승인 및 대도시 유료 무인 운행 개시
-momentum: 260.6
-news_count: 3
+momentum: 311.0
+news_count: 4
 priority: 4
-rank: 15
+rank: 16
 related_companies:
 - Tesla
 - Waymo
@@ -33,12 +33,13 @@ time_horizon: 2026~2027
 title: End-to-End AI 자율주행과 로보택시
 aliases:
 - T5-05
+- T5-05 End to End AI 자율주행과 로보택시
 - T5-05 End-to-End AI 자율주행과 로보택시
 - T-18
 - T-18 End-to-End AI 자율주행과 로보택시
 - End-to-End AI 자율주행과 로보택시
-sector: "피지컬 AI, 모빌리티 & 로보틱스"
-sector_id: T3
+sector: 피지컬 AI·자율주행·로보틱스
+sector_id: T5
 thesis_nature: consensus
 stack_layer: L5
 stack_name: L5 (디바이스)
@@ -50,7 +51,7 @@ old_id: T-18
 previous_id: RB-04
 ---
 
-# T3-04 End-to-End AI 자율주행과 로보택시
+# T5-05 End-to-End AI 자율주행과 로보택시
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#3-🤖-피지컬-ai-로보틱스--엣지-디바이스-physical-ai--edge|피지컬 AI & 엣지 디바이스]]
 

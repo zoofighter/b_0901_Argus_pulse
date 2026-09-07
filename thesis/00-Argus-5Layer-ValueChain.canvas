@@ -178,7 +178,7 @@
       "width": 300,
       "height": 170,
       "type": "file",
-      "file": "argus/Theses/T4-03-바이오AI와-신약개발-가속.md"
+      "file": "argus/Theses/T4-03-추론-시간-연산과-시스템2-추론-모델의-부상.md"
     },
     {
       "id": "node_l4_4",
@@ -187,7 +187,7 @@
       "width": 300,
       "height": 170,
       "type": "file",
-      "file": "argus/Theses/T4-04-TPU-증가와-GPU-수요-둔화.md"
+      "file": "argus/Theses/T2-11-TPU-증가와-GPU-수요-둔화.md"
     },
     {
       "id": "lbl_l3",
@@ -233,6 +233,42 @@
       "height": 170,
       "type": "file",
       "file": "argus/Theses/T3-04-엔비디아와-네오클라우드.md"
+    },
+    {
+      "id": "node_l3_5",
+      "x": 1620,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-05-AI-올플래시-스토리지와-QLC-eSSD-공급망.md"
+    },
+    {
+      "id": "node_l3_6",
+      "x": 1940,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-06-초고다층-기판-MLB와-초저손실-CCL-병목.md"
+    },
+    {
+      "id": "node_l3_7",
+      "x": 2260,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-07-데이터센터-간-초장거리-인터커넥트-DCI.md"
+    },
+    {
+      "id": "node_l3_8",
+      "x": 2580,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-08-AI-클러스터-OS와-MFU-가동률-최적화-SW.md"
     },
     {
       "id": "lbl_l2",

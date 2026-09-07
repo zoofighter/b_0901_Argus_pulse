@@ -2,7 +2,7 @@
 confidence: 65
 direction: neutral
 hypothesis: 2nm 공정 진입과 함께 후면전력공급(BSPDN) 및 GAA 수율이 파운드리 시장 점유율의 지각변동을 일으킨다
-id: "T2-02"
+id: T2-04
 keywords:
 - 2nm
 - GAA
@@ -12,12 +12,12 @@ keywords:
 - High-NA EUV
 - 파운드리수율
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: TSMC vs 삼성전자 2nm 공정 양산 수율 60% 달성 및 고객사 수주 공시
 momentum: 103.0
 news_count: 1
 priority: 4
-rank: 22
+rank: 28
 related_companies:
 - TSMC
 - 삼성전자
@@ -36,8 +36,8 @@ aliases:
 - T-16
 - T-16 파운드리 2nm 공정과 GAA 격돌
 - 파운드리 2nm 공정과 GAA 격돌
-sector: "AI 컴퓨트 & 차세대 반도체"
-sector_id: T1
+sector: AI 컴퓨트·메모리·선단반도체
+sector_id: T2
 thesis_nature: consensus
 stack_layer: L1
 stack_name: L1 (칩/패키징)
@@ -51,7 +51,7 @@ old_id: T-16
 previous_id: SC-08
 ---
 
-# T1-08 파운드리 2nm 공정과 GAA 격돌
+# T2-04 파운드리 2nm 공정과 GAA 격돌
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 

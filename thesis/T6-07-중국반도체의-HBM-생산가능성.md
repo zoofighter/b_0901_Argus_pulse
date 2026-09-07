@@ -3,7 +3,7 @@ confidence: 40
 direction: bearish
 hypothesis: 수출통제 우회와 자체 기술 개발을 통해 중국이 2027~2028년 내 HBM3E 수준의 양산 능력을 확보하며, 이는 SK하이닉스·삼성의
   점유율과 ASP에 하방 압력을 가한다
-id: "T6-07"
+id: T6-07
 keywords:
 - 중국HBM
 - CXMT
@@ -13,10 +13,10 @@ keywords:
 - 메모리국산화
 - 화웨이반도체
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: CXMT 또는 화웨이 계열사의 HBM3 수준 샘플 공식 확인 또는 중국산 HBM 탑재 AI칩 등장
-momentum: 2714.0
-news_count: 35
+momentum: 1773.0
+news_count: 21
 priority: 4
 rank: 5
 related_companies:
@@ -33,11 +33,12 @@ time_horizon: 2026~2027
 title: 중국 반도체의 HBM 생산 가능성
 aliases:
 - T6-07
+- T6-07 중국반도체의 HBM 생산가능성
 - T6-07 중국 반도체의 HBM 생산 가능성
 - T-36
 - T-36 중국 반도체의 HBM 생산 가능성
 - 중국 반도체의 HBM 생산 가능성
-sector: "매크로 자본시장, 금리 & 지정학 안보"
+sector: 매크로 자본시장 & 지정학 안보
 sector_id: T6
 thesis_nature: contrarian
 stack_layer: L1
@@ -50,7 +51,7 @@ old_id: T-36
 previous_id: GE-02
 ---
 
-# T6-02 중국 반도체의 HBM 생산 가능성
+# T6-07 중국 반도체의 HBM 생산 가능성
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 

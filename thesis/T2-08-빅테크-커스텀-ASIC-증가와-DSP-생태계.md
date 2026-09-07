@@ -3,7 +3,7 @@ confidence: 75
 direction: bullish
 hypothesis: 빅테크의 자체 칩(TPU, Trainium, Maia 등) 개발 가속화로 파운드리와 팹리스를 잇는 디자인하우스(DSP)의 역할과
   가치가 급상승한다
-id: "T5-06"
+id: T2-08
 keywords:
 - 디자인하우스
 - DSP
@@ -13,12 +13,12 @@ keywords:
 - VCA
 - OIP
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 국내 주요 DSP 기업의 3nm/2nm 글로벌 빅테크 수주 공식 공시
-momentum: 45.0
-news_count: 0
+momentum: 135.0
+news_count: 1
 priority: 3
-rank: 32
+rank: 21
 related_companies:
 - 에이직랜드
 - 가온칩스
@@ -34,13 +34,15 @@ status: active
 time_horizon: 2026~2027
 title: 빅테크 커스텀 ASIC 증가와 DSP 생태계
 aliases:
+- T2-08
+- T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계
 - T5-06
 - T5-06 빅테크 커스텀 ASIC 증가와 DSP 생태계
 - T-24
 - T-24 빅테크 커스텀 ASIC 증가와 DSP 생태계
 - 빅테크 커스텀 ASIC 증가와 DSP 생태계
-sector: "AI 컴퓨트 & 차세대 반도체"
-sector_id: T1
+sector: AI 컴퓨트·메모리·선단반도체
+sector_id: T2
 thesis_nature: consensus
 stack_layer: L1
 stack_name: L1 (칩/패키징)
@@ -54,7 +56,7 @@ old_id: T-24
 previous_id: SC-09
 ---
 
-# T1-09 빅테크 커스텀 ASIC 증가와 DSP 생태계
+# T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 
@@ -73,13 +75,13 @@ previous_id: SC-09
 
 ```mermaid
 graph LR
-    P_T_06["[[T4-04-TPU-증가와-GPU-수요-둔화|T4-04 TPU 증가와 GPU 수요 둔화]]"] --> T_T_24["★ [[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]]"]
+    P_T_06["[[T2-11-TPU-증가와-GPU-수요-둔화|T2-11 TPU 증가와 GPU 수요 둔화]]"] --> T_T_24["★ [[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]]"]
     P_T_15["[[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"] --> T_T_24["★ [[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]]"]
     T_T_24["★ [[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]]"] --> D_T_16["[[T2-04-파운드리-2nm-공정과-GAA-격돌|T2-04 파운드리 2nm 공정과 GAA 격돌]]"]
 ```
 
 - 🔼 **선행 가설 (배경 요인 & 상위 인프라)**:
-  - [[T4-04-TPU-증가와-GPU-수요-둔화|T4-04 TPU 증가와 GPU 수요 둔화]] — 빅테크 자체 ASIC 전환
+  - [[T2-11-TPU-증가와-GPU-수요-둔화|T2-11 TPU 증가와 GPU 수요 둔화]] — 빅테크 자체 ASIC 전환
   - [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]] — 추론 ASIC 수요 폭증
 - ➡️ **동반 및 대체·경쟁 가설**:
   - (해당 없음)

@@ -3,7 +3,7 @@ confidence: 60
 direction: neutral
 hypothesis: 45 TOPS 이상의 NPU가 탑재된 Arm 기반 SoC(스냅드래곤 X 시리즈 등)가 x86의 점유율을 잠식하며 PC 아키텍처
   재편이 일어난다
-id: "T6-07"
+id: T5-03
 keywords:
 - AIPC
 - Copilot+
@@ -13,12 +13,12 @@ keywords:
 - x86vsArm
 - 배터리수명
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 글로벌 프리미엄 노트북 시장에서 Arm 기반 AI PC 점유율 20% 돌파
 momentum: 42.0
 news_count: 0
 priority: 3
-rank: 38
+rank: 48
 related_companies:
 - Qualcomm
 - 인텔
@@ -38,8 +38,8 @@ aliases:
 - T-21
 - T-21 AI PC 보급 확대와 Arm 기반 윈도우 생태계
 - AI PC 보급 확대와 Arm 기반 윈도우 생태계
-sector: "피지컬 AI, 모빌리티 & 로보틱스"
-sector_id: T3
+sector: 피지컬 AI·자율주행·로보틱스
+sector_id: T5
 thesis_nature: consensus
 stack_layer: L5
 stack_name: L5 (디바이스)
@@ -50,7 +50,7 @@ old_id: T-21
 previous_id: RB-07
 ---
 
-# T3-07 AI PC 보급 확대와 Arm 기반 윈도우 생태계
+# T5-03 AI PC 보급 확대와 Arm 기반 윈도우 생태계
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#3-🤖-피지컬-ai-로보틱스--엣지-디바이스-physical-ai--edge|피지컬 AI & 엣지 디바이스]]
 

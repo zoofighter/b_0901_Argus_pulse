@@ -2,7 +2,7 @@
 confidence: 47
 direction: bearish
 hypothesis: GPU 담보 대출(칩담대) 시장이 AI 서브프라임 리스크를 만들고 있다
-id: "T6-07"
+id: T6-02
 keywords:
 - 칩담대
 - GPU담보대출
@@ -12,12 +12,12 @@ keywords:
 - 감가상각
 - 자산유동화
 last_checked: 2026-09-06T21:13
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: GPU 담보 대출 연체율 급등 또는 대형 네오클라우드 재무 위기
 momentum: 39.4
 news_count: 0
 priority: 3
-rank: 42
+rank: 52
 related_companies:
 - NVIDIA
 - CoreWeave
@@ -30,13 +30,15 @@ status: active
 time_horizon: 2026~2027
 title: 엔비디아와 GPU 금융
 aliases:
+- T6-02
+- T6-02 엔비디아와 GPU 금융
 - T6-07
 - T6-07 엔비디아와 GPU 금융
 - T-09
 - T-09 엔비디아와 GPU 금융
 - 엔비디아와 GPU 금융
-sector: "매크로 자본시장, 금리 & 지정학 안보"
-sector_id: T4
+sector: 매크로 자본시장 & 지정학 안보
+sector_id: T6
 thesis_nature: contrarian
 stack_layer: L3
 stack_name: L3 (클라우드)
@@ -47,7 +49,7 @@ old_id: T-09
 previous_id: MC-03
 ---
 
-# T4-03 엔비디아와 GPU 금융
+# T6-02 엔비디아와 GPU 금융
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#4-🏛️-매크로-클라우드-금융--소프트웨어-과점-macro--ecosystem|매크로 & 빅테크 생태계]]
 
@@ -66,13 +68,13 @@ GPU 담보 대출(칩담대) 시장이 AI 서브프라임 리스크를 만들고
 
 ```mermaid
 graph LR
-    P_T_08["[[T3-04-엔비디아와-네오클라우드|T3-04 엔비디아와 네오클라우드]]"] --> T_T_09["★ [[T6-02-엔비디아와-GPU-금융|T6-02 엔비디아와 GPU 금융]]"]
+    P_T_08["[[T6-09-엔비디아와-네오클라우드|T3-04 엔비디아와 네오클라우드]]"] --> T_T_09["★ [[T6-02-엔비디아와-GPU-금융|T6-02 엔비디아와 GPU 금융]]"]
     T_T_09["★ [[T6-02-엔비디아와-GPU-금융|T6-02 엔비디아와 GPU 금융]]"] --> D_T_37["[[T6-03-AI-버블-가능성|T6-03 AI 버블 가능성]]"]
     T_T_09["★ [[T6-02-엔비디아와-GPU-금융|T6-02 엔비디아와 GPU 금융]]"] --> D_T_05["[[T6-01-금리와-데이터센터|T6-01 금리와 데이터센터]]"]
 ```
 
 - 🔼 **선행 가설 (배경 요인 & 상위 인프라)**:
-  - [[T3-04-엔비디아와-네오클라우드|T3-04 엔비디아와 네오클라우드]] — GPU 자산화 및 금융 결합
+  - [[T6-09-엔비디아와-네오클라우드|T3-04 엔비디아와 네오클라우드]] — GPU 자산화 및 금융 결합
 - ➡️ **동반 및 대체·경쟁 가설**:
   - (해당 없음)
 - 🔽 **파생 및 후행 병목 가설**:

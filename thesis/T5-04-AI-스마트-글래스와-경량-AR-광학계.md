@@ -3,7 +3,7 @@ confidence: 70
 direction: bullish
 hypothesis: 디스플레이 없는 음성/비전 AI 스마트 안경(Ray-Ban 메타 등)의 성공이 차세대 경량 AR 글래스 및 마이크로 OLED
   시장을 견인한다
-id: "T5-04"
+id: T5-04
 keywords:
 - 스마트글래스
 - AR안경
@@ -12,12 +12,12 @@ keywords:
 - 웨어러블AI
 - 비전AI
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 글로벌 AI 스마트 안경 연간 출하량 1,000만 대 돌파
 momentum: 44.0
 news_count: 0
 priority: 3
-rank: 36
+rank: 46
 related_companies:
 - Meta
 - EssilorLuxottica
@@ -36,8 +36,8 @@ aliases:
 - T-27
 - T-27 AI 스마트 글래스와 경량 AR 광학계
 - AI 스마트 글래스와 경량 AR 광학계
-sector: "피지컬 AI, 모빌리티 & 로보틱스"
-sector_id: T3
+sector: 피지컬 AI·자율주행·로보틱스
+sector_id: T5
 thesis_nature: consensus
 stack_layer: L5
 stack_name: L5 (디바이스)
@@ -49,7 +49,7 @@ old_id: T-27
 previous_id: RB-08
 ---
 
-# T3-08 AI 스마트 글래스와 경량 AR 광학계
+# T5-04 AI 스마트 글래스와 경량 AR 광학계
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#3-🤖-피지컬-ai-로보틱스--엣지-디바이스-physical-ai--edge|피지컬 AI & 엣지 디바이스]]
 

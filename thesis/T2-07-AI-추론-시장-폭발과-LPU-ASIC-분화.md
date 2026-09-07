@@ -2,7 +2,7 @@
 confidence: 65
 direction: bullish
 hypothesis: 학습 중심에서 실시간 추론 시대로 전환되며 초저지연·고효율의 LPU 및 전용 추론 ASIC이 GPU의 자리를 잠식한다
-id: "T2-07"
+id: T2-07
 keywords:
 - AI추론
 - LPU
@@ -12,12 +12,12 @@ keywords:
 - 추론전용칩
 - 서빙비용
 last_checked: 2026-09-04T21:11
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 하이퍼스케일러 LLM 서빙 워크로드의 30% 이상이 ASIC으로 전환
 momentum: 53.0
 news_count: 0
 priority: 4
-rank: 28
+rank: 39
 related_companies:
 - Groq
 - 리벨리온
@@ -33,12 +33,13 @@ time_horizon: 2026~2027
 title: AI 추론 시장 폭발과 LPU·ASIC 분화
 aliases:
 - T2-07
+- T2-07 AI 추론 시장 폭발과 LPU ASIC 분화
 - T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화
 - T-15
 - T-15 AI 추론 시장 폭발과 LPU·ASIC 분화
 - AI 추론 시장 폭발과 LPU·ASIC 분화
-sector: "AI 컴퓨트 & 차세대 반도체"
-sector_id: T1
+sector: AI 컴퓨트·메모리·선단반도체
+sector_id: T2
 thesis_nature: consensus
 stack_layer: L1
 stack_name: L1 (칩/패키징)
@@ -51,7 +52,7 @@ old_id: T-15
 previous_id: SC-07
 ---
 
-# T1-07 AI 추론 시장 폭발과 LPU·ASIC 분화
+# T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 
@@ -70,18 +71,18 @@ previous_id: SC-07
 
 ```mermaid
 graph LR
-    P_T_06["[[T4-04-TPU-증가와-GPU-수요-둔화|T4-04 TPU 증가와 GPU 수요 둔화]]"] --> T_T_15["★ [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"]
+    P_T_06["[[T2-11-TPU-증가와-GPU-수요-둔화|T2-11 TPU 증가와 GPU 수요 둔화]]"] --> T_T_15["★ [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"]
     T_T_15["★ [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"] --> D_T_24["[[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]]"]
-    T_T_15["★ [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"] --> D_T_34["[[T4-03-바이오AI와-신약개발-가속|T4-03 바이오 AI와 신약 개발 가속]]"]
+    T_T_15["★ [[T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화|T2-07 AI 추론 시장 폭발과 LPU·ASIC 분화]]"] --> D_T_34["[[T4-03-추론-시간-연산과-시스템2-추론-모델의-부상|T4-03 추론 시간 연산과 시스템 2 추론 모델의 부상]]"]
 ```
 
 - 🔼 **선행 가설 (배경 요인 & 상위 인프라)**:
-  - [[T4-04-TPU-증가와-GPU-수요-둔화|T4-04 TPU 증가와 GPU 수요 둔화]] — 학습에서 추론으로의 패러다임 이동
+  - [[T2-11-TPU-증가와-GPU-수요-둔화|T2-11 TPU 증가와 GPU 수요 둔화]] — 학습에서 추론으로의 패러다임 이동
 - ➡️ **동반 및 대체·경쟁 가설**:
   - (해당 없음)
 - 🔽 **파생 및 후행 병목 가설**:
   - [[T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계|T2-08 빅테크 커스텀 ASIC 증가와 DSP 생태계]] — 추론 전용 ASIC 설계 수요 폭증
-  - [[T4-03-바이오AI와-신약개발-가속|T4-03 바이오 AI와 신약 개발 가속]] — 도메인 특화 추론 가속
+  - [[T4-03-추론-시간-연산과-시스템2-추론-모델의-부상|T4-03 추론 시간 연산과 시스템 2 추론 모델의 부상]] — 테스트 타임 연산 및 CoT 추론 가속
 
 ---
 

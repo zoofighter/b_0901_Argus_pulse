@@ -1,7 +1,7 @@
 ---
-id: "T6-08"
+id: T6-08
 title: 중국 반도체의 NAND 점유율 증가와 레거시·eSSD 잠식
-sector: "매크로 자본시장, 금리 & 지정학 안보"
+sector: 매크로 자본시장 & 지정학 안보
 sector_id: T6
 hypothesis: 미국의 장비 제재에도 불구하고 YMTC의 Xtacking 기반 고적층 3D NAND 및 QLC 양산 수율이 급상승하며, 중국
   내수 자립(60%+)과 글로벌 레거시/eSSD 시장 잠식으로 한국·미국 낸드 마진을 압박한다.
@@ -45,17 +45,18 @@ related_theses:
 related_vs: []
 aliases:
 - T6-08
+- T6-08 중국반도체의 NAND 점유율 증가
 - T6-08 중국 반도체의 NAND 점유율 증가와 레거시·eSSD 잠식
 - 중국반도체의 NAND 점유율 증가
 - YMTC 낸드 점유율 증가
-rank: 10
-momentum: 670.6
-news_count: 9
-last_ranked: 2026-09-06T21:17
+rank: 12
+momentum: 588.6
+news_count: 7
+last_ranked: 2026-09-07T19:30
 last_checked: 2026-09-06T21:16
 ---
 
-# T6-03 중국 반도체의 NAND 점유율 증가와 레거시·eSSD 잠식
+# T6-08 중국 반도체의 NAND 점유율 증가와 레거시·eSSD 잠식
 
 > **역발상/헷지 가설 (Contrarian / Margin Pressure)**  
 > D램/HBM과 달리 노광 장비(EUV) 제재의 영향이 상대적으로 덜한 **3D 낸드 분야에서 YMTC의 독자 아키텍처(Xtacking)와 막대한 정부 보조금을 무기로 한 중국산 낸드의 글로벌 침투**와 그에 따른 한국 메모리 기업들의 중장기 마진 훼손 리스크를 추적합니다.

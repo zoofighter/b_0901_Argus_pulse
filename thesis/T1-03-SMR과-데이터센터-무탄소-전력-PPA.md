@@ -2,7 +2,7 @@
 confidence: 75
 direction: bullish
 hypothesis: 전력망 부족에 직면한 빅테크들이 24/7 기저부하 확보를 위해 SMR 개발사와 장기 전력구매계약(PPA)을 직접 체결한다
-id: "T2-06"
+id: T1-03
 keywords:
 - SMR
 - 소형모듈원전
@@ -11,12 +11,12 @@ keywords:
 - 원자력발전
 - 기저부하
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 빅테크-SMR 기업 간 상업적 전력 공급 계약(PPA) 공식 체결
-momentum: 55.0
-news_count: 0
+momentum: 85.0
+news_count: 1
 priority: 4
-rank: 27
+rank: 31
 related_companies:
 - NuScale
 - Oklo
@@ -31,13 +31,15 @@ status: active
 time_horizon: 2027~2028
 title: SMR과 데이터센터 무탄소 전력 PPA
 aliases:
+- T1-03
+- T1-03 SMR과 데이터센터 무탄소 전력 PPA
 - T2-06
 - T2-06 SMR과 데이터센터 무탄소 전력 PPA
 - T-13
 - T-13 SMR과 데이터센터 무탄소 전력 PPA
 - SMR과 데이터센터 무탄소 전력 PPA
-sector: "AI 데이터센터 & 전력·냉각 인프라"
-sector_id: T2
+sector: AI 데이터센터 & 전력·냉각 물리 인프라
+sector_id: T1
 thesis_nature: consensus
 stack_layer: L2
 stack_name: L2 (물리인프라)
@@ -49,7 +51,7 @@ old_id: T-13
 previous_id: DC-03
 ---
 
-# T3-03 SMR과 데이터센터 무탄소 전력 PPA
+# T1-03 SMR과 데이터센터 무탄소 전력 PPA
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#2-⚡-ai-데이터센터--전력냉각-인프라-power--infrastructure|AI 인프라 & 전력·냉각]]
 

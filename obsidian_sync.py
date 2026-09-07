@@ -24,6 +24,7 @@ FOLDER_MAP = {
     "outline": "argus/Outline",
     "digest": "argus/Digest",
     "review": "argus/Review",
+    "brief": "argus/Review",
     "theses": "argus/Theses",
     "thesis": "argus/Theses",
     "canvas": "argus/Canvas",
@@ -94,7 +95,7 @@ def sync_all_outputs() -> dict[str, int]:
     }
 
     # 1. Output 디렉터리 동기화
-    for cat in ["blog", "thread", "outline", "digest", "review"]:
+    for cat in ["blog", "thread", "outline", "digest", "review", "brief"]:
         src_dir = config.OUTPUT_DIR / cat
         if not src_dir.exists():
             continue
@@ -102,7 +103,7 @@ def sync_all_outputs() -> dict[str, int]:
         for md_file in src_dir.glob("*.md"):
             res = sync_file(md_file, cat)
             if res:
-                counts[cat] += 1
+                counts[cat] = counts.get(cat, 0) + 1
 
     # 2. Thesis 및 하위 지식 디렉터리 동기화
     if config.THESIS_DIR.exists():
@@ -131,6 +132,9 @@ def sync_all_outputs() -> dict[str, int]:
                 counts["canvas"] = counts.get("canvas", 0) + 1
         moc_file = config.THESIS_DIR / "00-Argus-Master-MOC.md"
         if moc_file.exists() and sync_file(moc_file, "moc"):
+            counts["moc"] += 1
+        dash_file = config.THESIS_DIR / "00-Argus-Pipeline-Dashboard.md"
+        if dash_file.exists() and sync_file(dash_file, "moc"):
             counts["moc"] += 1
 
     # 3. Docs 동기화

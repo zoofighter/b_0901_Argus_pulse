@@ -2,7 +2,7 @@
 confidence: 73
 direction: bullish
 hypothesis: 데이터센터의 신재생에너지 간헐성 극복을 위해 대용량 BESS 투자가 폭증하며 LFP 배터리와 미국 현지 공장이 최대 수혜를 입는다
-id: "T2-02"
+id: T1-04
 keywords:
 - ESS
 - BESS
@@ -11,12 +11,12 @@ keywords:
 - 전력망안정화
 - IRA세액공제
 last_checked: 2026-09-06T21:07
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 테슬라 메가팩 및 북미 배터리 3사 ESS 수주 잔고 사상 최대 갱신
-momentum: 1378.8
-news_count: 19
+momentum: 1009.2
+news_count: 13
 priority: 4
-rank: 7
+rank: 9
 related_companies:
 - Tesla
 - LG에너지솔루션
@@ -31,13 +31,15 @@ status: active
 time_horizon: 2026~2027
 title: AI 전력망용 대용량 ESS와 LFP 공급망
 aliases:
+- T1-04
+- T1-04 AI 전력망용 대용량 ESS와 LFP 공급망
 - T2-02
 - T2-02 AI 전력망용 대용량 ESS와 LFP 공급망
 - T-22
 - T-22 AI 전력망용 대용량 ESS와 LFP 공급망
 - AI 전력망용 대용량 ESS와 LFP 공급망
-sector: "AI 데이터센터 & 전력·냉각 인프라"
-sector_id: T2
+sector: AI 데이터센터 & 전력·냉각 물리 인프라
+sector_id: T1
 thesis_nature: consensus
 stack_layer: L2
 stack_name: L2 (물리인프라)
@@ -50,7 +52,7 @@ old_id: T-22
 previous_id: DC-04
 ---
 
-# T3-04 AI 전력망용 대용량 ESS와 LFP 공급망
+# T1-04 AI 전력망용 대용량 ESS와 LFP 공급망
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#2-⚡-ai-데이터센터--전력냉각-인프라-power--infrastructure|AI 인프라 & 전력·냉각]]
 

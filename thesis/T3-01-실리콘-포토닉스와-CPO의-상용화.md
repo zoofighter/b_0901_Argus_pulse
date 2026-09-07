@@ -3,7 +3,7 @@ confidence: 70
 direction: bullish
 hypothesis: 구리 배선의 전력·신호 손실 한계로 800G/1.6T 광트랜시버 및 CPO(Co-Packaged Optics)가 데이터센터 스위치
   백본으로 급부상한다
-id: "T5-09"
+id: T3-01
 keywords:
 - 실리콘포토닉스
 - CPO
@@ -12,12 +12,12 @@ keywords:
 - 광인터커넥트
 - 이더넷스위치
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 브로드컴/엔비디아 CPO 스위치 양산 채택 및 데이터센터 실증
 momentum: 44.0
 news_count: 0
 priority: 3
-rank: 34
+rank: 44
 related_companies:
 - Broadcom
 - Marvell
@@ -32,13 +32,15 @@ status: active
 time_horizon: 2027~2028
 title: 실리콘 포토닉스와 CPO의 상용화
 aliases:
+- T3-01
+- T3-01 실리콘 포토닉스와 CPO의 상용화
 - T5-09
 - T5-09 실리콘 포토닉스와 CPO의 상용화
 - T-14
 - T-14 실리콘 포토닉스와 CPO의 상용화
 - 실리콘 포토닉스와 CPO의 상용화
-sector: "초고속 네트워킹 & 시스템 플랫폼"
-sector_id: T1
+sector: 초고속 네트워킹·시스템 플랫폼
+sector_id: T3
 thesis_nature: consensus
 stack_layer: L3
 stack_name: L3 (네트워킹)
@@ -51,7 +53,7 @@ old_id: T-14
 previous_id: SC-06
 ---
 
-# T1-06 실리콘 포토닉스와 CPO의 상용화
+# T3-01 실리콘 포토닉스와 CPO의 상용화
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 

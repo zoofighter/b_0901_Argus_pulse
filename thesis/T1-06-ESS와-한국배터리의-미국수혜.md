@@ -3,7 +3,7 @@ confidence: 78
 direction: bullish
 hypothesis: 저장용 배터리(ESS) 시장이 전기차를 추월하는 속도가 예상보다 빠르고, 미국의 중국 배제 정책(관세 58% + 국가비상사태)이
   한국 배터리 3사에 2032년까지 한정된 구조적 기회를 만든다
-id: "T5-09"
+id: T1-06
 keywords:
 - ESS
 - LFP
@@ -14,12 +14,12 @@ keywords:
 - 음극재흑연
 - GWh
 last_checked: 2026-09-06T21:07
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 삼성SDI 인디애나·SK온 조지아 LFP 양산 개시(2026년 10월) + 에너지부 비상사태 세부품목 확정
-momentum: 1604.4
-news_count: 22
+momentum: 1088.2
+news_count: 14
 priority: 5
-rank: 6
+rank: 8
 related_companies:
 - LG에너지솔루션
 - 삼성SDI
@@ -33,13 +33,15 @@ status: active
 time_horizon: 2026~2027
 title: ESS와 한국 배터리의 미국 수혜
 aliases:
+- T1-06
+- T1-06 ESS와 한국배터리의 미국수혜
 - T5-09
 - T5-09 ESS와 한국 배터리의 미국 수혜
 - T-32
 - T-32 ESS와 한국 배터리의 미국 수혜
 - ESS와 한국 배터리의 미국 수혜
-sector: "AI 데이터센터 & 전력·냉각 인프라"
-sector_id: T2
+sector: AI 데이터센터 & 전력·냉각 물리 인프라
+sector_id: T1
 thesis_nature: consensus
 stack_layer: L0
 stack_name: L0 (소재/배터리)
@@ -51,7 +53,7 @@ old_id: T-32
 previous_id: DC-06
 ---
 
-# T3-06 ESS와 한국 배터리의 미국 수혜
+# T1-06 ESS와 한국 배터리의 미국 수혜
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#2-⚡-ai-데이터센터--전력냉각-인프라-power--infrastructure|AI 인프라 & 전력·냉각]]
 

@@ -2,7 +2,7 @@
 confidence: 52
 direction: bullish
 hypothesis: CXL 3.0이 제3 메모리 계층으로 자리잡으며 메모리 풀링이 AI 인프라 표준이 된다
-id: "T5-09"
+id: T2-06
 keywords:
 - CXL
 - CXLmemory
@@ -12,12 +12,12 @@ keywords:
 - 제3메모리계층
 - Fabric
 last_checked: 2026-09-04T09:47
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: Azure 또는 메타의 CXL 메모리 풀링 프로덕션 도입 공식 발표
 momentum: 40.4
 news_count: 0
 priority: 3
-rank: 40
+rank: 50
 related_companies:
 - 삼성전자
 - SK하이닉스
@@ -36,8 +36,8 @@ aliases:
 - T-07
 - T-07 CXL 메모리의 확대
 - CXL 메모리의 확대
-sector: "AI 컴퓨트 & 차세대 반도체"
-sector_id: T1
+sector: AI 컴퓨트·메모리·선단반도체
+sector_id: T2
 thesis_nature: consensus
 stack_layer: L1
 stack_name: L1 (칩/패키징)
@@ -49,7 +49,7 @@ old_id: T-07
 previous_id: SC-03
 ---
 
-# T1-03 CXL 메모리의 확대
+# T2-06 CXL 메모리의 확대
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 

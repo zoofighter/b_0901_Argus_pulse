@@ -2,7 +2,7 @@
 title: "Argus Pulse — 24시간 자동화 파이프라인 대시보드"
 type: system-dashboard
 created: 2026-09-07
-updated: 2026-09-07 18:27:44
+updated: 2026-09-07 19:28:28
 tags:
   - argus-pulse
   - system-dashboard
@@ -13,7 +13,7 @@ tags:
 # 🦅 Argus Pulse 24시간 자동화 파이프라인 관제 대시보드
 
 > **시스템 상태**: `🟢 ALL SYSTEMS OPERATIONAL`  
-> **최근 점검 시각**: `2026-09-07 18:27:44` | **옵시디언 볼트**: `obs_argus`
+> **최근 점검 시각**: `2026-09-07 19:28:28` | **옵시디언 볼트**: `obs_argus`
 
 ---
 
@@ -64,7 +64,7 @@ flowchart LR
 |:---:|:---|:---|:---:|:---:|:---|:---:|
 | **`08:00`** | **아침 주제 추천 & 기획안 생성** | `topic_generator.py --auto` | 🟢 성공 | `2026-09-07 13:05:01` | → 리뷰 모드를 사용하려면: python review_generator.py | `[[argus/Outline|📂 바로가기]]` |
 | **`08:05`** | **미매칭 뉴스 기반 신규 테마 발굴** | `theme_discoverer.py` | 🔴 미기록 | `-` | 로그 파일 없음 | `[[argus/Incubator|📂 바로가기]]` |
-| **`09:00~21:00`** | **실시간 뉴스 감시 (매 정각)** | `hourly_monitor.py --once` | 🟢 성공 | `2026-09-07 18:00:01` | ✓ 고득점(80점+) 뉴스 없음 | `[[argus|📂 바로가기]]` |
+| **`09:00~21:00`** | **실시간 뉴스 감시 (매 정각)** | `hourly_monitor.py --once` | 🟢 성공 | `2026-09-07 19:00:01` | 새로 확인된 뉴스: 0건 | `[[argus|📂 바로가기]]` |
 | **`13:00`** | **오후 블로그 사후 검증 리뷰 (RAG)** | `review_generator.py --rag` | 🟢 성공 | `2026-09-07 13:00:24` | 📓 [Obsidian 동기화] REVIEW -> argus/Review/2026-09-07-review-50-vs-33-함정-HBM-왕좌는-이미 | `[[argus/Review|📂 바로가기]]` |
 | **`13:05`** | **변곡점 1-Page 투자 메모 작성** | `thesis_brief_writer.py --inflection-only` | 🔴 미기록 | `-` | 로그 파일 없음 | `[[argus/Review|📂 바로가기]]` |
 | **`21:00`** | **데일리 다이제스트 종합 요약 (RAG)** | `daily_digest.py --rag` | ⚪ 과거 기록 | `2026-09-06 21:00:17` | 📝 [Thesis Frontmatter 갱신] 총 43개 Thesis MD 파일에 rank & momentum 저장 완료 | `[[argus/Digest|📂 바로가기]]` |

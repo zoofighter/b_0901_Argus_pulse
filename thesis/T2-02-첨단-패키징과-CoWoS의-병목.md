@@ -2,7 +2,7 @@
 confidence: 80
 direction: bullish
 hypothesis: 차세대 AI 가속기의 출하량 한계는 웨이퍼 팹이 아닌 CoWoS 및 2.5D/3D 첨단 패키징 캐파가 결정한다
-id: "T6-08"
+id: T2-02
 keywords:
 - CoWoS
 - 첨단패키징
@@ -13,12 +13,12 @@ keywords:
 - FOPLP
 - 팬아웃
 last_checked: null
-last_ranked: 2026-09-06T21:17
+last_ranked: 2026-09-07T19:30
 milestone: 주요 OSAT 기업의 첨단 패키징 캐파 2배 증설 및 유리기판 파일럿 라인 가동
 momentum: 56.0
 news_count: 0
 priority: 4
-rank: 25
+rank: 36
 related_companies:
 - TSMC
 - ASE
@@ -40,8 +40,8 @@ aliases:
 - T-10
 - T-10 첨단 패키징과 CoWoS의 병목
 - 첨단 패키징과 CoWoS의 병목
-sector: "AI 컴퓨트 & 차세대 반도체"
-sector_id: T1
+sector: AI 컴퓨트·메모리·선단반도체
+sector_id: T2
 thesis_nature: consensus
 stack_layer: L1
 stack_name: L1 (칩/패키징)
@@ -55,7 +55,7 @@ old_id: T-10
 previous_id: SC-04
 ---
 
-# T1-04 첨단 패키징과 CoWoS의 병목
+# T2-02 첨단 패키징과 CoWoS의 병목
 
 > 🧭 **상위 인덱스**: [[00-Argus-Master-MOC|Master MOC]] ➔ [[00-Argus-Master-MOC#1-💾-ai-컴퓨트--차세대-반도체-compute--silicon|AI 컴퓨트 & 반도체]]
 

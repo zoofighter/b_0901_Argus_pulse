@@ -2,160 +2,280 @@
   "nodes": [
     {
       "id": "h4",
-      "x": -400,
+      "x": -450,
       "y": -350,
-      "width": 1600,
+      "width": 1900,
       "height": 100,
       "type": "text",
-      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵\n> 오픈소스 LLM 고도화 ➔ 엔터프라이즈 사설 AI & SaaS 마진 잠식 ➔ 바이오 AI 가속 & 자체 TPU/ASIC 분화"
+      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> GPT-6 아스트라 AGI ➔ o1/o3 추론 연산 ➔ DeepSeek/Qwen 중국 AI 가격 파괴 ➔ Computer Use 자율 에이전트 ➔ xAI 그록 ➔ 사설 AI & SaaS 과점화"
     },
     {
-      "id": "vs_asic",
-      "x": 850,
+      "id": "top_frontier",
+      "x": -450,
       "y": -180,
-      "width": 260,
-      "height": 140,
+      "width": 320,
+      "height": 200,
       "type": "file",
-      "file": "argus/Vs/Vs-GPU-vs-TPU-ASIC.md"
+      "file": "argus/Topics/Topic-프론티어모델.md"
+    },
+    {
+      "id": "top_agent",
+      "x": -50,
+      "y": -180,
+      "width": 320,
+      "height": 200,
+      "type": "file",
+      "file": "argus/Topics/Topic-AI에이전트.md"
+    },
+    {
+      "id": "top_ondevice",
+      "x": 350,
+      "y": -180,
+      "width": 320,
+      "height": 200,
+      "type": "file",
+      "file": "argus/Topics/Topic-온디바이스AI.md"
+    },
+    {
+      "id": "t4_06",
+      "x": -450,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-06-GPT-6-아스트라와-자율형-AGI-엔지니어링-에이전트.md"
+    },
+    {
+      "id": "t4_03",
+      "x": -50,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-03-추론-시간-연산과-시스템2-추론-모델의-부상.md"
+    },
+    {
+      "id": "t4_08",
+      "x": 350,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-08-중국-AI-모델-급부상과-오픈AI·앤트로픽-과점-위협.md"
+    },
+    {
+      "id": "t4_04",
+      "x": 750,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-04-자율형-에이전트와-컴퓨터-제어-엔터프라이즈-침투.md"
+    },
+    {
+      "id": "t4_07",
+      "x": 1150,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-07-xAI-그록과-실시간-데이터-파이어호스-인텔리전스.md"
+    },
+    {
+      "id": "t4_05",
+      "x": -450,
+      "y": 380,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-05-프론티어-LLM-멀티모달-네이티브화와-실시간-옴니-인텔리전스.md"
     },
     {
       "id": "t4_01",
-      "x": -350,
-      "y": -180,
+      "x": -50,
+      "y": 380,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
       "file": "argus/Theses/T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md"
     },
     {
       "id": "t4_02",
-      "x": 50,
-      "y": -180,
+      "x": 350,
+      "y": 380,
       "width": 320,
-      "height": 220,
+      "height": 240,
       "type": "file",
       "file": "argus/Theses/T4-02-AI-소프트웨어-레이어의-과점화.md"
     },
     {
-      "id": "t4_03",
-      "x": 450,
-      "y": -180,
-      "width": 320,
-      "height": 220,
-      "type": "file",
-      "file": "argus/Theses/T4-03-바이오AI와-신약개발-가속.md"
-    },
-    {
-      "id": "t4_04",
-      "x": 850,
-      "y": 100,
-      "width": 320,
-      "height": 220,
-      "type": "file",
-      "file": "argus/Theses/T4-04-TPU-증가와-GPU-수요-둔화.md"
-    },
-    {
-      "id": "c_msft",
-      "x": -350,
-      "y": 150,
-      "width": 260,
-      "height": 160,
-      "type": "file",
-      "file": "argus/Companies/Company-Microsoft.md"
-    },
-    {
-      "id": "c_meta",
-      "x": -50,
-      "y": 150,
-      "width": 260,
-      "height": 160,
-      "type": "file",
-      "file": "argus/Companies/Company-Meta.md"
-    },
-    {
-      "id": "c_alphabet",
-      "x": 250,
-      "y": 150,
-      "width": 260,
-      "height": 160,
-      "type": "file",
-      "file": "argus/Companies/Company-Alphabet.md"
-    },
-    {
       "id": "c_openai",
-      "x": 550,
-      "y": 150,
-      "width": 260,
+      "x": -450,
+      "y": 680,
+      "width": 240,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-OpenAI.md"
     },
     {
       "id": "c_anthropic",
-      "x": 550,
-      "y": 360,
-      "width": 260,
+      "x": -180,
+      "y": 680,
+      "width": 240,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Anthropic.md"
+    },
+    {
+      "id": "c_deepseek",
+      "x": 90,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-DeepSeek.md"
+    },
+    {
+      "id": "c_alibaba",
+      "x": 360,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Alibaba.md"
+    },
+    {
+      "id": "c_xai",
+      "x": 630,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-xAI.md"
+    },
+    {
+      "id": "c_msft",
+      "x": 900,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Microsoft.md"
+    },
+    {
+      "id": "c_meta",
+      "x": 1170,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Meta.md"
     }
   ],
   "edges": [
     {
       "id": "e4_1",
-      "fromNode": "t4_01",
-      "toNode": "t4_02",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "사설 AI vs SaaS 과점"
+      "fromNode": "top_frontier",
+      "fromSide": "bottom",
+      "toNode": "t4_06",
+      "toSide": "top",
+      "label": "GPT-6 Astra"
     },
     {
       "id": "e4_2",
-      "fromNode": "t4_01",
-      "toNode": "c_meta",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "label": "Llama 오픈소스 배포"
+      "fromNode": "t4_03",
+      "fromSide": "left",
+      "toNode": "t4_06",
+      "toSide": "right",
+      "label": "시스템 2 추론 결합"
     },
     {
       "id": "e4_3",
-      "fromNode": "t4_02",
-      "toNode": "c_msft",
+      "fromNode": "top_agent",
       "fromSide": "bottom",
+      "toNode": "t4_04",
       "toSide": "top",
-      "label": "Copilot 기업 번들링"
+      "label": "Computer Use"
     },
     {
       "id": "e4_4",
-      "fromNode": "t4_02",
-      "toNode": "c_openai",
+      "fromNode": "t4_06",
       "fromSide": "bottom",
+      "toNode": "c_openai",
       "toSide": "top",
-      "label": "ChatGPT 기업용 API"
+      "label": "AGI 엔지니어링 리더"
     },
     {
       "id": "e4_5",
-      "fromNode": "t4_02",
-      "toNode": "c_anthropic",
+      "fromNode": "t4_04",
       "fromSide": "bottom",
+      "toNode": "c_anthropic",
       "toSide": "top",
-      "label": "Claude Enterprise"
+      "label": "Claude Computer Use"
     },
     {
       "id": "e4_6",
-      "fromNode": "t4_04",
-      "toNode": "c_alphabet",
-      "fromSide": "bottom",
+      "fromNode": "top_frontier",
+      "fromSide": "right",
+      "toNode": "t4_07",
       "toSide": "top",
-      "label": "자체 TPU v6 Trillium"
+      "label": "Grok 3.5 / 4"
     },
     {
       "id": "e4_7",
-      "fromNode": "vs_asic",
-      "toNode": "t4_04",
+      "fromNode": "t4_07",
       "fromSide": "bottom",
+      "toNode": "c_xai",
       "toSide": "top",
-      "label": "비용 절감 ASIC 전환"
+      "label": "Colossus 200k 클러스터"
+    },
+    {
+      "id": "e4_8",
+      "fromNode": "t4_02",
+      "fromSide": "bottom",
+      "toNode": "c_msft",
+      "toSide": "top",
+      "label": "Copilot Studio"
+    },
+    {
+      "id": "e4_9",
+      "fromNode": "t4_01",
+      "fromSide": "bottom",
+      "toNode": "c_meta",
+      "toSide": "top",
+      "label": "Llama 3/4 사설화"
+    },
+    {
+      "id": "e4_10",
+      "fromNode": "t4_08",
+      "fromSide": "bottom",
+      "toNode": "c_deepseek",
+      "toSide": "top",
+      "label": "MLA/MoE 극저가 API"
+    },
+    {
+      "id": "e4_11",
+      "fromNode": "t4_08",
+      "fromSide": "bottom",
+      "toNode": "c_alibaba",
+      "toSide": "top",
+      "label": "Qwen 2.5 오픈소스"
+    },
+    {
+      "id": "e4_12",
+      "fromNode": "t4_08",
+      "fromSide": "left",
+      "toNode": "t4_03",
+      "toSide": "right",
+      "label": "R1 vs o1 추론 경쟁"
+    },
+    {
+      "id": "e4_13",
+      "fromNode": "t4_08",
+      "fromSide": "left",
+      "toNode": "t4_06",
+      "toSide": "right",
+      "label": "마진 압박 (가격 파괴)"
     }
   ]
 }
