@@ -3,52 +3,61 @@
     {
       "id": "h4",
       "x": -400,
-      "y": -300,
-      "width": 1200,
+      "y": -350,
+      "width": 1600,
       "height": 100,
       "type": "text",
-      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> 오픈소스 LLM 고도화 ➔ 온프레미스 사설 AI ➔ 빅테크 SW 플랫폼 과점화 ➔ 버티컬 바이오 AI"
+      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵\n> 오픈소스 LLM 고도화 ➔ 엔터프라이즈 사설 AI & SaaS 마진 잠식 ➔ 바이오 AI 가속 & 자체 TPU/ASIC 분화"
+    },
+    {
+      "id": "vs_asic",
+      "x": 850,
+      "y": -180,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "argus/Vs/Vs-GPU-vs-TPU-ASIC.md"
     },
     {
       "id": "t4_01",
       "x": -350,
-      "y": -100,
+      "y": -180,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md"
     },
     {
       "id": "t4_02",
       "x": 50,
-      "y": -100,
+      "y": -180,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T4-02-AI-소프트웨어-레이어의-과점화.md"
     },
     {
       "id": "t4_03",
       "x": 450,
-      "y": -100,
+      "y": -180,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T4-03-바이오AI와-신약개발-가속.md"
     },
     {
       "id": "t4_04",
       "x": 850,
-      "y": -100,
+      "y": 100,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T4-04-TPU-증가와-GPU-수요-둔화.md"
     },
     {
       "id": "c_msft",
       "x": -350,
-      "y": 250,
+      "y": 150,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -56,8 +65,8 @@
     },
     {
       "id": "c_meta",
-      "x": 50,
-      "y": 250,
+      "x": -50,
+      "y": 150,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -65,46 +74,88 @@
     },
     {
       "id": "c_alphabet",
-      "x": 450,
-      "y": 250,
+      "x": 250,
+      "y": 150,
       "width": 260,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Alphabet.md"
+    },
+    {
+      "id": "c_openai",
+      "x": 550,
+      "y": 150,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-OpenAI.md"
+    },
+    {
+      "id": "c_anthropic",
+      "x": 550,
+      "y": 360,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Anthropic.md"
     }
   ],
   "edges": [
     {
       "id": "e4_1",
       "fromNode": "t4_01",
-      "fromSide": "right",
       "toNode": "t4_02",
+      "fromSide": "right",
       "toSide": "left",
-      "label": "SW 통합 플랫폼"
+      "label": "사설 AI vs SaaS 과점"
     },
     {
       "id": "e4_2",
       "fromNode": "t4_01",
-      "fromSide": "bottom",
       "toNode": "c_meta",
+      "fromSide": "bottom",
       "toSide": "top",
-      "label": "Llama 오픈소스"
+      "label": "Llama 오픈소스 배포"
     },
     {
       "id": "e4_3",
       "fromNode": "t4_02",
-      "fromSide": "bottom",
       "toNode": "c_msft",
+      "fromSide": "bottom",
       "toSide": "top",
-      "label": "Copilot 생태계"
+      "label": "Copilot 기업 번들링"
     },
     {
       "id": "e4_4",
-      "fromNode": "t4_04",
+      "fromNode": "t4_02",
+      "toNode": "c_openai",
       "fromSide": "bottom",
-      "toNode": "c_alphabet",
       "toSide": "top",
-      "label": "자체 TPU 최적화"
+      "label": "ChatGPT 기업용 API"
+    },
+    {
+      "id": "e4_5",
+      "fromNode": "t4_02",
+      "toNode": "c_anthropic",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Claude Enterprise"
+    },
+    {
+      "id": "e4_6",
+      "fromNode": "t4_04",
+      "toNode": "c_alphabet",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "자체 TPU v6 Trillium"
+    },
+    {
+      "id": "e4_7",
+      "fromNode": "vs_asic",
+      "toNode": "t4_04",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "비용 절감 ASIC 전환"
     }
   ]
 }

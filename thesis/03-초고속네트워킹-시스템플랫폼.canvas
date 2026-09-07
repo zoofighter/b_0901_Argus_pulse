@@ -3,79 +3,97 @@
     {
       "id": "h3",
       "x": -400,
-      "y": -300,
-      "width": 1200,
+      "y": -350,
+      "width": 1600,
       "height": 100,
       "type": "text",
-      "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> CPO 실리콘 포토닉스 ➔ UEC vs 인피니밴드 통신 패브릭 ➔ 분산 데이터센터 코로케이션 ➔ 네오클라우드"
+      "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵\n> 800G/1.6T 광인터커넥트(CPO) ➔ UEC(오픈 이더넷) vs 인피니밴드 ➔ 분산형 코로케이션 & 네오클라우드 생태계"
     },
     {
       "id": "top_cpo",
       "x": -350,
-      "y": -100,
-      "width": 320,
-      "height": 220,
+      "y": -180,
+      "width": 260,
+      "height": 140,
       "type": "file",
       "file": "argus/Topics/Topic-실리콘포토닉스.md"
     },
     {
       "id": "top_net",
       "x": 50,
-      "y": -100,
-      "width": 320,
-      "height": 220,
+      "y": -180,
+      "width": 260,
+      "height": 140,
       "type": "file",
       "file": "argus/Topics/Topic-초고속네트워킹.md"
     },
     {
+      "id": "vs_net",
+      "x": 450,
+      "y": -180,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "argus/Vs/Vs-인피니밴드-vs-울트라이더넷.md"
+    },
+    {
       "id": "t3_01",
       "x": -350,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T3-01-실리콘-포토닉스와-CPO의-상용화.md"
     },
     {
       "id": "t3_02",
       "x": 50,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md"
     },
     {
       "id": "t3_03",
       "x": 450,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md"
     },
     {
       "id": "t3_04",
       "x": 850,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T3-04-엔비디아와-네오클라우드.md"
     },
     {
-      "id": "c_arista",
+      "id": "c_broadcom",
       "x": -350,
-      "y": 550,
+      "y": 320,
       "width": 260,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Broadcom.md"
     },
     {
-      "id": "c_coreweave",
+      "id": "c_nvda",
       "x": 50,
-      "y": 550,
+      "y": 320,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-NVIDIA.md"
+    },
+    {
+      "id": "c_coreweave",
+      "x": 450,
+      "y": 320,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -83,8 +101,8 @@
     },
     {
       "id": "c_equinix",
-      "x": 450,
-      "y": 550,
+      "x": 850,
+      "y": 320,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -95,34 +113,58 @@
     {
       "id": "e3_1",
       "fromNode": "top_cpo",
-      "fromSide": "right",
-      "toNode": "top_net",
-      "toSide": "left",
-      "label": "광인터커넥트 전환"
+      "toNode": "t3_01",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "CPO 광스위칭"
     },
     {
       "id": "e3_2",
-      "fromNode": "top_cpo",
+      "fromNode": "top_net",
+      "toNode": "t3_02",
       "fromSide": "bottom",
-      "toNode": "t3_01",
       "toSide": "top",
-      "label": "스케일아웃 통신"
+      "label": "UEC 연합 확장"
     },
     {
       "id": "e3_3",
-      "fromNode": "top_net",
-      "fromSide": "bottom",
+      "fromNode": "vs_net",
       "toNode": "t3_02",
+      "fromSide": "bottom",
       "toSide": "top",
-      "label": "표준 연합 대결"
+      "label": "오픈 vs 독점 진영"
     },
     {
       "id": "e3_4",
-      "fromNode": "t3_04",
+      "fromNode": "t3_01",
+      "toNode": "c_broadcom",
       "fromSide": "bottom",
-      "toNode": "c_coreweave",
       "toSide": "top",
-      "label": "클러스터 대여"
+      "label": "Tomahawk/Jericho 스위치"
+    },
+    {
+      "id": "e3_5",
+      "fromNode": "t3_02",
+      "toNode": "c_nvda",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Quantum 인피니밴드 수성"
+    },
+    {
+      "id": "e3_6",
+      "fromNode": "t3_04",
+      "toNode": "c_coreweave",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "GPU 클러스터 대여"
+    },
+    {
+      "id": "e3_7",
+      "fromNode": "t3_03",
+      "toNode": "c_equinix",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "에지 코로케이션 분산"
     }
   ]
 }

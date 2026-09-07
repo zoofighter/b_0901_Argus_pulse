@@ -98,6 +98,7 @@ flowchart TB
 
 | 섹터 번호 및 명칭 | 캔버스 보드 바로가기 | 주요 노드 구성 |
 |:---|:---:|:---|
+| **🎂 통합 마스터 (젠슨 황 5-Layer Stack)** | **[[00-Argus-5Layer-ValueChain.canvas\|🎂 5-Layer 통합 밸류체인 캔버스]]** | Layer 1(에너지) ➔ Layer 2(반도체) ➔ Layer 3(네트워킹) ➔ Layer 4(SW) ➔ Layer 5(로봇) + Macro(T6) |
 | **Sector 1 (⚡ 에너지·전력·냉각 인프라)** | **[[01-에너지-전력-냉각-인프라.canvas\|⚡ Sector 1 캔버스]]** | 데이터센터 전력, 액체냉각, SMR, 대용량 ESS, HVDC, Vertiv, HD현대일렉 |
 | **Sector 2 (💾 AI 컴퓨트·메모리·선단반도체)** | **[[02-AI컴퓨트-메모리-선단반도체.canvas\|💾 Sector 2 캔버스]]** | HBM, CoWoS 패키징, 유리기판, 2nm GAA, CXL, SK하이닉스, TSMC, 삼성전자 |
 | **Sector 3 (🌐 초고속 네트워킹·시스템 플랫폼)** | **[[03-초고속네트워킹-시스템플랫폼.canvas\|🌐 Sector 3 캔버스]]** | 실리콘 포토닉스, CPO, UEC vs 인피니밴드, 네오클라우드, Broadcom, CoreWeave |

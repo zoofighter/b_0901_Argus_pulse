@@ -38,28 +38,30 @@ BANNER = """
   [10] 📚 RAG 지식 DB 상태 및 인제스트 (ingest.py)
   [11] 🔥 시장 모멘텀(News Momentum) Thesis 랭킹 조회
   [12] 📝 수기 뉴스 등록 (add_news.py — 자동 수집 누락 기사 주입)
+  [13] 🌱 신규 테마 발굴기 (theme_discoverer.py — 미매칭 고득점 뉴스 마이닝)
+  [14] 🎯 1-Page 투자 메모 생성 (thesis_brief_writer.py — 변곡점 브리프)
   ──────────────────────────────────────────────────────────────────
   [q] 종료
 ======================================================================
 """
 
+
 CRONTAB_SAMPLE = f"""# ── Argus Pulse Crontab 스케줄 ─────────────────────────────
-# 08:00 아침 주제 추천 (알림 발송)
+# 08:00 아침 주제 추천 & 신규 테마 발굴
 0 8 * * * cd {config.ROOT_DIR} && {sys.executable} topic_generator.py --auto >> logs/cron_topic.log 2>&1
+5 8 * * * cd {config.ROOT_DIR} && {sys.executable} theme_discoverer.py >> logs/cron_theme.log 2>&1
 
 # 09:00~21:00 매시간 뉴스 모니터링 (80점 이상 즉시 알림)
 0 9-21 * * * cd {config.ROOT_DIR} && {sys.executable} hourly_monitor.py --once >> logs/cron_monitor.log 2>&1
 
-# 13:00 오후 블로그 사후 검증 리뷰 (RAG 연동) 및 옵시디언 동기화
+# 13:00 오후 블로그 사후 검증 리뷰 & 1-Page 투자 메모 (변곡점 발생 시)
 0 13 * * * cd {config.ROOT_DIR} && {sys.executable} review_generator.py --rag >> logs/cron_review.log 2>&1
-
-# 13:05 오후 신규 주제 추천 (오전~점심 핫 뉴스 기반)
-5 13 * * * cd {config.ROOT_DIR} && {sys.executable} topic_generator.py --auto >> logs/cron_topic.log 2>&1
+5 13 * * * cd {config.ROOT_DIR} && {sys.executable} thesis_brief_writer.py --inflection-only >> logs/cron_brief.log 2>&1
 
 # 21:00 데일리 다이제스트 생성 (RAG 연동) 및 옵시디언 동기화
 0 21 * * * cd {config.ROOT_DIR} && {sys.executable} daily_digest.py --rag >> logs/cron_digest.log 2>&1
 
-# 21:05 시장 모멘텀 상위 Thesis 가설 신뢰도 스마트 자동 점검 및 프론트매터 랭킹 갱신
+# 21:05 시장 모멘텀 상위 Thesis 가설 신뢰도 스마트 자동 점검 및 마일스톤 감시
 5 21 * * * cd {config.ROOT_DIR} && {sys.executable} thesis_checker.py --smart >> logs/cron_checker.log 2>&1
 # ───────────────────────────────────────────────────────────"""
 
@@ -87,7 +89,7 @@ def interactive_menu():
     while True:
         vault_name = Path(config.OBSIDIAN_VAULT_PATH).name if config.OBSIDIAN_VAULT_PATH else "미설정"
         print(BANNER.format(llm=config.GEMINI_MODEL, vault=vault_name))
-        choice = input("선택 번호 입력 [1~10, q]: ").strip().lower()
+        choice = input("선택 번호 입력 [1~14, q]: ").strip().lower()
 
         if choice in ("q", "quit", "exit"):
             print("\n🦅 Argus Pulse를 종료합니다. 좋은 하루 되세요!\n")
@@ -124,6 +126,14 @@ def interactive_menu():
             run_cmd(["thesis_loader.py", "--rank"])
         elif choice == "12":
             run_cmd(["add_news.py"])
+        elif choice == "13":
+            run_cmd(["theme_discoverer.py"])
+        elif choice == "14":
+            tid = input("투자 메모를 작성할 Thesis ID (입력 안하면 변곡점 발생 테제 자동 대상): ").strip().upper()
+            if tid:
+                run_cmd(["thesis_brief_writer.py", "--id", tid])
+            else:
+                run_cmd(["thesis_brief_writer.py", "--inflection-only"])
         else:
             print("  ⚠️ 올바른 번호를 선택해주세요.")
         
@@ -144,6 +154,8 @@ def main():
     parser.add_argument("--ingest",   action="store_true", help="RAG 지식 DB 인제스트 현황 확인")
     parser.add_argument("--rank",     action="store_true", help="시장 모멘텀(News Momentum) Thesis 랭킹 조회")
     parser.add_argument("--add-news", action="store_true", help="수기 뉴스 직접 등록 (news.sqlite)")
+    parser.add_argument("--discover", action="store_true", help="미매칭 뉴스 기반 신규 테마 발굴")
+    parser.add_argument("--brief",    type=str, nargs="?", const="inflection", help="1-Page 투자 메모 생성 (ID 지정 가능)")
     parser.add_argument("--rag",      action="store_true", help="RAG 심층 검색 활성화")
     args = parser.parse_args()
 
@@ -153,6 +165,13 @@ def main():
         run_cmd(["topic_generator.py", "--raw"])
     elif args.monitor:
         run_cmd(["hourly_monitor.py", "--once"])
+    elif args.discover:
+        run_cmd(["theme_discoverer.py"])
+    elif args.brief:
+        if args.brief == "inflection":
+            run_cmd(["thesis_brief_writer.py", "--inflection-only"])
+        else:
+            run_cmd(["thesis_brief_writer.py", "--id", args.brief])
     elif args.digest:
         cmd = ["daily_digest.py"]
         if args.rag:
@@ -183,3 +202,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

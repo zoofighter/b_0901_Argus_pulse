@@ -1,0 +1,447 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "x": 200,
+      "y": -1000,
+      "width": 2200,
+      "height": 120,
+      "type": "text",
+      "text": "# 🎂 젠슨 황 5-Layer Stack ↔ Argus 6대 섹터 통합 가치사슬 맵 (Master Value Chain)\n> **에너지·물리인프라(T1)** ➔ **컴퓨트·선단반도체(T2)** ➔ **초고속네트워킹(T3)** ➔ **파운데이션SW(T4)** ➔ **피지컬AI(T5)** + **거시자본시장·지정학안보(T6)**"
+    },
+    {
+      "id": "macro_header",
+      "x": -450,
+      "y": -800,
+      "width": 350,
+      "height": 90,
+      "type": "text",
+      "text": "### 🏛️ Macro: 자본시장 & 지정학 안보 (Sector 6 - T6)\n> 금리, CAPEX ROI, GPU 금융 및 소버린 AI 무역 규제"
+    },
+    {
+      "id": "macro_t6_1",
+      "x": -450,
+      "y": -680,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-01-금리와-데이터센터.md"
+    },
+    {
+      "id": "macro_t6_2",
+      "x": -450,
+      "y": -450,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-02-엔비디아와-GPU-금융.md"
+    },
+    {
+      "id": "macro_t6_3",
+      "x": -450,
+      "y": -220,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-03-AI-버블-가능성.md"
+    },
+    {
+      "id": "macro_t6_4",
+      "x": -450,
+      "y": 10,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-05-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
+    },
+    {
+      "id": "macro_t6_5",
+      "x": -450,
+      "y": 240,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-06-소버린-AI와-국가-단위-컴퓨트-인프라.md"
+    },
+    {
+      "id": "macro_t6_6",
+      "x": -450,
+      "y": 470,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-07-중국반도체의-HBM-생산가능성.md"
+    },
+    {
+      "id": "macro_t6_7",
+      "x": -450,
+      "y": 700,
+      "width": 350,
+      "height": 190,
+      "type": "file",
+      "file": "argus/Theses/T6-08-중국반도체의-NAND-점유율-증가.md"
+    },
+    {
+      "id": "lbl_l5",
+      "x": 0,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "text",
+      "text": "### 🤖 Layer 5: 피지컬 AI & 자율 에이전트/모빌리티 (Sector 5 - T5)"
+    },
+    {
+      "id": "node_l5_1",
+      "x": 340,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-01-온디바이스-AI의-변화.md"
+    },
+    {
+      "id": "node_l5_2",
+      "x": 660,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-02-행동형-AI-에이전트와-모바일-교체-슈퍼사이클.md"
+    },
+    {
+      "id": "node_l5_3",
+      "x": 980,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-03-AI-PC-보급-확대와-Arm-기반-윈도우-생태계.md"
+    },
+    {
+      "id": "node_l5_4",
+      "x": 1300,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-05-End-to-End-AI-자율주행과-로보택시.md"
+    },
+    {
+      "id": "node_l5_5",
+      "x": 1620,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-06-휴머노이드-로봇과-액추에이터-공급망.md"
+    },
+    {
+      "id": "node_l5_6",
+      "x": 1940,
+      "y": -800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T5-07-피지컬-AI와-공간지능-반도체.md"
+    },
+    {
+      "id": "lbl_l4",
+      "x": 0,
+      "y": -400,
+      "width": 300,
+      "height": 170,
+      "type": "text",
+      "text": "### 💻 Layer 4: 파운데이션 모델 & AI 소프트웨어 (Sector 4 - T4)"
+    },
+    {
+      "id": "node_l4_1",
+      "x": 340,
+      "y": -400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md"
+    },
+    {
+      "id": "node_l4_2",
+      "x": 660,
+      "y": -400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T4-02-AI-소프트웨어-레이어의-과점화.md"
+    },
+    {
+      "id": "node_l4_3",
+      "x": 980,
+      "y": -400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T4-03-바이오AI와-신약개발-가속.md"
+    },
+    {
+      "id": "node_l4_4",
+      "x": 1300,
+      "y": -400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T4-04-TPU-증가와-GPU-수요-둔화.md"
+    },
+    {
+      "id": "lbl_l3",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "text",
+      "text": "### 🌐 Layer 3: 시스템 소프트웨어 & 초고속 통신 플랫폼 (Sector 3 - T3)"
+    },
+    {
+      "id": "node_l3_1",
+      "x": 340,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-01-실리콘-포토닉스와-CPO의-상용화.md"
+    },
+    {
+      "id": "node_l3_2",
+      "x": 660,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md"
+    },
+    {
+      "id": "node_l3_3",
+      "x": 980,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md"
+    },
+    {
+      "id": "node_l3_4",
+      "x": 1300,
+      "y": 0,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T3-04-엔비디아와-네오클라우드.md"
+    },
+    {
+      "id": "lbl_l2",
+      "x": 0,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "text",
+      "text": "### 💾 Layer 2: 컴퓨팅 하드웨어 & 차세대 반도체 제조 (Sector 2 - T2)"
+    },
+    {
+      "id": "node_l2_1",
+      "x": 340,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-01-메모리-산업의-변화.md"
+    },
+    {
+      "id": "node_l2_2",
+      "x": 660,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-02-첨단-패키징과-CoWoS의-병목.md"
+    },
+    {
+      "id": "node_l2_3",
+      "x": 980,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-03-유리기판의-차세대-패키징-침투.md"
+    },
+    {
+      "id": "node_l2_4",
+      "x": 1300,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-04-파운드리-2nm-공정과-GAA-격돌.md"
+    },
+    {
+      "id": "node_l2_5",
+      "x": 1620,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-06-CXL-메모리의-확대.md"
+    },
+    {
+      "id": "node_l2_6",
+      "x": 1940,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-07-AI-추론-시장-폭발과-LPU-ASIC-분화.md"
+    },
+    {
+      "id": "node_l2_7",
+      "x": 2260,
+      "y": 400,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T2-08-빅테크-커스텀-ASIC-증가와-DSP-생태계.md"
+    },
+    {
+      "id": "lbl_l1",
+      "x": 0,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "text",
+      "text": "### ⚡ Layer 1: 에너지 & 데이터센터 물리 인프라 (Sector 1 - T1)"
+    },
+    {
+      "id": "node_l1_1",
+      "x": 340,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-01-데이터센터의-변화.md"
+    },
+    {
+      "id": "node_l1_2",
+      "x": 660,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-02-데이터센터-액체냉각의-표준화.md"
+    },
+    {
+      "id": "node_l1_3",
+      "x": 980,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-03-SMR과-데이터센터-무탄소-전력-PPA.md"
+    },
+    {
+      "id": "node_l1_4",
+      "x": 1300,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-04-AI-전력망용-대용량-ESS와-LFP-공급망.md"
+    },
+    {
+      "id": "node_l1_5",
+      "x": 1620,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-05-변압기-초고압-그리드-쇼티지-장기화.md"
+    },
+    {
+      "id": "node_l1_6",
+      "x": 1940,
+      "y": 800,
+      "width": 300,
+      "height": 170,
+      "type": "file",
+      "file": "argus/Theses/T1-07-800V-48V-HVDC-전력-아키텍처-혁신.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_l5_to_l4",
+      "fromNode": "node_l5_1",
+      "fromSide": "top",
+      "toNode": "node_l4_1",
+      "toSide": "bottom",
+      "label": "하위 레이어 가치 전이 (Value Flow)"
+    },
+    {
+      "id": "edge_l4_to_l3",
+      "fromNode": "node_l4_1",
+      "fromSide": "top",
+      "toNode": "node_l3_1",
+      "toSide": "bottom",
+      "label": "하위 레이어 가치 전이 (Value Flow)"
+    },
+    {
+      "id": "edge_l3_to_l2",
+      "fromNode": "node_l3_1",
+      "fromSide": "top",
+      "toNode": "node_l2_1",
+      "toSide": "bottom",
+      "label": "하위 레이어 가치 전이 (Value Flow)"
+    },
+    {
+      "id": "edge_l2_to_l1",
+      "fromNode": "node_l2_1",
+      "fromSide": "top",
+      "toNode": "node_l1_1",
+      "toSide": "bottom",
+      "label": "하위 레이어 가치 전이 (Value Flow)"
+    },
+    {
+      "id": "edge_infra_to_compute",
+      "fromNode": "node_l1_1",
+      "fromSide": "top",
+      "toNode": "node_l2_1",
+      "toSide": "bottom",
+      "label": "GW급 전력 공급 ➔ 차세대 HBM/GPU 가동"
+    },
+    {
+      "id": "edge_compute_to_network",
+      "fromNode": "node_l2_1",
+      "fromSide": "top",
+      "toNode": "node_l3_1",
+      "toSide": "bottom",
+      "label": "초고속 컴퓨팅 ➔ CPO/광통신 패브릭 직결"
+    },
+    {
+      "id": "edge_network_to_model",
+      "fromNode": "node_l3_1",
+      "fromSide": "top",
+      "toNode": "node_l4_1",
+      "toSide": "bottom",
+      "label": "분산 클러스터 ➔ 파운데이션 모델 학습/추론"
+    },
+    {
+      "id": "edge_model_to_physical",
+      "fromNode": "node_l4_1",
+      "fromSide": "top",
+      "toNode": "node_l5_1",
+      "toSide": "bottom",
+      "label": "지능형 AI ➔ 온디바이스 & 로보틱스 피지컬화"
+    },
+    {
+      "id": "edge_macro_to_infra",
+      "fromNode": "macro_t6_1",
+      "fromSide": "right",
+      "toNode": "lbl_l1",
+      "toSide": "left",
+      "label": "고금리 & 데이터센터 ROI 제약"
+    }
+  ]
+}

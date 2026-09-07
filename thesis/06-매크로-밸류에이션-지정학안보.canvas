@@ -3,202 +3,244 @@
     {
       "id": "h6",
       "x": -400,
-      "y": -300,
-      "width": 1600,
+      "y": -350,
+      "width": 1800,
       "height": 100,
       "type": "text",
-      "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 고금리 장기화(5%) ➔ 빅테크 CAPEX ROI 회수 압박 ➔ GPU 금융 리스크 ➔ 소버린 AI & 미중 메모리/패권 경쟁"
+      "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 10년 금리 5% & 빅테크 CapEx ROI 압박 ➔ OpenAI/Anthropic $5,000억 매출 갭 ➔ 소버린 AI & 미중 반도체(HBM/NAND) 패권"
     },
     {
       "id": "t6_01",
       "x": -350,
-      "y": -100,
-      "width": 320,
-      "height": 240,
+      "y": -180,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-01-금리와-데이터센터.md"
     },
     {
       "id": "t6_03",
-      "x": 50,
-      "y": -100,
-      "width": 320,
-      "height": 240,
+      "x": 0,
+      "y": -180,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-03-AI-버블-가능성.md"
     },
     {
       "id": "t6_05",
-      "x": 450,
-      "y": -100,
-      "width": 320,
-      "height": 240,
+      "x": 350,
+      "y": -180,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-05-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md"
     },
     {
       "id": "t6_04",
-      "x": 850,
-      "y": -100,
-      "width": 320,
-      "height": 240,
+      "x": 700,
+      "y": -180,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-04-10년금리-5%-재진입-가능성.md"
     },
     {
       "id": "t6_02",
       "x": -350,
-      "y": 200,
-      "width": 320,
-      "height": 240,
+      "y": 80,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-02-엔비디아와-GPU-금융.md"
     },
     {
       "id": "t6_06",
-      "x": 50,
-      "y": 200,
-      "width": 320,
-      "height": 240,
+      "x": 0,
+      "y": 80,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-06-소버린-AI와-국가-단위-컴퓨트-인프라.md"
     },
     {
       "id": "t6_07",
-      "x": 450,
-      "y": 200,
-      "width": 320,
-      "height": 240,
+      "x": 350,
+      "y": 80,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-07-중국반도체의-HBM-생산가능성.md"
     },
     {
       "id": "t6_08",
-      "x": 850,
-      "y": 200,
-      "width": 320,
-      "height": 240,
+      "x": 700,
+      "y": 80,
+      "width": 300,
+      "height": 210,
       "type": "file",
       "file": "argus/Theses/T6-08-중국반도체의-NAND-점유율-증가.md"
     },
     {
       "id": "c_coreweave",
       "x": -350,
-      "y": 550,
-      "width": 260,
-      "height": 160,
+      "y": 350,
+      "width": 240,
+      "height": 150,
       "type": "file",
       "file": "argus/Companies/Company-CoreWeave.md"
     },
     {
       "id": "c_msft",
       "x": -50,
-      "y": 550,
-      "width": 260,
-      "height": 160,
+      "y": 350,
+      "width": 240,
+      "height": 150,
       "type": "file",
       "file": "argus/Companies/Company-Microsoft.md"
     },
     {
       "id": "c_openai",
       "x": 250,
-      "y": 550,
-      "width": 260,
-      "height": 160,
+      "y": 350,
+      "width": 240,
+      "height": 150,
       "type": "file",
       "file": "argus/Companies/Company-OpenAI.md"
     },
     {
       "id": "c_anthropic",
       "x": 550,
-      "y": 550,
-      "width": 260,
-      "height": 160,
+      "y": 350,
+      "width": 240,
+      "height": 150,
       "type": "file",
       "file": "argus/Companies/Company-Anthropic.md"
     },
     {
       "id": "c_ymtc",
       "x": 850,
-      "y": 550,
-      "width": 260,
-      "height": 160,
+      "y": 350,
+      "width": 240,
+      "height": 150,
       "type": "file",
       "file": "argus/Companies/Company-YMTC.md"
+    },
+    {
+      "id": "c_nvda",
+      "x": -200,
+      "y": 550,
+      "width": 240,
+      "height": 150,
+      "type": "file",
+      "file": "argus/Companies/Company-NVIDIA.md"
+    },
+    {
+      "id": "c_samsung",
+      "x": 100,
+      "y": 550,
+      "width": 240,
+      "height": 150,
+      "type": "file",
+      "file": "argus/Companies/Company-삼성전자.md"
     }
   ],
   "edges": [
     {
       "id": "e6_1",
       "fromNode": "t6_01",
-      "fromSide": "right",
       "toNode": "t6_03",
+      "fromSide": "right",
       "toSide": "left",
       "label": "할인율 상승 압박"
     },
     {
       "id": "e6_2",
       "fromNode": "t6_03",
-      "fromSide": "right",
       "toNode": "t6_05",
+      "fromSide": "right",
       "toSide": "left",
       "label": "$500B 매출 갭"
     },
     {
       "id": "e6_3",
       "fromNode": "t6_01",
-      "fromSide": "bottom",
-      "toNode": "t6_02",
-      "toSide": "top",
-      "label": "대안 파이낸싱"
-    },
-    {
-      "id": "e6_4",
-      "fromNode": "t6_02",
-      "fromSide": "bottom",
-      "toNode": "c_coreweave",
-      "toSide": "top",
-      "label": "부채 레버리지"
-    },
-    {
-      "id": "e6_5",
-      "fromNode": "t6_05",
-      "fromSide": "bottom",
-      "toNode": "c_openai",
-      "toSide": "top",
-      "label": "수익화 모델 검증"
-    },
-    {
-      "id": "e6_6",
-      "fromNode": "t6_08",
-      "fromSide": "bottom",
-      "toNode": "c_ymtc",
-      "toSide": "top",
-      "label": "3D NAND 공급"
-    },
-    {
-      "id": "e6_7",
-      "fromNode": "t6_01",
-      "fromSide": "right",
       "toNode": "t6_04",
+      "fromSide": "right",
       "toSide": "left",
       "label": "국채 금리 상방 압력"
     },
     {
+      "id": "e6_4",
+      "fromNode": "t6_01",
+      "toNode": "t6_02",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "대안 파이낸싱"
+    },
+    {
+      "id": "e6_5",
+      "fromNode": "t6_02",
+      "toNode": "c_coreweave",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "부채 레버리지"
+    },
+    {
+      "id": "e6_6",
+      "fromNode": "t6_05",
+      "toNode": "c_openai",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "소프트웨어 수익화 검증"
+    },
+    {
+      "id": "e6_7",
+      "fromNode": "t6_05",
+      "toNode": "c_anthropic",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "B2B 에이전트 결제"
+    },
+    {
       "id": "e6_8",
       "fromNode": "t6_06",
-      "fromSide": "right",
       "toNode": "t6_07",
+      "fromSide": "right",
       "toSide": "left",
       "label": "중국 소버린 자립"
     },
     {
       "id": "e6_9",
       "fromNode": "t6_07",
-      "fromSide": "right",
       "toNode": "t6_08",
+      "fromSide": "right",
       "toSide": "left",
       "label": "메모리 공급망 다변화"
+    },
+    {
+      "id": "e6_10",
+      "fromNode": "t6_08",
+      "toNode": "c_ymtc",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "Xtacking 3D NAND 저가 침투"
+    },
+    {
+      "id": "e6_11",
+      "fromNode": "t6_08",
+      "toNode": "c_samsung",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "레거시 낸드 마진 압박"
+    },
+    {
+      "id": "e6_12",
+      "fromNode": "t6_03",
+      "toNode": "c_nvda",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "CapEx 둔화 시 밸류에이션 디레이팅"
     }
   ]
 }

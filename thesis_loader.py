@@ -104,15 +104,49 @@ def update_thesis_confidence(thesis_id: str, new_confidence: int) -> bool:
     Thesis MD 파일의 confidence 값을 갱신.
     Thesis Checker 에이전트가 점검 후 호출.
     """
+    return update_thesis_evaluation(thesis_id=thesis_id, new_confidence=new_confidence)
+
+
+def update_thesis_evaluation(
+    thesis_id: str,
+    new_confidence: int,
+    milestone_status: Optional[str] = None,
+    milestone_evidence: Optional[str] = None,
+    falsification_triggered: Optional[bool] = None,
+    falsification_reason: Optional[str] = None,
+    lifecycle_stage: Optional[str] = None,
+) -> bool:
+    """
+    Thesis MD 파일의 confidence, 마일스톤 상태, 기각 상태를 원자적으로 갱신.
+    """
+    from datetime import datetime
     for md_file in [f for f in THESIS_DIR.glob("*.md") if not f.name.startswith(("00-", "Topic-", "Company-", "Vs-"))]:
         meta, body = _parse_md_file(md_file)
         if meta.get("id") == thesis_id:
             meta["confidence"] = max(0, min(100, new_confidence))
-            from datetime import datetime
             meta["last_checked"] = datetime.now().strftime("%Y-%m-%dT%H:%M")
+
+            if milestone_status and milestone_status in ("NONE", "PROGRESS", "ACHIEVED"):
+                meta["milestone_status"] = milestone_status
+            if milestone_evidence and milestone_evidence.strip() not in ("없음", "-"):
+                meta["milestone_evidence"] = milestone_evidence.strip()
+
+            if falsification_triggered is not None:
+                meta["falsification_triggered"] = bool(falsification_triggered)
+            if falsification_reason and falsification_reason.strip() not in ("없음", "-"):
+                meta["falsification_reason"] = falsification_reason.strip()
+
+            if lifecycle_stage:
+                meta["lifecycle_stage"] = lifecycle_stage
+            elif falsification_triggered:
+                meta["lifecycle_stage"] = "Falsified"
+            elif milestone_status == "ACHIEVED":
+                meta["lifecycle_stage"] = "Priced-in"
+
             _save_md_file(md_file, meta, body)
             return True
     return False
+
 
 
 def append_thesis_evidence(thesis_id: str, date_str: str, supporting: str = None, counter: str = None) -> bool:

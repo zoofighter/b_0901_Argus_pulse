@@ -97,7 +97,83 @@ def notify_content_generated(content_type: str, title: str, filepath: str | Path
     return send_discord(message=f"🎉 **{content_type}** 초안 생성이 완료되었습니다!", embeds=[embed])
 
 
-if __name__ == "__main__":
+def notify_thesis_inflection(thesis: dict, eval_result: dict, old_conf: int, new_conf: int) -> bool:
+    """테제 신뢰도 급변(±10p), 마일스톤 달성, 또는 가설 기각 발생 시 디스코드 긴급 경보"""
+    tid = thesis.get("id", "")
+    title = thesis.get("title", "")
+    delta = new_conf - old_conf
+
+    milestone_status = eval_result.get("milestone_status", "NONE")
+    falsification_triggered = bool(eval_result.get("falsification_triggered", False))
+
+    # 발송 조건 점검: |delta| >= 10, milestone ACHIEVED, 또는 falsification_triggered
+    is_inflection = abs(delta) >= 10 or milestone_status == "ACHIEVED" or falsification_triggered
+    if not is_inflection:
+        return True
+
+    # 색상 및 태그 결정
+    if falsification_triggered:
+        color = 0xFF0000  # 적색 (Red Flag)
+        tag = "🚨 [가설 기각 트리거 발생 (Red Flag)]"
+        action = "포트폴리오 해당 테제 관련 자산 비중 축소 및 전면 재검토 필요"
+    elif milestone_status == "ACHIEVED":
+        color = 0x00FF00  # 녹색 (Milestone Hit)
+        tag = "🎯 [핵심 마일스톤 달성 (Catalyst Hit)]"
+        action = "단기 모멘텀 확인, 밸류에이션 반영률 및 차기 마일스톤 점검"
+    elif delta >= 10:
+        color = 0xFFA500  # 황색 (Positive Inflection)
+        tag = f"⚡ [신뢰도 대폭 상향 경보 (+{delta}%p)]"
+        action = "가설 지지 팩트 지속성 확인 및 비중 확대 기회 탐색"
+    else:
+        color = 0xFF6347  # 토마토 레드 (Negative Inflection)
+        tag = f"⚠️ [신뢰도 대폭 하향 경보 ({delta}%p)]"
+        action = "가설 훼손 요인 및 경쟁 리스크 확인 후 리스크 관리"
+
+    fields = [
+        {"name": "신뢰도 변화", "value": f"`{old_conf}%` ➔ `{new_conf}%` ({delta:+d}%p)", "inline": True},
+        {"name": "마일스톤 상태", "value": f"`{milestone_status}`\n{eval_result.get('milestone_evidence', '없음')[:120]}", "inline": True},
+    ]
+
+    if falsification_triggered:
+        fields.append({
+            "name": "🚨 기각 조건 도달 사유",
+            "value": eval_result.get("falsification_reason", "조건 충족"),
+            "inline": False
+        })
+
+    supp = eval_result.get("supporting_evidence", "없음")
+    counter = eval_result.get("counter_evidence", "없음")
+    if supp != "없음":
+        fields.append({"name": "✅ 지지 팩트 (Bull)", "value": supp, "inline": False})
+    if counter != "없음":
+        fields.append({"name": "⚠️ 반박/리스크 (Bear)", "value": counter, "inline": False})
+
+    fields.append({"name": "💡 대응 액션 가이드", "value": action, "inline": False})
+
+    embed = {
+        "title": f"{tag} [{tid}] {title}",
+        "description": f"**핵심 가설**: {thesis.get('hypothesis', '')}\n**평가 근거**: {eval_result.get('reason', '')}",
+        "fields": fields,
+        "color": color,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+
+    print(f"📢 [긴급 경보] {tag} [{tid}] {title} ({old_conf}% -> {new_conf}%)")
+    return send_discord(message=f"🚨 **Argus Pulse 가설 변곡점 긴급 경보** — [{tid}] {title}", embeds=[embed])
+
+
+def notify_new_theme_candidate(theme_name: str, hypothesis: str, companies: list[str], orphan_count: int, tc_filename: str) -> bool:
+    """신규 테마 후보(Incubator/TC-XX) 발굴 시 디스코드 알림"""
+    comp_str = ", ".join(companies) if companies else "미정"
+    embed = {
+        "title": f"🌱 [신규 테마 발굴] {theme_name}",
+        "description": f"**핵심 가설**: {hypothesis}\n\n- 미매칭 고득점 뉴스: **{orphan_count}건** 군집\n- 관련 기업: `{comp_str}`\n- 후보 테제: `Incubator/{tc_filename}`",
+        "color": 0x9370DB,  # 미디엄 퍼플
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+    print(f"📢 [신규 테마 발굴] {theme_name} ({orphan_count}건 뉴스)")
+    return send_discord(message=f"🌟 **신규 테마 후보가 발굴되어 인큐베이터에 등록되었습니다!**", embeds=[embed])
+
     import sys
     print("=== Notifier 모듈 점검 ===")
     if not config.DISCORD_WEBHOOK:

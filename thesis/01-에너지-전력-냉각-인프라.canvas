@@ -3,97 +3,133 @@
     {
       "id": "h1",
       "x": -400,
-      "y": -300,
-      "width": 1200,
+      "y": -350,
+      "width": 1600,
       "height": 100,
       "type": "text",
-      "text": "# ⚡ [Sector 1] AI 데이터센터 & 전력·냉각 인프라 맵 (젠슨 황 1단)\n> 전력 밀도 폭증 ➔ 수랭식 냉각 전환 ➔ 초고압 변압기 쇼티지 ➔ 무탄소 SMR & 대용량 ESS"
+      "text": "# ⚡ [Sector 1] AI 데이터센터 & 전력·냉각 인프라 밸류체인 맵\n> 기가와트(GW)급 전력 포화 ➔ 변압기 쇼티지 & 액체냉각(DLC) 표준화 ➔ SMR 무탄소 PPA & 온사이트 자체발전 혁신"
     },
     {
       "id": "top_liquid",
       "x": -350,
-      "y": -100,
-      "width": 320,
-      "height": 220,
+      "y": -180,
+      "width": 260,
+      "height": 140,
       "type": "file",
       "file": "argus/Topics/Topic-액체냉각.md"
     },
     {
       "id": "top_grid",
-      "x": 50,
-      "y": -100,
-      "width": 320,
-      "height": 220,
+      "x": -50,
+      "y": -180,
+      "width": 260,
+      "height": 140,
       "type": "file",
       "file": "argus/Topics/Topic-전력그리드.md"
     },
     {
       "id": "top_smr",
-      "x": 450,
-      "y": -100,
-      "width": 320,
-      "height": 220,
+      "x": 250,
+      "y": -180,
+      "width": 260,
+      "height": 140,
       "type": "file",
       "file": "argus/Topics/Topic-SMR.md"
     },
     {
+      "id": "top_ess",
+      "x": 550,
+      "y": -180,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "argus/Topics/Topic-ESS.md"
+    },
+    {
+      "id": "top_hvdc",
+      "x": 850,
+      "y": -180,
+      "width": 260,
+      "height": 140,
+      "type": "file",
+      "file": "argus/Topics/Topic-HVDC.md"
+    },
+    {
       "id": "t1_01",
       "x": -350,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T1-01-데이터센터의-변화.md"
     },
     {
       "id": "t1_02",
       "x": 50,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T1-02-데이터센터-액체냉각의-표준화.md"
     },
     {
       "id": "t1_05",
       "x": 450,
-      "y": 200,
+      "y": 30,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T1-05-변압기-초고압-그리드-쇼티지-장기화.md"
     },
     {
+      "id": "t1_03",
+      "x": 850,
+      "y": 30,
+      "width": 320,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Theses/T1-03-SMR과-데이터센터-무탄소-전력-PPA.md"
+    },
+    {
       "id": "t1_04",
       "x": -350,
-      "y": 500,
+      "y": 320,
       "width": 320,
-      "height": 240,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T1-04-AI-전력망용-대용량-ESS와-LFP-공급망.md"
     },
     {
-      "id": "t1_07",
+      "id": "t1_06",
       "x": 50,
-      "y": 500,
+      "y": 320,
       "width": 320,
-      "height": 240,
+      "height": 220,
+      "type": "file",
+      "file": "argus/Theses/T1-06-ESS와-한국배터리의-미국수혜.md"
+    },
+    {
+      "id": "t1_07",
+      "x": 450,
+      "y": 320,
+      "width": 320,
+      "height": 220,
       "type": "file",
       "file": "argus/Theses/T1-07-800V-48V-HVDC-전력-아키텍처-혁신.md"
     },
     {
-      "id": "top_ess",
-      "x": 450,
-      "y": 500,
+      "id": "t1_08",
+      "x": 850,
+      "y": 320,
       "width": 320,
       "height": 220,
       "type": "file",
-      "file": "argus/Topics/Topic-ESS.md"
+      "file": "argus/Theses/T1-08-온사이트-가스터빈과-연료전지-자체발전.md"
     },
     {
       "id": "c_vertiv",
       "x": -350,
-      "y": 820,
+      "y": 620,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -102,7 +138,7 @@
     {
       "id": "c_hd",
       "x": -50,
-      "y": 820,
+      "y": 620,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -111,7 +147,7 @@
     {
       "id": "c_ls",
       "x": 250,
-      "y": 820,
+      "y": 620,
       "width": 260,
       "height": 160,
       "type": "file",
@@ -120,69 +156,118 @@
     {
       "id": "c_ge",
       "x": 550,
-      "y": 820,
+      "y": 620,
       "width": 260,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-GE-Vernova.md"
+    },
+    {
+      "id": "c_lgensol",
+      "x": 850,
+      "y": 620,
+      "width": 260,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-LG에너지솔루션.md"
     }
   ],
   "edges": [
     {
       "id": "e1_1",
       "fromNode": "top_liquid",
-      "fromSide": "right",
-      "toNode": "top_grid",
-      "toSide": "left",
-      "label": "냉각 전력 소모"
+      "toNode": "t1_02",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "DLC 냉각 표준화"
     },
     {
       "id": "e1_2",
       "fromNode": "top_grid",
-      "fromSide": "right",
-      "toNode": "top_smr",
-      "toSide": "left",
-      "label": "기저부하 확보"
+      "toNode": "t1_05",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "변압기 리드타임 4년+"
     },
     {
       "id": "e1_3",
-      "fromNode": "top_liquid",
+      "fromNode": "top_smr",
+      "toNode": "t1_03",
       "fromSide": "bottom",
-      "toNode": "t1_02",
       "toSide": "top",
-      "label": "DLC 표준화"
+      "label": "24/7 기저부하 PPA"
     },
     {
       "id": "e1_4",
-      "fromNode": "top_grid",
-      "fromSide": "bottom",
-      "toNode": "t1_05",
-      "toSide": "top",
-      "label": "리드타임 4년+"
+      "fromNode": "t1_01",
+      "toNode": "t1_02",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "밀도 100kW+ 수랭 전환"
     },
     {
       "id": "e1_5",
+      "fromNode": "t1_01",
+      "toNode": "t1_05",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "변전소 병목"
+    },
+    {
+      "id": "e1_6",
       "fromNode": "t1_02",
-      "fromSide": "bottom",
       "toNode": "c_vertiv",
+      "fromSide": "bottom",
       "toSide": "top",
       "label": "CDU 독점 공급"
     },
     {
-      "id": "e1_6",
+      "id": "e1_7",
       "fromNode": "t1_05",
-      "fromSide": "bottom",
       "toNode": "c_hd",
+      "fromSide": "bottom",
       "toSide": "top",
       "label": "초고압 변압기 수혜"
     },
     {
-      "id": "e1_7",
+      "id": "e1_8",
       "fromNode": "t1_05",
-      "fromSide": "bottom",
       "toNode": "c_ls",
+      "fromSide": "bottom",
       "toSide": "top",
-      "label": "배전/스위치기어"
+      "label": "배전반/스위치기어"
+    },
+    {
+      "id": "e1_9",
+      "fromNode": "t1_04",
+      "toNode": "t1_06",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "미국 대용량 ESS 수주"
+    },
+    {
+      "id": "e1_10",
+      "fromNode": "t1_06",
+      "toNode": "c_lgensol",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "BESS 배터리 공급"
+    },
+    {
+      "id": "e1_11",
+      "fromNode": "t1_08",
+      "toNode": "c_ge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "가스터빈 자체발전"
+    },
+    {
+      "id": "e1_12",
+      "fromNode": "top_hvdc",
+      "toNode": "t1_07",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "800V 랙 전력 변환"
     }
   ]
 }
