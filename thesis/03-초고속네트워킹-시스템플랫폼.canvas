@@ -2,84 +2,183 @@
   "nodes": [
     {
       "id": "h3",
-      "x": -400,
-      "y": -300,
-      "width": 1200,
+      "x": -450,
+      "y": -350,
+      "width": 2200,
       "height": 100,
       "type": "text",
-      "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> CPO 실리콘 포토닉스 ➔ UEC vs 인피니밴드 통신 패브릭 ➔ 분산 데이터센터 코로케이션"
+      "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> 800G/1.6T 광트랜시버 & AEC ➔ NVLink 랙스케일 패브릭 ➔ PCIe Gen6/7 리타이머 ➔ CPO 실리콘 포토닉스 ➔ UEC vs IB ➔ 장거리 DCI"
     },
     {
       "id": "top_cpo",
-      "x": -350,
-      "y": -100,
+      "x": -450,
+      "y": -180,
       "width": 320,
-      "height": 220,
+      "height": 200,
       "type": "file",
       "file": "argus/Topics/Topic-실리콘포토닉스.md"
     },
     {
       "id": "top_net",
-      "x": 50,
-      "y": -100,
+      "x": -50,
+      "y": -180,
       "width": 320,
-      "height": 220,
+      "height": 200,
       "type": "file",
       "file": "argus/Topics/Topic-초고속네트워킹.md"
     },
     {
-      "id": "t3_01",
-      "x": -350,
-      "y": 200,
+      "id": "t3_04",
+      "x": -450,
+      "y": 80,
       "width": 320,
       "height": 240,
       "type": "file",
-      "file": "argus/Theses/T3-01-실리콘-포토닉스와-CPO의-상용화.md"
+      "file": "argus/Theses/T3-04-800G·1.6T-광트랜시버와-AEC·LPO-초고속-인터커넥트-혁신.md"
+    },
+    {
+      "id": "t3_10",
+      "x": -50,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-10-NVLink-Switch-랙스케일-패브릭과-대규모-구리-백플레인.md"
+    },
+    {
+      "id": "t3_09",
+      "x": 350,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-09-PCIe-Gen6·Gen7-전환과-초고속-신호-리타이머-병목.md"
     },
     {
       "id": "t3_02",
-      "x": 50,
-      "y": 200,
+      "x": 750,
+      "y": 80,
       "width": 320,
       "height": 240,
       "type": "file",
       "file": "argus/Theses/T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md"
     },
     {
+      "id": "t3_01",
+      "x": 1150,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-01-실리콘-포토닉스와-CPO의-상용화.md"
+    },
+    {
+      "id": "t3_06",
+      "x": -450,
+      "y": 380,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-06-초고다층-기판-MLB와-초저손실-CCL-병목.md"
+    },
+    {
+      "id": "t3_07",
+      "x": -50,
+      "y": 380,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-07-데이터센터-간-초장거리-인터커넥트-DCI.md"
+    },
+    {
+      "id": "t3_08",
+      "x": 350,
+      "y": 380,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T3-08-AI-클러스터-OS와-MFU-가동률-최적화-SW.md"
+    },
+    {
       "id": "t3_03",
-      "x": 450,
-      "y": 200,
+      "x": 750,
+      "y": 380,
       "width": 320,
       "height": 240,
       "type": "file",
       "file": "argus/Theses/T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md"
     },
     {
+      "id": "c_innolight",
+      "x": -450,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Innolight.md"
+    },
+    {
+      "id": "c_coherent",
+      "x": -180,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Coherent.md"
+    },
+    {
+      "id": "c_lumentum",
+      "x": 90,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Lumentum.md"
+    },
+    {
+      "id": "c_credo",
+      "x": 360,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Credo.md"
+    },
+    {
+      "id": "c_amphenol",
+      "x": 630,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Amphenol.md"
+    },
+    {
+      "id": "c_astera",
+      "x": 900,
+      "y": 680,
+      "width": 240,
+      "height": 160,
+      "type": "file",
+      "file": "argus/Companies/Company-Astera Labs.md"
+    },
+    {
       "id": "c_broadcom",
-      "x": -350,
-      "y": 550,
-      "width": 260,
+      "x": 1170,
+      "y": 680,
+      "width": 240,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Broadcom.md"
     },
     {
       "id": "c_arista",
-      "x": 50,
-      "y": 550,
-      "width": 260,
+      "x": 1440,
+      "y": 680,
+      "width": 240,
       "height": 160,
       "type": "file",
       "file": "argus/Companies/Company-Arista.md"
-    },
-    {
-      "id": "c_equinix",
-      "x": 450,
-      "y": 550,
-      "width": 260,
-      "height": 160,
-      "type": "file",
-      "file": "argus/Companies/Company-Equinix.md"
     }
   ],
   "edges": [
@@ -93,27 +192,59 @@
     },
     {
       "id": "e3_2",
-      "fromNode": "top_cpo",
+      "fromNode": "top_net",
       "fromSide": "bottom",
-      "toNode": "t3_01",
+      "toNode": "t3_04",
       "toSide": "top",
-      "label": "스케일아웃 통신"
+      "label": "1.6T 광모듈 전환"
     },
     {
       "id": "e3_3",
-      "fromNode": "top_net",
+      "fromNode": "t3_04",
       "fromSide": "bottom",
-      "toNode": "t3_02",
+      "toNode": "c_innolight",
       "toSide": "top",
-      "label": "표준 연합 대결"
+      "label": "광트랜시버 1위"
     },
     {
       "id": "e3_4",
+      "fromNode": "t3_04",
+      "fromSide": "bottom",
+      "toNode": "c_lumentum",
+      "toSide": "top",
+      "label": "200G EML 레이저"
+    },
+    {
+      "id": "e3_5",
+      "fromNode": "t3_10",
+      "fromSide": "bottom",
+      "toNode": "c_amphenol",
+      "toSide": "top",
+      "label": "구리 백플레인"
+    },
+    {
+      "id": "e3_6",
+      "fromNode": "t3_09",
+      "fromSide": "bottom",
+      "toNode": "c_astera",
+      "toSide": "top",
+      "label": "리타이머 독점"
+    },
+    {
+      "id": "e3_7",
       "fromNode": "t3_01",
       "fromSide": "bottom",
       "toNode": "c_broadcom",
       "toSide": "top",
-      "label": "CPO 스위치"
+      "label": "CPO 스위치 ASIC"
+    },
+    {
+      "id": "e3_8",
+      "fromNode": "t3_02",
+      "fromSide": "bottom",
+      "toNode": "c_arista",
+      "toSide": "top",
+      "label": "UEC 이더넷 연합"
     }
   ]
 }

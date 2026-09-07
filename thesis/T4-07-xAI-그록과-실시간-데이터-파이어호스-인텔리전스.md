@@ -17,12 +17,12 @@ keywords:
 - Optimus통합
 - 실시간검색AI
 last_checked: 2026-09-07T19:22
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: Grok의 실시간 소셜 데이터 기반 검색 트래픽 및 Tesla FSD/Optimus VLA 백본 통합 공식화
 momentum: 114.0
 news_count: 1
 priority: 5
-rank: 29
+rank: 31
 related_companies:
 - xAI
 - Tesla

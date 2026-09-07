@@ -14,12 +14,12 @@ keywords:
 - 음성지연시간단축
 - 감정인식AI
 last_checked: 2026-09-07T19:10
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 글로벌 1,000대 콜센터 솔루션의 50% 이상이 네이티브 옴니 음성 모델 기반의 완전 자율 상담으로 전환
 momentum: 56.0
 news_count: 0
 priority: 4
-rank: 37
+rank: 39
 related_companies:
 - OpenAI
 - Anthropic

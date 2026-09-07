@@ -13,7 +13,7 @@ keywords:
 - 메모리국산화
 - 화웨이반도체
 last_checked: null
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: CXMT 또는 화웨이 계열사의 HBM3 수준 샘플 공식 확인 또는 중국산 HBM 탑재 AI칩 등장
 momentum: 1773.0
 news_count: 21

@@ -98,25 +98,41 @@ def create_canvas_02():
 def create_canvas_03():
     """3. T3: 초고속 네트워킹 & 시스템 플랫폼 캔버스 (젠슨 황 3단)"""
     nodes = [
-        {"id": "h3", "x": -400, "y": -300, "width": 1200, "height": 100, "type": "text", "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> CPO 실리콘 포토닉스 ➔ UEC vs 인피니밴드 통신 패브릭 ➔ 분산 데이터센터 코로케이션"},
+        {"id": "h3", "x": -450, "y": -350, "width": 2200, "height": 100, "type": "text", "text": "# 🌐 [Sector 3] 초고속 네트워킹 & 분산 시스템 플랫폼 맵 (젠슨 황 3단)\n> 800G/1.6T 광트랜시버 & AEC ➔ NVLink 랙스케일 패브릭 ➔ PCIe Gen6/7 리타이머 ➔ CPO 실리콘 포토닉스 ➔ UEC vs IB ➔ 장거리 DCI"},
         
-        {"id": "top_cpo", "x": -350, "y": -100, "width": 320, "height": 220, "type": "file", "file": p_topic("Topic-실리콘포토닉스.md")},
-        {"id": "top_net", "x": 50, "y": -100, "width": 320, "height": 220, "type": "file", "file": p_topic("Topic-초고속네트워킹.md")},
+        {"id": "top_cpo", "x": -450, "y": -180, "width": 320, "height": 200, "type": "file", "file": p_topic("Topic-실리콘포토닉스.md")},
+        {"id": "top_net", "x": -50, "y": -180, "width": 320, "height": 200, "type": "file", "file": p_topic("Topic-초고속네트워킹.md")},
         
-        {"id": "t3_01", "x": -350, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-01-실리콘-포토닉스와-CPO의-상용화.md")},
-        {"id": "t3_02", "x": 50, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md")},
-        {"id": "t3_03", "x": 450, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md")},
+        {"id": "t3_04", "x": -450, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-04-800G·1.6T-광트랜시버와-AEC·LPO-초고속-인터커넥트-혁신.md")},
+        {"id": "t3_10", "x": -50, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-10-NVLink-Switch-랙스케일-패브릭과-대규모-구리-백플레인.md")},
+        {"id": "t3_09", "x": 350, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-09-PCIe-Gen6·Gen7-전환과-초고속-신호-리타이머-병목.md")},
+        {"id": "t3_02", "x": 750, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-02-초고속-AI-네트워킹-UEC-vs-인피니밴드.md")},
+        {"id": "t3_01", "x": 1150, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-01-실리콘-포토닉스와-CPO의-상용화.md")},
         
-        {"id": "c_broadcom", "x": -350, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Broadcom.md")},
-        {"id": "c_arista", "x": 50, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Arista.md")},
-        {"id": "c_equinix", "x": 450, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Equinix.md")},
+        {"id": "t3_06", "x": -450, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-06-초고다층-기판-MLB와-초저손실-CCL-병목.md")},
+        {"id": "t3_07", "x": -50, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-07-데이터센터-간-초장거리-인터커넥트-DCI.md")},
+        {"id": "t3_08", "x": 350, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-08-AI-클러스터-OS와-MFU-가동률-최적화-SW.md")},
+        {"id": "t3_03", "x": 750, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T3-03-전력-포화와-분산형-AI-데이터센터-코로케이션.md")},
+        
+        {"id": "c_innolight", "x": -450, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Innolight.md")},
+        {"id": "c_coherent", "x": -180, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Coherent.md")},
+        {"id": "c_lumentum", "x": 90, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Lumentum.md")},
+        {"id": "c_credo", "x": 360, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Credo.md")},
+        {"id": "c_amphenol", "x": 630, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Amphenol.md")},
+        {"id": "c_astera", "x": 900, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Astera Labs.md")},
+        {"id": "c_broadcom", "x": 1170, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Broadcom.md")},
+        {"id": "c_arista", "x": 1440, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Arista.md")},
     ]
     
     edges = [
         {"id": "e3_1", "fromNode": "top_cpo", "fromSide": "right", "toNode": "top_net", "toSide": "left", "label": "광인터커넥트 전환"},
-        {"id": "e3_2", "fromNode": "top_cpo", "fromSide": "bottom", "toNode": "t3_01", "toSide": "top", "label": "스케일아웃 통신"},
-        {"id": "e3_3", "fromNode": "top_net", "fromSide": "bottom", "toNode": "t3_02", "toSide": "top", "label": "표준 연합 대결"},
-        {"id": "e3_4", "fromNode": "t3_01", "fromSide": "bottom", "toNode": "c_broadcom", "toSide": "top", "label": "CPO 스위치"},
+        {"id": "e3_2", "fromNode": "top_net", "fromSide": "bottom", "toNode": "t3_04", "toSide": "top", "label": "1.6T 광모듈 전환"},
+        {"id": "e3_3", "fromNode": "t3_04", "fromSide": "bottom", "toNode": "c_innolight", "toSide": "top", "label": "광트랜시버 1위"},
+        {"id": "e3_4", "fromNode": "t3_04", "fromSide": "bottom", "toNode": "c_lumentum", "toSide": "top", "label": "200G EML 레이저"},
+        {"id": "e3_5", "fromNode": "t3_10", "fromSide": "bottom", "toNode": "c_amphenol", "toSide": "top", "label": "구리 백플레인"},
+        {"id": "e3_6", "fromNode": "t3_09", "fromSide": "bottom", "toNode": "c_astera", "toSide": "top", "label": "리타이머 독점"},
+        {"id": "e3_7", "fromNode": "t3_01", "fromSide": "bottom", "toNode": "c_broadcom", "toSide": "top", "label": "CPO 스위치 ASIC"},
+        {"id": "e3_8", "fromNode": "t3_02", "fromSide": "bottom", "toNode": "c_arista", "toSide": "top", "label": "UEC 이더넷 연합"},
     ]
     return {"nodes": nodes, "edges": edges}
 
@@ -124,21 +140,22 @@ def create_canvas_03():
 def create_canvas_04():
     """4. T4: 파운데이션 모델 & 엔터프라이즈 SW 캔버스 (젠슨 황 4단)"""
     nodes = [
-        {"id": "h4", "x": -450, "y": -350, "width": 1900, "height": 100, "type": "text", "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> GPT-6 아스트라 AGI ➔ o1/o3 추론 연산 ➔ DeepSeek/Qwen 중국 AI 가격 파괴 ➔ Computer Use 자율 에이전트 ➔ xAI 그록 ➔ 사설 AI & SaaS 과점화"},
+        {"id": "h4", "x": -450, "y": -350, "width": 2200, "height": 100, "type": "text", "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> GPT-6 아스트라 AGI ➔ 앤트로픽 해석가능성/신뢰 AI ➔ o1/o3 추론 ➔ DeepSeek/Qwen 가격 파괴 ➔ Computer Use ➔ xAI 그록 ➔ 사설 AI & SaaS 과점화"},
         
         {"id": "top_frontier", "x": -450, "y": -180, "width": 320, "height": 200, "type": "file", "file": p_topic("Topic-프론티어모델.md")},
         {"id": "top_agent", "x": -50, "y": -180, "width": 320, "height": 200, "type": "file", "file": p_topic("Topic-AI에이전트.md")},
         {"id": "top_ondevice", "x": 350, "y": -180, "width": 320, "height": 200, "type": "file", "file": p_topic("Topic-온디바이스AI.md")},
         
         {"id": "t4_06", "x": -450, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-06-GPT-6-아스트라와-자율형-AGI-엔지니어링-에이전트.md")},
-        {"id": "t4_03", "x": -50, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-03-추론-시간-연산과-시스템2-추론-모델의-부상.md")},
-        {"id": "t4_08", "x": 350, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-08-중국-AI-모델-급부상과-오픈AI·앤트로픽-과점-위협.md")},
-        {"id": "t4_04", "x": 750, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-04-자율형-에이전트와-컴퓨터-제어-엔터프라이즈-침투.md")},
-        {"id": "t4_07", "x": 1150, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-07-xAI-그록과-실시간-데이터-파이어호스-인텔리전스.md")},
+        {"id": "t4_09", "x": -100, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-09-앤트로픽-클로드의-해석가능성-기술과-엔터프라이즈-AI-시장-독점.md")},
+        {"id": "t4_03", "x": 250, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-03-추론-시간-연산과-시스템2-추론-모델의-부상.md")},
+        {"id": "t4_08", "x": 600, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-08-중국-AI-모델-급부상과-오픈AI·앤트로픽-과점-위협.md")},
+        {"id": "t4_04", "x": 950, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-04-자율형-에이전트와-컴퓨터-제어-엔터프라이즈-침투.md")},
+        {"id": "t4_07", "x": 1300, "y": 80, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-07-xAI-그록과-실시간-데이터-파이어호스-인텔리전스.md")},
         
         {"id": "t4_05", "x": -450, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-05-프론티어-LLM-멀티모달-네이티브화와-실시간-옴니-인텔리전스.md")},
-        {"id": "t4_01", "x": -50, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md")},
-        {"id": "t4_02", "x": 350, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-02-AI-소프트웨어-레이어의-과점화.md")},
+        {"id": "t4_01", "x": -100, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-01-오픈소스-모델-고도화와-온프레미스-사설-AI.md")},
+        {"id": "t4_02", "x": 250, "y": 380, "width": 320, "height": 240, "type": "file", "file": p_thesis("T4-02-AI-소프트웨어-레이어의-과점화.md")},
         
         {"id": "c_openai", "x": -450, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-OpenAI.md")},
         {"id": "c_anthropic", "x": -180, "y": 680, "width": 240, "height": 160, "type": "file", "file": p_comp("Company-Anthropic.md")},
@@ -154,15 +171,15 @@ def create_canvas_04():
         {"id": "e4_2", "fromNode": "t4_03", "fromSide": "left", "toNode": "t4_06", "toSide": "right", "label": "시스템 2 추론 결합"},
         {"id": "e4_3", "fromNode": "top_agent", "fromSide": "bottom", "toNode": "t4_04", "toSide": "top", "label": "Computer Use"},
         {"id": "e4_4", "fromNode": "t4_06", "fromSide": "bottom", "toNode": "c_openai", "toSide": "top", "label": "AGI 엔지니어링 리더"},
-        {"id": "e4_5", "fromNode": "t4_04", "fromSide": "bottom", "toNode": "c_anthropic", "toSide": "top", "label": "Claude Computer Use"},
-        {"id": "e4_6", "fromNode": "top_frontier", "fromSide": "right", "toNode": "t4_07", "toSide": "top", "label": "Grok 3.5 / 4"},
-        {"id": "e4_7", "fromNode": "t4_07", "fromSide": "bottom", "toNode": "c_xai", "toSide": "top", "label": "Colossus 200k 클러스터"},
-        {"id": "e4_8", "fromNode": "t4_02", "fromSide": "bottom", "toNode": "c_msft", "toSide": "top", "label": "Copilot Studio"},
-        {"id": "e4_9", "fromNode": "t4_01", "fromSide": "bottom", "toNode": "c_meta", "toSide": "top", "label": "Llama 3/4 사설화"},
-        {"id": "e4_10", "fromNode": "t4_08", "fromSide": "bottom", "toNode": "c_deepseek", "toSide": "top", "label": "MLA/MoE 극저가 API"},
-        {"id": "e4_11", "fromNode": "t4_08", "fromSide": "bottom", "toNode": "c_alibaba", "toSide": "top", "label": "Qwen 2.5 오픈소스"},
-        {"id": "e4_12", "fromNode": "t4_08", "fromSide": "left", "toNode": "t4_03", "toSide": "right", "label": "R1 vs o1 추론 경쟁"},
-        {"id": "e4_13", "fromNode": "t4_08", "fromSide": "left", "toNode": "t4_06", "toSide": "right", "label": "마진 압박 (가격 파괴)"},
+        {"id": "e4_5", "fromNode": "t4_09", "fromSide": "bottom", "toNode": "c_anthropic", "toSide": "top", "label": "해석가능성 & Claude 3.7"},
+        {"id": "e4_6", "fromNode": "t4_09", "fromSide": "right", "toNode": "t4_04", "toSide": "left", "label": "Computer Use 워크플로우"},
+        {"id": "e4_7", "fromNode": "top_frontier", "fromSide": "right", "toNode": "t4_07", "toSide": "top", "label": "Grok 3.5 / 4"},
+        {"id": "e4_8", "fromNode": "t4_07", "fromSide": "bottom", "toNode": "c_xai", "toSide": "top", "label": "Colossus 200k 클러스터"},
+        {"id": "e4_9", "fromNode": "t4_02", "fromSide": "bottom", "toNode": "c_msft", "toSide": "top", "label": "Copilot Studio"},
+        {"id": "e4_10", "fromNode": "t4_01", "fromSide": "bottom", "toNode": "c_meta", "toSide": "top", "label": "Llama 3/4 사설화"},
+        {"id": "e4_11", "fromNode": "t4_08", "fromSide": "bottom", "toNode": "c_deepseek", "toSide": "top", "label": "MLA/MoE 극저가 API"},
+        {"id": "e4_12", "fromNode": "t4_08", "fromSide": "bottom", "toNode": "c_alibaba", "toSide": "top", "label": "Qwen 2.5 오픈소스"},
+        {"id": "e4_13", "fromNode": "t4_08", "fromSide": "left", "toNode": "t4_09", "toSide": "right", "label": "가격 공세 vs 신뢰/안전 수성"},
     ]
     return {"nodes": nodes, "edges": edges}
 
@@ -199,30 +216,29 @@ def create_canvas_05():
 def create_canvas_06():
     """6. T6: 매크로 자본시장, 금리 & 지정학 안보 캔버스 (거시 환경)"""
     nodes = [
-        {"id": "h6", "x": -400, "y": -300, "width": 1400, "height": 100, "type": "text", "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 앤트로픽 메가 IPO ➔ 빅테크 CAPEX ROI($500B 갭) ➔ GPU 금융 & 금리 리스크 ➔ 소버린 AI & 미중 패권"},
+        {"id": "h6", "x": -400, "y": -300, "width": 1400, "height": 100, "type": "text", "text": "# 📊 [Sector 6] 매크로 자본시장 · 밸류에이션 · 지정학 안보 맵\n> 빅테크 CAPEX ROI($500B 갭) ➔ GPU 금융 & 금리 리스크 ➔ AI 버블론 ➔ 소버린 AI & 미중 패권"},
         
-        {"id": "t6_10", "x": -350, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-10-앤트로픽-메가-IPO와-순수-AI-파운데이션-밸류에이션-리레이팅.md")},
-        {"id": "t6_05", "x": 50, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-05-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md")},
-        {"id": "t6_03", "x": 450, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-03-AI-버블-가능성.md")},
+        {"id": "t6_05", "x": -350, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-05-오픈AI·앤트로픽의-5000억달러-매출-갭과-데이터센터-ROI-딜레마.md")},
+        {"id": "t6_03", "x": 50, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-03-AI-버블-가능성.md")},
+        {"id": "t6_04", "x": 450, "y": -100, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-04-10년금리-5%-재진입-가능성.md")},
         
         {"id": "t6_01", "x": -350, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-01-금리와-데이터센터.md")},
         {"id": "t6_02", "x": 50, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-02-엔비디아와-GPU-금융.md")},
         {"id": "t6_09", "x": 450, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-09-엔비디아와-네오클라우드.md")},
         {"id": "t6_06", "x": 850, "y": 200, "width": 320, "height": 240, "type": "file", "file": p_thesis("T6-06-소버린-AI와-국가-단위-컴퓨트-인프라.md")},
         
-        {"id": "c_anthropic", "x": -350, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Anthropic.md")},
-        {"id": "c_openai", "x": -50, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-OpenAI.md")},
-        {"id": "c_coreweave", "x": 250, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-CoreWeave.md")},
-        {"id": "c_msft", "x": 550, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Microsoft.md")},
+        {"id": "c_coreweave", "x": -350, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-CoreWeave.md")},
+        {"id": "c_nvda", "x": -50, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-NVIDIA.md")},
+        {"id": "c_msft", "x": 250, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-Microsoft.md")},
+        {"id": "c_ust", "x": 550, "y": 550, "width": 260, "height": 160, "type": "file", "file": p_comp("Company-US_Treasury.md")},
     ]
     
     edges = [
-        {"id": "e6_1", "fromNode": "t6_10", "fromSide": "right", "toNode": "t6_05", "toSide": "left", "label": "공모 자금 유입"},
-        {"id": "e6_2", "fromNode": "t6_05", "fromSide": "right", "toNode": "t6_03", "toSide": "left", "label": "매출 갭 해소 검증"},
-        {"id": "e6_3", "fromNode": "t6_10", "fromSide": "bottom", "toNode": "c_anthropic", "toSide": "top", "label": "최대 2조$ IPO"},
-        {"id": "e6_4", "fromNode": "t6_01", "fromSide": "right", "toNode": "t6_02", "toSide": "left", "label": "대안 파이낸싱"},
-        {"id": "e6_5", "fromNode": "t6_02", "fromSide": "right", "toNode": "t6_09", "toSide": "left", "label": "GPU 담보 레버리지"},
-        {"id": "e6_6", "fromNode": "t6_09", "fromSide": "bottom", "toNode": "c_coreweave", "toSide": "top", "label": "우선 할당"},
+        {"id": "e6_1", "fromNode": "t6_05", "fromSide": "right", "toNode": "t6_03", "toSide": "left", "label": "매출 갭 해소 실패 시 버블"},
+        {"id": "e6_2", "fromNode": "t6_01", "fromSide": "right", "toNode": "t6_02", "toSide": "left", "label": "대안 파이낸싱"},
+        {"id": "e6_3", "fromNode": "t6_02", "fromSide": "right", "toNode": "t6_09", "toSide": "left", "label": "GPU 담보 레버리지"},
+        {"id": "e6_4", "fromNode": "t6_09", "fromSide": "bottom", "toNode": "c_coreweave", "toSide": "top", "label": "우선 할당"},
+        {"id": "e6_5", "fromNode": "t6_04", "fromSide": "bottom", "toNode": "c_ust", "toSide": "top", "label": "국채 금리 부담"},
     ]
     return {"nodes": nodes, "edges": edges}
 

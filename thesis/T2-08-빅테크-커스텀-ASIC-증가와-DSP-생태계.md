@@ -13,12 +13,12 @@ keywords:
 - VCA
 - OIP
 last_checked: null
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 국내 주요 DSP 기업의 3nm/2nm 글로벌 빅테크 수주 공식 공시
 momentum: 135.0
 news_count: 1
 priority: 3
-rank: 21
+rank: 24
 related_companies:
 - 에이직랜드
 - 가온칩스

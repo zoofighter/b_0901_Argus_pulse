@@ -46,10 +46,10 @@ aliases:
 - T3-06
 - T3-06 초고다층 기판 MLB와 초저손실 CCL 병목
 - 초고다층 기판 MLB와 초저손실 CCL 병목
-rank: 54
+rank: 56
 momentum: 26.4
 news_count: 0
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 ---
 
 # T3-06 초고다층 기판 MLB와 초저손실 CCL 병목

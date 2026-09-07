@@ -12,12 +12,12 @@ keywords:
 - 제3메모리계층
 - Fabric
 last_checked: 2026-09-04T09:47
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: Azure 또는 메타의 CXL 메모리 풀링 프로덕션 도입 공식 발표
 momentum: 40.4
 news_count: 0
 priority: 3
-rank: 50
+rank: 52
 related_companies:
 - 삼성전자
 - SK하이닉스

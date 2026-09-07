@@ -49,10 +49,10 @@ aliases:
 - T6-08 중국 반도체의 NAND 점유율 증가와 레거시·eSSD 잠식
 - 중국반도체의 NAND 점유율 증가
 - YMTC 낸드 점유율 증가
-rank: 12
+rank: 13
 momentum: 588.6
 news_count: 7
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 last_checked: 2026-09-06T21:16
 ---
 

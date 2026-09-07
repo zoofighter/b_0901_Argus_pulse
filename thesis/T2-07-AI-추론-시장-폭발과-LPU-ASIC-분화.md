@@ -12,12 +12,12 @@ keywords:
 - 추론전용칩
 - 서빙비용
 last_checked: 2026-09-04T21:11
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 하이퍼스케일러 LLM 서빙 워크로드의 30% 이상이 ASIC으로 전환
 momentum: 53.0
 news_count: 0
 priority: 4
-rank: 39
+rank: 41
 related_companies:
 - Groq
 - 리벨리온

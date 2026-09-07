@@ -11,7 +11,7 @@ keywords:
 - 전력망안정화
 - IRA세액공제
 last_checked: 2026-09-06T21:07
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 테슬라 메가팩 및 북미 배터리 3사 ESS 수주 잔고 사상 최대 갱신
 momentum: 1009.2
 news_count: 13

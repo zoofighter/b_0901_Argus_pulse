@@ -43,10 +43,10 @@ aliases:
 - T3-07
 - T3-07 데이터센터 간 초장거리 인터커넥트 DCI
 - 데이터센터 간 초장거리 인터커넥트 DCI
-rank: 42
+rank: 44
 momentum: 45.0
 news_count: 0
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 ---
 
 # T3-07 데이터센터 간 초장거리 인터커넥트 DCI

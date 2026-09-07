@@ -43,10 +43,10 @@ aliases:
 - T3-08
 - T3-08 AI 클러스터 OS와 MFU 가동률 최적화 SW
 - AI 클러스터 OS와 MFU 가동률 최적화 SW
-rank: 53
+rank: 55
 momentum: 35.2
 news_count: 0
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 ---
 
 # T3-08 AI 클러스터 OS와 MFU 가동률 최적화 SW

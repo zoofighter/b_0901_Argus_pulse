@@ -12,12 +12,12 @@ keywords:
 - 감가상각
 - 자산유동화
 last_checked: 2026-09-06T21:13
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: GPU 담보 대출 연체율 급등 또는 대형 네오클라우드 재무 위기
 momentum: 39.4
 news_count: 0
 priority: 3
-rank: 52
+rank: 54
 related_companies:
 - NVIDIA
 - CoreWeave

@@ -11,12 +11,12 @@ keywords:
 - 원자력발전
 - 기저부하
 last_checked: null
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 빅테크-SMR 기업 간 상업적 전력 공급 계약(PPA) 공식 체결
 momentum: 85.0
 news_count: 1
 priority: 4
-rank: 31
+rank: 33
 related_companies:
 - NuScale
 - Oklo

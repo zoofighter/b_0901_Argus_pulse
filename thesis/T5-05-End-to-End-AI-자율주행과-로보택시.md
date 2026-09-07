@@ -12,12 +12,12 @@ keywords:
 - 규제완화
 - 운전자제거
 last_checked: null
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 테슬라 사이버캡(Cybercab) 규제 승인 및 대도시 유료 무인 운행 개시
 momentum: 311.0
 news_count: 4
 priority: 4
-rank: 16
+rank: 17
 related_companies:
 - Tesla
 - Waymo

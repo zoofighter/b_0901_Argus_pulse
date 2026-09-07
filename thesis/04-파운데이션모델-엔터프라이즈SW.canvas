@@ -4,10 +4,10 @@
       "id": "h4",
       "x": -450,
       "y": -350,
-      "width": 1900,
+      "width": 2200,
       "height": 100,
       "type": "text",
-      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> GPT-6 아스트라 AGI ➔ o1/o3 추론 연산 ➔ DeepSeek/Qwen 중국 AI 가격 파괴 ➔ Computer Use 자율 에이전트 ➔ xAI 그록 ➔ 사설 AI & SaaS 과점화"
+      "text": "# 💻 [Sector 4] 파운데이션 모델 & 엔터프라이즈 SW 맵 (젠슨 황 4단)\n> GPT-6 아스트라 AGI ➔ 앤트로픽 해석가능성/신뢰 AI ➔ o1/o3 추론 ➔ DeepSeek/Qwen 가격 파괴 ➔ Computer Use ➔ xAI 그록 ➔ 사설 AI & SaaS 과점화"
     },
     {
       "id": "top_frontier",
@@ -46,8 +46,17 @@
       "file": "argus/Theses/T4-06-GPT-6-아스트라와-자율형-AGI-엔지니어링-에이전트.md"
     },
     {
+      "id": "t4_09",
+      "x": -100,
+      "y": 80,
+      "width": 320,
+      "height": 240,
+      "type": "file",
+      "file": "argus/Theses/T4-09-앤트로픽-클로드의-해석가능성-기술과-엔터프라이즈-AI-시장-독점.md"
+    },
+    {
       "id": "t4_03",
-      "x": -50,
+      "x": 250,
       "y": 80,
       "width": 320,
       "height": 240,
@@ -56,7 +65,7 @@
     },
     {
       "id": "t4_08",
-      "x": 350,
+      "x": 600,
       "y": 80,
       "width": 320,
       "height": 240,
@@ -65,7 +74,7 @@
     },
     {
       "id": "t4_04",
-      "x": 750,
+      "x": 950,
       "y": 80,
       "width": 320,
       "height": 240,
@@ -74,7 +83,7 @@
     },
     {
       "id": "t4_07",
-      "x": 1150,
+      "x": 1300,
       "y": 80,
       "width": 320,
       "height": 240,
@@ -92,7 +101,7 @@
     },
     {
       "id": "t4_01",
-      "x": -50,
+      "x": -100,
       "y": 380,
       "width": 320,
       "height": 240,
@@ -101,7 +110,7 @@
     },
     {
       "id": "t4_02",
-      "x": 350,
+      "x": 250,
       "y": 380,
       "width": 320,
       "height": 240,
@@ -207,14 +216,22 @@
     },
     {
       "id": "e4_5",
-      "fromNode": "t4_04",
+      "fromNode": "t4_09",
       "fromSide": "bottom",
       "toNode": "c_anthropic",
       "toSide": "top",
-      "label": "Claude Computer Use"
+      "label": "해석가능성 & Claude 3.7"
     },
     {
       "id": "e4_6",
+      "fromNode": "t4_09",
+      "fromSide": "right",
+      "toNode": "t4_04",
+      "toSide": "left",
+      "label": "Computer Use 워크플로우"
+    },
+    {
+      "id": "e4_7",
       "fromNode": "top_frontier",
       "fromSide": "right",
       "toNode": "t4_07",
@@ -222,7 +239,7 @@
       "label": "Grok 3.5 / 4"
     },
     {
-      "id": "e4_7",
+      "id": "e4_8",
       "fromNode": "t4_07",
       "fromSide": "bottom",
       "toNode": "c_xai",
@@ -230,7 +247,7 @@
       "label": "Colossus 200k 클러스터"
     },
     {
-      "id": "e4_8",
+      "id": "e4_9",
       "fromNode": "t4_02",
       "fromSide": "bottom",
       "toNode": "c_msft",
@@ -238,7 +255,7 @@
       "label": "Copilot Studio"
     },
     {
-      "id": "e4_9",
+      "id": "e4_10",
       "fromNode": "t4_01",
       "fromSide": "bottom",
       "toNode": "c_meta",
@@ -246,7 +263,7 @@
       "label": "Llama 3/4 사설화"
     },
     {
-      "id": "e4_10",
+      "id": "e4_11",
       "fromNode": "t4_08",
       "fromSide": "bottom",
       "toNode": "c_deepseek",
@@ -254,7 +271,7 @@
       "label": "MLA/MoE 극저가 API"
     },
     {
-      "id": "e4_11",
+      "id": "e4_12",
       "fromNode": "t4_08",
       "fromSide": "bottom",
       "toNode": "c_alibaba",
@@ -262,20 +279,12 @@
       "label": "Qwen 2.5 오픈소스"
     },
     {
-      "id": "e4_12",
-      "fromNode": "t4_08",
-      "fromSide": "left",
-      "toNode": "t4_03",
-      "toSide": "right",
-      "label": "R1 vs o1 추론 경쟁"
-    },
-    {
       "id": "e4_13",
       "fromNode": "t4_08",
       "fromSide": "left",
-      "toNode": "t4_06",
+      "toNode": "t4_09",
       "toSide": "right",
-      "label": "마진 압박 (가격 파괴)"
+      "label": "가격 공세 vs 신뢰/안전 수성"
     }
   ]
 }

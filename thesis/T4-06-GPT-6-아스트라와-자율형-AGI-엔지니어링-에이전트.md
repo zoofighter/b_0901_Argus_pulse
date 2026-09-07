@@ -16,12 +16,12 @@ keywords:
 - 엔터프라이즈API
 - 자율연구원
 last_checked: 2026-09-07T19:15
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: GPT-6 아스트라 엔터프라이즈 도입 기업의 사내 소프트웨어 개발 및 보안 패치 자동화율 60% 상회
 momentum: 415.6
 news_count: 6
 priority: 5
-rank: 15
+rank: 16
 related_companies:
 - OpenAI
 - Microsoft

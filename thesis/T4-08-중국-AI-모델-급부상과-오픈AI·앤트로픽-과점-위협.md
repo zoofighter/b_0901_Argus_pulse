@@ -19,13 +19,13 @@ keywords:
 - 소버린AI
 - 파운데이션모델커모디티화
 last_checked: 2026-09-07T19:30
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 중국 오픈소스 모델(DeepSeek, Qwen)의 글로벌 오픈소스 리더보드 상위권 독점 및 글로벌 AI API 평균 단가 70%
   하락 압력 가시화
 momentum: 156.0
 news_count: 1
 priority: 5
-rank: 20
+rank: 23
 related_companies:
 - DeepSeek
 - Alibaba

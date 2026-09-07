@@ -14,7 +14,7 @@ keywords:
 - 음극재흑연
 - GWh
 last_checked: 2026-09-06T21:07
-last_ranked: 2026-09-07T19:30
+last_ranked: 2026-09-07T19:47
 milestone: 삼성SDI 인디애나·SK온 조지아 LFP 양산 개시(2026년 10월) + 에너지부 비상사태 세부품목 확정
 momentum: 1088.2
 news_count: 14
