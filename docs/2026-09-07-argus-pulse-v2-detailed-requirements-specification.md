@@ -12,10 +12,10 @@
 ### 1.1 배경 및 전략적 방향성
 * **현행 문제점**: 기존 시스템은 수집된 뉴스를 가공하여 매일 2-Page 블로그 포스트를 찍어내는 '퍼블리싱 공장'에 치중되어 있어, 실제 투자 수익률(알파) 창출에 직결되는 가설 검증 및 신규 테마 선점 기능이 미흡함.
 * **v2.0 핵심 목표**:
-  1. 41개 투자 가설(Theses)의 **마일스톤 달성 여부와 기각 조건(Falsification)을 실시간 감시**하여 가설 훼손 시 즉시 경보 발령.
+  1. 43개 투자 가설(Theses)의 **마일스톤 달성 여부와 기각 조건(Falsification)을 실시간 감시**하여 가설 훼손 시 즉시 경보 발령.
   2. 기존 테제에 매칭되지 않는 70점+ 고득점 뉴스를 마이닝하여 **새롭게 태동하는 테마(Emerging Themes)를 조기 발굴**하고 인큐베이팅.
   3. 2-Page 대중 블로그를 대체하는 **1-Page 심층 투자 의사결정 메모(Thesis Inflection Brief)** 자동 생성.
-  4. 젠슨 황의 **5-Layer Cake(에너지·인프라 ➔ 하드웨어 ➔ 시스템SW ➔ 파운데이션 ➔ 에이전트)** 구조와 Argus 6대 레이어를 일치시키는 옵시디언 캔버스(Canvas) 시각화 완성.
+  4. 젠슨 황의 **5-Layer Cake(에너지·인프라 ➔ 하드웨어 ➔ 시스템SW ➔ 파운데이션 ➔ 에이전트)** 구조와 Argus 6대 섹터(T1~T6)를 완벽히 일치시키는 옵시디언 캔버스(Canvas) 시각화 완성.
 
 ---
 
@@ -24,7 +24,7 @@
 ```mermaid
 flowchart TD
     subgraph INGEST ["데이터 인제스트 & 모니터링"]
-        NEWS[일일 수집 뉴스 500건+] --> DISPATCH{41개 테제 키워드 매칭?}
+        NEWS[일일 수집 뉴스 500건+] --> DISPATCH{43개 테제 키워드 매칭?}
     end
 
     subgraph REQ1 ["요건 1: 테제 추적기 & 마일스톤 감시 (thesis_checker.py)"]
@@ -61,7 +61,7 @@ flowchart TD
 ## 3. [요건 1] `thesis_checker.py` 마일스톤 & 기각 조건 감시 엔진 (Priority: P0)
 
 ### 3.1 목적
-* 41개 테제의 YAML 프론트매터에 정적으로만 방치되어 있던 `milestone`과 본문의 기각 조건을 **실제 뉴스 데이터와 능동적으로 대조하여 가설 유효성을 판정**하고, 이상 발생 시 즉각 경보를 발송함.
+* 43개 테제의 YAML 프론트매터에 정적으로만 방치되어 있던 `milestone`과 본문의 기각 조건을 **실제 뉴스 데이터와 능동적으로 대조하여 가설 유효성을 판정**하고, 이상 발생 시 즉각 경보를 발송함.
 
 ### 3.2 데이터 스키마 보강 (YAML Frontmatter)
 기존 `thesis/T#-XX.md` 프론트매터에 기각 조건 및 상태 필드를 정규화합니다:
@@ -104,11 +104,11 @@ lifecycle_stage: "Catalyst Active" # Emerging | Catalyst Active | Priced-in | Pe
 ## 4. [요건 2] 미매칭 뉴스 풀 기반 신규 테마 발굴기 (`theme_discoverer.py`) (Priority: P0)
 
 ### 4.1 목적
-* 41개 기존 테제 키워드에 매칭되지 않아 버려지던 70점+ 고득점 뉴스를 마이닝하여, 시장에 새로 부상하는 기술/기업/내러티브를 선제 발굴하고 `Incubator`에 등록.
+* 43개 기존 테제 키워드에 매칭되지 않아 버려지던 70점+ 고득점 뉴스를 마이닝하여, 시장에 새로 부상하는 기술/기업/내러티브를 선제 발굴하고 `Incubator`에 등록.
 
 ### 4.2 동작 파이프라인
 1. **Orphan News 격리**:
-   * `news.sqlite`에서 최근 3일간 `score >= 70`이면서, 41개 테제 키워드와 0건 매칭된 뉴스 추출.
+   * `news.sqlite`에서 최근 3일간 `score >= 70`이면서, 43개 테제 키워드와 0건 매칭된 뉴스 추출.
 2. **키워드 이상 급증(Spike) 탐지**:
    * 형태소 분석 및 개체명(Entity) 추출을 통해 직전 2주 대비 이번 주 출현 빈도가 $200\%$ 이상 급증한 신규 단어(예: *FEL*, *광집적 CPO*, *유리기판 TGV*, *온사이트 SMR*) 추출.
 3. **LLM 기반 테마 군집화 & 명명**:
@@ -133,7 +133,7 @@ lifecycle_stage: "Catalyst Active" # Emerging | Catalyst Active | Priced-in | Pe
 ### 5.2 스크립트 명세 (`thesis_brief_writer.py`)
 * **실행 방식**:
   ```bash
-  python thesis_brief_writer.py --id T1-01              # 특정 테제 수동 생성
+  python thesis_brief_writer.py --id T2-01              # 특정 테제 수동 생성 (예: T2-01 HBM 메모리)
   python thesis_brief_writer.py --inflection-only       # 오늘 변곡점(±10p) 테제 자동 생성
   ```
 * **트리거 시점**:
@@ -142,14 +142,14 @@ lifecycle_stage: "Catalyst Active" # Emerging | Catalyst Active | Priced-in | Pe
 ### 5.3 문서 템플릿 표준 명세 (1-Page 포맷)
 ```markdown
 ---
-title: "[Thesis Brief] T1-01 메모리 산업의 변화 — 마일스톤 달성 및 변곡점 점검"
+title: "[Thesis Brief] T2-01 메모리 산업의 변화 — 마일스톤 달성 및 변곡점 점검"
 date: 2026-09-07
-thesis_id: T1-01
+thesis_id: T2-01
 confidence: 75 -> 85 (+10p)
 status: action-required
 ---
 
-# 🎯 [Thesis Brief] T1-01 메모리 산업의 변화: 변곡점 분석
+# 🎯 [Thesis Brief] T2-01 메모리 산업의 변화: 변곡점 분석
 
 > **한 줄 결론**: 마일스톤(삼성 HBM4 퀄 테스트) 진척 가시화로 단기 신뢰도 85% 상향. HBM3E 가격 경쟁 노이즈를 뚫고 커스텀 ASIC화 프리미엄 반영 구간 진입.
 
@@ -175,20 +175,20 @@ status: action-required
 ### 6.1 목적
 * 직전에 작성된 [젠슨 황 5-Layer Cake vs Argus MOC 비교 문서](file:///Users/chansoojeon/Library/CloudStorage/Dropbox/03_code/b_0901_Argus_pulse/docs/2026-09-07-jensen-huang-5-layer-cake-vs-argus-moc-comparison.md)의 분석 결과를 옵시디언의 시각적 인터페이스인 **Obsidian Canvas(`.canvas`)**에 반영하여 거시 밸류체인 조망 체계를 완성함.
 
-### 6.2 계층 구조 매핑 명세
+### 6.2 계층 구조 매핑 명세 (젠슨 황 5-Layer Stack ↔ Argus 6대 섹터 정렬)
 
-| 계층 번호 | 젠슨 황 5-Layer Cake | Argus 6대 섹터 코드 | 주요 테제 노드 군집 |
-|:---:|:---|:---:|:---|
-| **Layer 1** | **에너지 & 물리 인프라** (Energy & Facilities) | **`T2`** (인프라/전력·냉각) | `T2-01`(DC병목), `T2-02`(액체냉각), `T2-03`(SMR), `T2-05`(변압기), `T2-07`(HVDC) |
-| **Layer 2** | **컴퓨팅 하드웨어 & 제조** (Hardware Systems) | **`T1`** (컴퓨트/반도체) | `T1-01`(HBM4), `T1-04`(CoWoS), `T1-05`(유리기판), `T1-08`(2nm), `T1-09`(ASIC) |
-| **Layer 3** | **시스템 소프트웨어 & 플랫폼** (CUDA/OS) | **`T1/T5`** (인프라SW/통신) | `T1-11`(UEC), `T1-06`(CPO), `T5-01`(온프레미스 사설 AI) |
-| **Layer 4** | **파운데이션 모델 & AI SW** (Models & Apps) | **`T5`** (엔터프라이즈 SW) | `T5-02`(SW과점화), `T5-03`(바이오AI 신약개발) |
-| **Layer 5** | **피지컬 AI & 자율 에이전트** (Physical AI/Robotics) | **`T3`** (피지컬AI/엣지) | `T3-03`(휴머노이드), `T3-04`(FSD/로보택시), `T3-06`(모바일 에이전트) |
-| **Macro** | *(매크로 자본시장 & 공급망 지정학)* | **`T4` & `T6`** (거시경제/안보) | `T4-01`(금리/DC), `T4-04`(버블리스크), `T6-01`(소버린AI), `T6-02`(중국추격) |
+| 계층 번호 | 젠슨 황 5-Layer Cake | Argus 6대 섹터 코드 | 캔버스 보드 파일 | 주요 테제 노드 군집 |
+|:---:|:---|:---:|:---|:---|
+| **Layer 1** | **에너지 & 물리 인프라**<br>(Energy & Facilities) | **`T1`**<br>(에너지·전력·냉각 인프라, 8개) | `01-에너지-전력-냉각-인프라.canvas` | `T1-01`(DC병목), `T1-02`(액체냉각), `T1-03`(SMR), `T1-04`(대용량 ESS), `T1-05`(변압기), `T1-07`(HVDC), `T1-08`(온사이트 발전) |
+| **Layer 2** | **컴퓨팅 하드웨어 & 제조**<br>(Hardware Systems) | **`T2`**<br>(AI 컴퓨트·메모리·선단반도체, 10개) | `02-AI컴퓨트-메모리-선단반도체.canvas` | `T2-01`(HBM4), `T2-02`(CoWoS), `T2-03`(유리기판), `T2-04`(2nm GAA), `T2-05`(3D DRAM/NAND), `T2-06`(CXL), `T2-07`(추론 LPU/ASIC) |
+| **Layer 3** | **시스템 소프트웨어 & 플랫폼**<br>(CUDA / Distributed Systems) | **`T3`**<br>(초고속 네트워킹·시스템 플랫폼, 4개) | `03-초고속네트워킹-시스템플랫폼.canvas` | `T3-01`(실리콘 포토닉스/CPO), `T3-02`(UEC vs 인피니밴드), `T3-03`(분산형 코로케이션), `T3-04`(네오클라우드) |
+| **Layer 4** | **파운데이션 모델 & AI SW**<br>(Models & Frameworks) | **`T4`**<br>(파운데이션 모델·엔터프라이즈 SW, 4개) | `04-파운데이션모델-엔터프라이즈SW.canvas` | `T4-01`(사설 AI/온프레미스), `T4-02`(SW 레이어 과점화), `T4-03`(바이오 AI 신약), `T4-04`(TPU vs GPU) |
+| **Layer 5** | **피지컬 AI & 자율 에이전트**<br>(Physical AI / Robotics / Edge) | **`T5`**<br>(피지컬 AI·자율주행·로보틱스, 9개) | `05-피지컬AI-자율주행-로보틱스.canvas` | `T5-01`(온디바이스 AI), `T5-02`(모바일 에이전트), `T5-03`(AI PC), `T5-05`(E2E 자율주행/로보택시), `T5-06`(휴머노이드), `T5-07`(공간지능) |
+| **Macro** | *(자본 순환 매크로 & 지정학 안보)*<br>(Financial ROI & Sovereign AI) | **`T6`**<br>(매크로 자본시장·밸류에이션·지정학, 8개) | `06-매크로-밸류에이션-지정학안보.canvas` | `T6-01`(금리/DC ROI), `T6-02`(GPU 금융), `T6-03`(AI 버블), `T6-05`(5000억$ 매출 갭), `T6-06`(소버린 AI), `T6-07`(중국 HBM), `T6-08`(중국 NAND) |
 
 ### 6.3 Canvas 파일 정비 요건
-1. 기존의 분절된 Canvas 파일 정리 및 최신 41개 테제 코드로 리네이밍.
-2. `obs_argus/argus/Canvas/00-Argus-5Layer-ValueChain.canvas`를 마스터 캔버스로 생성하여, 에너지(하단) ➔ 반도체 ➔ 소프트웨어 ➔ 피지컬AI(상단)로 이어지는 데이터 흐름 화살표 연결.
+1. 6대 섹터별 전용 Canvas 파일(`01-` ~ `06-`)과 최신 43개 테제 노드 간 링크 및 태그 동기화.
+2. `obs_argus/argus/Canvas/00-Argus-5Layer-ValueChain.canvas`를 통합 마스터 캔버스로 생성하여, 에너지(`T1`, 하단) ➔ 컴퓨트 반도체(`T2`) ➔ 네트워킹 플랫폼(`T3`) ➔ 파운데이션 SW(`T4`) ➔ 피지컬 AI(`T5`, 상단)로 이어지는 수직 데이터 흐름 및 외곽 매크로(`T6`) 인과관계 화살표 연결.
 3. `00-Argus-Master-MOC.md` 상단에 Canvas 뷰 링크 추가.
 
 ---
@@ -197,7 +197,7 @@ status: action-required
 
 ```
 [08:00] 🌅 아침: 테제 감사 & 신규 테마 발굴 (Theme Discovery)
-   ├── 41개 테제 상태 일괄 감사 (thesis_checker.py --smart)
+   ├── 43개 테제 상태 일괄 감사 (thesis_checker.py --smart)
    ├── 신규 테마 발굴기 실행 (theme_discoverer.py) ➔ Incubator/TC-XX 생성
    └── 마일스톤 도래 테제 발견 시 ➔ 디스코드 알림 발송
 
@@ -211,7 +211,7 @@ status: action-required
    └── 디스코드 긴급 경보(Red Flag / Milestone Hit) 발송
 
 [21:00] 🌙 야간: 종합 테제 매트릭스 & 모멘텀 랭킹 갱신 (daily_digest.py)
-   ├── 41개 테제 모멘텀 랭킹 동기화 및 Master MOC Dataview 갱신
+   ├── 43개 테제 모멘텀 랭킹 동기화 및 Master MOC Dataview 갱신
    └── 인큐베이션 중인 후보 테제(TC-XX) 생존 여부 점검
 ```
 
