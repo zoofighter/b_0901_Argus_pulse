@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "id": "header",
+      "x": 0,
+      "y": -400,
+      "width": 1400,
+      "height": 100,
+      "type": "text",
+      "text": "# ⚙️ Argus Pulse 24시간 자율 배치 파이프라인 캔버스 (Live Architecture)\n> 데이터 수집 ➔ 모니터링 ➔ 1-Page 투자 메모 ➔ 종합 다이제스트 ➔ 5-Layer MOC 갱신"
+    },
+    {
+      "id": "group_Morning",
+      "x": 0,
+      "y": -260,
+      "width": 340,
+      "height": 70,
+      "type": "text",
+      "text": "### 🌅 08:00 아침 인텔리전스"
+    },
+    {
+      "id": "group_Hourly",
+      "x": 380,
+      "y": -260,
+      "width": 340,
+      "height": 70,
+      "type": "text",
+      "text": "### 🔍 09:00~21:00 실시간 감시"
+    },
+    {
+      "id": "group_Midday",
+      "x": 760,
+      "y": -260,
+      "width": 340,
+      "height": 70,
+      "type": "text",
+      "text": "### ☀️ 13:00 사후검증 & 변곡점"
+    },
+    {
+      "id": "group_Nightly",
+      "x": 1140,
+      "y": -260,
+      "width": 340,
+      "height": 70,
+      "type": "text",
+      "text": "### 🌙 21:00 야간 다이제스트"
+    },
+    {
+      "id": "task_node_1",
+      "x": 0,
+      "y": -160,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**08:00 | 아침 주제 추천 & 기획안 생성**\n\n- 모듈: `topic_generator.py --auto`\n- 상태: **🟢 성공**\n- 최근 실행: `2026-09-07 13:05:01`\n- 폴더: `argus/Outline`\n- 요약: → 리뷰 모드를 사용하려면: python review_generator.py"
+    },
+    {
+      "id": "task_node_2",
+      "x": 0,
+      "y": 60,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**08:05 | 미매칭 뉴스 기반 신규 테마 발굴**\n\n- 모듈: `theme_discoverer.py`\n- 상태: **🔴 미기록**\n- 최근 실행: `-`\n- 폴더: `argus/Incubator`\n- 요약: 로그 파일 없음"
+    },
+    {
+      "id": "task_node_3",
+      "x": 380,
+      "y": -160,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**09:00~21:00 | 실시간 뉴스 감시 (매 정각)**\n\n- 모듈: `hourly_monitor.py --once`\n- 상태: **🟢 성공**\n- 최근 실행: `2026-09-07 18:00:01`\n- 폴더: `argus`\n- 요약: ✓ 고득점(80점+) 뉴스 없음"
+    },
+    {
+      "id": "task_node_4",
+      "x": 760,
+      "y": -160,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**13:00 | 오후 블로그 사후 검증 리뷰 (RAG)**\n\n- 모듈: `review_generator.py --rag`\n- 상태: **🟢 성공**\n- 최근 실행: `2026-09-07 13:00:24`\n- 폴더: `argus/Review`\n- 요약: 📓 [Obsidian 동기화] REVIEW -> argus/Review/2026-09-07-review-50"
+    },
+    {
+      "id": "task_node_5",
+      "x": 760,
+      "y": 60,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**13:05 | 변곡점 1-Page 투자 메모 작성**\n\n- 모듈: `thesis_brief_writer.py --inflection-only`\n- 상태: **🔴 미기록**\n- 최근 실행: `-`\n- 폴더: `argus/Review`\n- 요약: 로그 파일 없음"
+    },
+    {
+      "id": "task_node_6",
+      "x": 1140,
+      "y": -160,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**21:00 | 데일리 다이제스트 종합 요약 (RAG)**\n\n- 모듈: `daily_digest.py --rag`\n- 상태: **⚪ 과거 기록**\n- 최근 실행: `2026-09-06 21:00:17`\n- 폴더: `argus/Digest`\n- 요약: 📝 [Thesis Frontmatter 갱신] 총 43개 Thesis MD 파일에 rank & momentu"
+    },
+    {
+      "id": "task_node_7",
+      "x": 1140,
+      "y": 60,
+      "width": 340,
+      "height": 190,
+      "type": "text",
+      "text": "**21:05 | 테제 마일스톤/기각 감사 & 모멘텀 랭킹**\n\n- 모듈: `thesis_checker.py --smart`\n- 상태: **⚪ 과거 기록**\n- 최근 실행: `2026-09-06 21:17:02`\n- 폴더: `argus/Theses`\n- 요약: 📝 [Thesis Frontmatter 갱신] 총 43개 Thesis MD 파일에 rank & momentu"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_m_to_h",
+      "fromNode": "task_node_1",
+      "fromSide": "right",
+      "toNode": "task_node_3",
+      "toSide": "left",
+      "label": "신규 테마 & 추천 기획안 인계"
+    },
+    {
+      "id": "e_h_to_mid",
+      "fromNode": "task_node_3",
+      "fromSide": "right",
+      "toNode": "task_node_4",
+      "toSide": "left",
+      "label": "오전 핫뉴스 ➔ 사후 검증 및 투자메모 작성"
+    },
+    {
+      "id": "e_mid_to_night",
+      "fromNode": "task_node_5",
+      "fromSide": "right",
+      "toNode": "task_node_6",
+      "toSide": "left",
+      "label": "변곡점 테제 ➔ 일일 종합 다이제스트 반영"
+    }
+  ]
+}

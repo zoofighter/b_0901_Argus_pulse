@@ -40,10 +40,12 @@ BANNER = """
   [12] 📝 수기 뉴스 등록 (add_news.py — 자동 수집 누락 기사 주입)
   [13] 🌱 신규 테마 발굴기 (theme_discoverer.py — 미매칭 고득점 뉴스 마이닝)
   [14] 🎯 1-Page 투자 메모 생성 (thesis_brief_writer.py — 변곡점 브리프)
+  [15] 📊 24시간 파이프라인 관제 대시보드 (batch_visualizer.py — 옵시디언 시각화)
   ──────────────────────────────────────────────────────────────────
   [q] 종료
 ======================================================================
 """
+
 
 
 CRONTAB_SAMPLE = f"""# ── Argus Pulse Crontab 스케줄 ─────────────────────────────
@@ -134,6 +136,8 @@ def interactive_menu():
                 run_cmd(["thesis_brief_writer.py", "--id", tid])
             else:
                 run_cmd(["thesis_brief_writer.py", "--inflection-only"])
+        elif choice == "15":
+            run_cmd(["batch_visualizer.py"])
         else:
             print("  ⚠️ 올바른 번호를 선택해주세요.")
         
@@ -156,10 +160,13 @@ def main():
     parser.add_argument("--add-news", action="store_true", help="수기 뉴스 직접 등록 (news.sqlite)")
     parser.add_argument("--discover", action="store_true", help="미매칭 뉴스 기반 신규 테마 발굴")
     parser.add_argument("--brief",    type=str, nargs="?", const="inflection", help="1-Page 투자 메모 생성 (ID 지정 가능)")
+    parser.add_argument("--status",   action="store_true", help="24시간 배치 파이프라인 관제 대시보드 갱신 및 상태 점검")
     parser.add_argument("--rag",      action="store_true", help="RAG 심층 검색 활성화")
     args = parser.parse_args()
 
-    if args.topic:
+    if args.status:
+        run_cmd(["batch_visualizer.py"])
+    elif args.topic:
         run_cmd(["topic_generator.py", "--auto"])
     elif args.raw:
         run_cmd(["topic_generator.py", "--raw"])
@@ -198,6 +205,7 @@ def main():
         run_cmd(["add_news.py"])
     else:
         interactive_menu()
+
 
 
 if __name__ == "__main__":
